@@ -41,8 +41,15 @@
     useXkbConfig = true; # use xkb.options in tty.
   };
 
+  
+  # -- DISPLAY MANAGER --
+  
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.autoNumlock = true;
+  # services.xserver.displayManager.sddm.theme = sddm-sugar-light; # enable this later when you have the theme ready.
+  
 
 
   
