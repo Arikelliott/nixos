@@ -80,11 +80,17 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = [
-    pkgs.vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    pkgs.wget
-    pkgs.curl
-    pkgs.git
+  environment.systemPackages = with pkgs [
+    gnome
+    firefox
+    vscodium
+    zsh
+    stow
+    kitty
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    curl
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
