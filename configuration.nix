@@ -90,6 +90,7 @@
 
 # - SSH -
   services.openssh.enable = true; # Enable the OpenSSH daemon.
+  programs.ssh.enableAskPassword = false; # Disable Askpass (hopefully)
 
 # - Firewall -
   # Open ports in the firewall.
@@ -97,6 +98,13 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   networking.firewall.enable = false;
+
+# - Extra Init Commands -
+# This is for running shell commands on startup. All commands should be compatible with basic `sh` rather than bash.
+  # environment.extraInit = "
+  #   unset -v SSH_ASKPASS
+  # ";
+  # unset -v SSH_ASKPASS - Disables Askpass variable on startup so it won't bring up dialog for git and ssh.
 
 
 
@@ -120,24 +128,9 @@
 
 # - Desktop Environment List: - 
   # - GNOME # --- Currently disabled!
-  services.xserver.desktopManager.gnome.enable = true; # Enable GNOME.
+  # services.xserver.desktopManager.gnome.enable = true; # Enable GNOME.
   # environment.gnome.excludePackages = (with pkgs; [ # GNOME packages to exclude.
-  #   gnome-photos
-  #   gnome-tour
   # ]) ++ (with pkgs.gnome; [
-  #   cheese # webcam tool
-  #   gnome-music
-  #   gnome-terminal
-  #   gedit # text editor
-  #   epiphany # web browser
-  #   geary # email reader
-  #   evince # document viewer
-  #   gnome-characters
-  #   totem # video player
-  #   tali # poker game
-  #   iagno # go game
-  #   hitori # sudoku game
-  #   atomix # puzzle game
   # ]);
 
   # - Hyprland
@@ -164,7 +157,7 @@
 
 # - OpenRGB -
   services.hardware.openrgb.enable = true; # Enable OpenRGB daemon and other options.
-  services.hardware.openrgb.motherboard = "amd"; # Ensure it's using AMD modules (should be automatically though).
+  # services.hardware.openrgb.motherboard = "amd"; # Ensure it's using AMD modules (should be automatically though).
 
 # - APC UPS Daemon -
   services.apcupsd.enable = true;
