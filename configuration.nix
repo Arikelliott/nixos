@@ -275,7 +275,6 @@
     swww # Fancy Wayland wallpaper setter and daemon.
     waypaper # GUI frontend for swww.
     loupe # GUI Image Viewer.
-    # lxappearance # GTK application theme and font configurer.
     nwg-look # Wayland alternative to lxappearance.
     cinnamon.nemo-with-extensions # Nemo file explorer
     cinnamon.nemo-fileroller
@@ -356,7 +355,6 @@
     materia-theme # Materia GTK theme.
     material-icons # Google's Material icons.
     papirus-icon-theme
-    
   ];
 
 # - User Package Lists
