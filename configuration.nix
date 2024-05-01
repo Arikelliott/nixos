@@ -54,6 +54,11 @@
 
 # -------- BASIC SYSTEM CONFIGURATION --------
 
+# - NixOS -
+  nix = {
+    settings.experimental-features = [ "nix-command" "flakes" ]; # Enable flakes and nix-command.
+  };
+
 # - Networking -
   networking.hostName = "silvana"; # Define your hostname.
   networking.networkmanager.enable = true;  # Enable NetworkManager
