@@ -39,6 +39,12 @@
     options = ["defaults"]; # Mount options (optional). NOTE: Use square brackets around string.
   };
 
+  fileSystems."/home/arik/.mount/nas" = { # Mount NAS storage.
+    device = "smorgasbord-server.lan:/home/arik/mount/nas";
+    fsType = "nfs";
+    options = [ "x-systemd.automount" "noauto" ]; # Enable lazy mounting. Only mounts when first accessed instead of at boot.
+  };
+
 
 
 # -------- USER ACCOUNTS --------
