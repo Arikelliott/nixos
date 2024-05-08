@@ -203,6 +203,9 @@
     # };
   };
 
+# - Java -
+  programs.java.enable = true;
+
 
 
 # -------- SYSTEM PACKAGES --------
@@ -264,6 +267,7 @@
     stow # Symlink/dotfiles manager.
     zsh # Z Shell.
     zsh-powerlevel10k # Powerlevel10k theme for zsh.
+    netscanner # Network scanning tool.
 
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
@@ -308,7 +312,7 @@
     # exfatprogs # exFAT filesystem utilities.
     foomatic-db-engine # A big set of utilities for printing.
     ghostscript # Postscript interpreter for PDFs and stuff.
-    jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
+    # jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
     libsForQt5.polkit-kde-agent # KDE polkit agent.
 
 # Social:
