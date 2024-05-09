@@ -74,7 +74,7 @@
   time.timeZone = "America/Detroit"; # Set your time zone.
 
 # - Keyboard and Localization -
-  services.xserver.layout = "us"; # Configure keymap in X11.
+  services.xserver.xkb.layout = "us"; # Configure keymap in X11.
 
 # - Printing -
   services.printing.enable = true; # Enable CUPS to print documents.
@@ -98,6 +98,9 @@
 
 # - Drawing Tablets -
   hardware.opentabletdriver.enable = true; # Enable OpenTabletDriver.
+
+# - Shell -
+  
 
 # - SSH -
   services.openssh.enable = true; # Enable the OpenSSH daemon.
@@ -125,7 +128,7 @@
   services.xserver.enable = true; # Enable X11 windowing system.
 
 # - Display Manager -
-  services.xserver.displayManager = {
+  services.displayManager = {
     # gdm.enable = true; # Enable GNOME Display Manager.
     # lightdm.enable = true; # Enable LightDM.
     sddm = { # Settings for SDDM display manager.
@@ -155,6 +158,12 @@
 
 # - Disable xterm -
   services.xserver.desktopManager.xterm.enable = false;
+
+# - XDG Portal Settings -
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+  };
 
 
 
@@ -267,7 +276,8 @@
     stow # Symlink/dotfiles manager.
     zsh # Z Shell.
     zsh-powerlevel10k # Powerlevel10k theme for zsh.
-    netscanner # Network scanning tool.
+    amdgpu_top # AMD GPU CLI monitoring tool.
+    # netscanner # Network scanning tool. NOTE: Unstable only currently
 
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
@@ -279,10 +289,11 @@
     grsync # GUI rsync wrapper.
     kdiff3 # Diff and merge up to 3 files or directories at once.
     meld # GTK diff and merge tool.
-    # lact # AMDGPU GUI software. *****
+    lact # AMDGPU GUI software. *****
     dunst # Standalone notificatin manager for WMs.
     grim # Wayland screenshot utility.
-    grimblast # Replacing hyprshot?
+    hyprshot # hyprland screenshot utility.
+    # grimblast # Replacing hyprshot?
     scrot # Another screen capture utility.
     slurp # Wayland region selector utility.
     wf-recorder # Wayland screen recorder.
