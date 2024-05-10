@@ -90,8 +90,19 @@
 
 # - Sound -
   # sound.enable = true; # Enable default ALSA sound.
-  security.rtkit.enable = true; # Enables RealtimeKit service, which handles scheduling?
-  hardware.pulseaudio.enable = true;
+  # security.rtkit.enable = true; # Enables RealtimeKit service, which handles scheduling?
+  # hardware.pulseaudio.enable = true;
+
+  # rtkit is optional but recommended
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+  };
 
 # - Mouse Input -
   # services.xserver.libinput.enable = true; # Enable touchpad support (enabled default in most desktopManager).
@@ -100,7 +111,8 @@
   hardware.opentabletdriver.enable = true; # Enable OpenTabletDriver.
 
 # - Shell -
-  
+  programs.zsh.enable = true; # Enable zsh.
+  users.defaultUserShell = pkgs.zsh; # Set zsh as default shell.
 
 # - SSH -
   services.openssh.enable = true; # Enable the OpenSSH daemon.
@@ -325,6 +337,7 @@
     ghostscript # Postscript interpreter for PDFs and stuff.
     # jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
     libsForQt5.polkit-kde-agent # KDE polkit agent.
+    bottles # User-friendly wrapper for WINE.
 
 # Social:
     discord # The popular chat app for lit gamers.
