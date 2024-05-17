@@ -146,7 +146,7 @@
     sddm = { # Settings for SDDM display manager.
       enable = true; # Enable SDDM.
       # wayland.enable = true; # Enable experimental Wayland support.
-      # theme = ""; # Theme to use.
+      # theme = "sddm-chili-theme"; # Theme to use.
       autoNumlock = true; # Enable num lock.
     };
     defaultSession = "hyprland"; # Set pre-selected session when starting display manager.
@@ -287,9 +287,10 @@
     # socat # Some fancy data redirection tool.
     stow # Symlink/dotfiles manager.
     zsh # Z Shell.
-    zsh-powerlevel10k # Powerlevel10k theme for zsh.
+    # zsh-powerlevel10k # Powerlevel10k theme for zsh.
     amdgpu_top # AMD GPU CLI monitoring tool.
     # netscanner # Network scanning tool. NOTE: Unstable only currently
+    zoxide # A smart cd replacement.
 
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
@@ -338,6 +339,7 @@
     # jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
     libsForQt5.polkit-kde-agent # KDE polkit agent.
     bottles # User-friendly wrapper for WINE.
+    pwvucontrol # Pipewire volume control interface.
 
 # Social:
     discord # The popular chat app for lit gamers.
