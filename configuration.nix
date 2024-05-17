@@ -45,6 +45,12 @@
     options = [ "x-systemd.automount" "noauto" ]; # Enable lazy mounting. Only mounts when first accessed instead of at boot.
   };
 
+# - Enable Swap File -
+  swapDevices = [ {
+    device = "/var/lib/swapfile";
+    size = 16*1024;
+  } ];
+
 
 
 # -------- USER ACCOUNTS --------
