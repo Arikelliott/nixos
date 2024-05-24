@@ -48,7 +48,7 @@
 # - Enable Swap File -
   swapDevices = [ {
     device = "/var/lib/swapfile";
-    size = 16*1024;
+    size = 32*1024;
   } ];
 
 
@@ -254,6 +254,7 @@
   environment.systemPackages = with pkgs; [
 
 # Main CLI Tools:
+    # Cool CLI alt tools: top alternatives, fzf, tree, fd, glow, fetcher?, ripgrep, zoxide, exa, bat, 
     btop # Fancy top-like process viewer.
     gotop # Fancy top-like process viewer.
     htop # Top-like process viewer with a few more features.
@@ -261,7 +262,6 @@
     tree # Shows contents of directories recursively.
     ranger # TUI file manager.
     # yazi # TUI file manager, maybe more feature-rich than Ranger.
-    # zoxide # "Smart" cd replacement.
     tldr # Summarizes common commands for CLI utilities.
     lsof # Lists open files and the corresponding processes.
     screen # Lets you have detachable shell sessions.
@@ -297,6 +297,8 @@
     amdgpu_top # AMD GPU CLI monitoring tool.
     # netscanner # Network scanning tool. NOTE: Unstable only currently
     zoxide # A smart cd replacement.
+    eza # ls replacement
+    bat # cat replacement
 
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
