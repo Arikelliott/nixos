@@ -69,6 +69,11 @@
 # - NixOS -
   nix = {
     settings.experimental-features = [ "nix-command" "flakes" ]; # Enable flakes and nix-command.
+    settings.auto-optimize-store = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+    };
   };
 
 # - Networking -
