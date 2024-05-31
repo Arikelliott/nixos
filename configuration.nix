@@ -39,6 +39,12 @@
     options = ["defaults"]; # Mount options (optional). NOTE: Use square brackets around string.
   };
 
+  fileSystems."/home/arik/.mount/media-archive" = { # Mount media drive.
+    device = "/dev/sda1";
+    fsType = "ext4";
+    options = ["defaults"];
+  };
+
   fileSystems."/home/arik/.mount/nas" = { # Mount NAS storage.
     device = "smorgasbord-server.lan:/home/arik/mount/nas";
     fsType = "nfs";
