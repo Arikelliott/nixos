@@ -384,6 +384,7 @@
     vscodium # Fancy GUI IDE.
     xfce.mousepad # basic text editor from XFCE.
     hugo # Static website generator.
+    keepassxc # KeePassXC password manager.
 
 # Media:
     audacity # Audio editing suite.
