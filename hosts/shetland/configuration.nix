@@ -23,6 +23,18 @@
 		};
   };
 
+  fileSystems."/home/arik/mount" = { # Mount home partition.
+    device = "/dev/sdb1";
+    fsType = "ext4";
+    options = ["defaults"]; # Mount options (optional). NOTE: Use square brackets around string.
+  };
+
+
+
+
+
+
+
   networking.hostName = "shetland"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
