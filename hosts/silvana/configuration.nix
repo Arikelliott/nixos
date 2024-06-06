@@ -42,7 +42,7 @@
   fileSystems."/home/arik/.mount/media-archive" = { # Mount media drive.
     device = "/dev/sdd1";
     fsType = "ext4";
-    options = [ "x-systemd.automount" "noauto" ];
+    options = ["defaults"];
   };
 
   fileSystems."/home/arik/.mount/nas" = { # Mount NAS storage.
