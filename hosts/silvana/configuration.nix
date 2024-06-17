@@ -40,6 +40,19 @@
   };
 
   fileSystems."/home/arik/.mount/media-archive" = { # Mount media drive.
+    device = "/dev/sdb1";
+    fsType = "ext4";
+    options = ["defaults"];
+  };
+
+  fileSystems."/home/arik/.mount/1tb-hdd" = { # Mount media drive.
+    device = "/dev/sdc1";
+    fsType = "ext4";
+    options = ["defaults"];
+  };
+
+
+  fileSystems."/home/arik/.mount/4tb-hdd" = { # Mount media drive.
     device = "/dev/sdd1";
     fsType = "ext4";
     options = ["defaults"];
@@ -50,6 +63,13 @@
     fsType = "nfs";
     options = [ "x-systemd.automount" "noauto" ]; # Enable lazy mounting. Only mounts when first accessed instead of at boot.
   };
+
+  fileSystems."/home/arik/.mount/windows-ssd" = { # Mount media drive.
+    device = "/dev/nvme0n1p4";
+    fsType = "ext4";
+    options = ["defaults"];
+  };
+
 
 # - Enable Swap File -
   swapDevices = [ {
@@ -247,6 +267,8 @@
 # - Java -
   programs.java.enable = true;
 
+# - Backups -
+
 
 
 # -------- SYSTEM PACKAGES --------
@@ -307,6 +329,7 @@
     # socat # Some fancy data redirection tool.
     stow # Symlink/dotfiles manager.
     zsh # Z Shell.
+    starship # Starship theme for zsh.
     # zsh-powerlevel10k # Powerlevel10k theme for zsh.
     amdgpu_top # AMD GPU CLI monitoring tool.
     # netscanner # Network scanning tool. NOTE: Unstable only currently
