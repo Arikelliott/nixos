@@ -89,6 +89,10 @@
      uid=1000; # Set User ID
    };
 
+  users.users.restic = {
+    isNormalUser = true;
+  };
+
 
 
 # -------- BASIC SYSTEM CONFIGURATION --------
@@ -268,7 +272,29 @@
   programs.java.enable = true;
 
 # - Backups -
+  # security.wrappers.restic = { # Run restic as non-root special user. Not sure if it's necessary or not?
+  #   source = "${pkgs.restic.out}/bin/restic";
+  #   owner = "restic";
+  #   group = "users";
+  #   permissions = "u=rwx,g=,o=";
+  #   capabilities = "cap_dac_read_search=+ep";
+  # };
 
+  services.restic.backups."general" = {
+    repository = "/home/arik/.mount/nas/backups";
+    paths = [
+      "/var/lib"
+      "/home/arik"
+    ];
+    exclude = [
+      "/home/arik/.mount/nas"
+    ];
+    timerConfig = {
+      OnCalendar = "Mon,Wed,Fri *-*-* 7:*:*";
+      Persistent = true;
+    };
+    passwordFile = "/etc/nixos/restic-password";
+  };
 
 
 # -------- SYSTEM PACKAGES --------
@@ -336,6 +362,7 @@
     zoxide # A smart cd replacement.
     eza # ls replacement
     bat # cat replacement
+    restic # Restic backuo utility.
 
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
