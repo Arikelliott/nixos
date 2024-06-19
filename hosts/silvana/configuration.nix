@@ -281,7 +281,7 @@
   # };
 
   services.restic.backups."general" = {
-    repository = "sftp:arik@192.168.1.3:/home/arik/mount/nas/backups";
+    repository = "sftp:arik@192.168.1.3:/home/arik/backups";
     paths = [
       "/var/lib"
       "/home/arik"
@@ -289,12 +289,16 @@
     exclude = [
       "/home/arik/.mount/nas"
     ];
-   timerConfig = {
-     OnCalendar = "Mon,Wed,Fri *-*-* 7:*:*";
-     Persistent = true;
+   timerConfig = { # Follows systemd-timer rules.
+     OnCalendar = "Mon,Wed,Fri *-*-* 7:*:*"; # Every mon/wed/fri at 7am.
+     Persistent = true; 
    };
     passwordFile = "/etc/nixos/restic-password";
     initialize = true;
+    pruneOpts = [
+      "--keep-daily 2"
+      "--keep-monthly 2"
+    ];
   };
 
 
