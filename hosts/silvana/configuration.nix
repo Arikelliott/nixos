@@ -281,7 +281,7 @@
   # };
 
   services.restic.backups."general" = {
-    repository = "sftp:arik@192.168.1.3:/home/arik/backups";
+    repository = "sftp:arik@192.168.1.3:/home/arik/mount/backups";
     paths = [
       "/var/lib"
       "/home/arik"
@@ -394,7 +394,7 @@
     nwg-look # Wayland alternative to lxappearance.
     cinnamon.nemo-with-extensions # Nemo file explorer
     cinnamon.nemo-fileroller
-    # xfce.thunar # Thunar file explorer.
+    xfce.thunar # Thunar file explorer.
     remmina # Remote desktop client.
     rofi-wayland # Wayland fork of Rofi app launcher.
     waybar # Wayland bar.
@@ -421,6 +421,7 @@
 
 # Social:
     discord # The popular chat app for lit gamers.
+    vesktop # Modded discord desktop client.
     betterdiscordctl # Discord client modder.
     irssi # Terminal-based IRC client.
 
