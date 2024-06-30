@@ -239,12 +239,38 @@
   services.apcupsd.enable = true;
 
 # - Docker -
-  virtualisation.docker.enable = true; # Enable docker.
+
   users.extraGroups.docker.members = [ "arik" ]; # List user accounts with Docker access.
-  # virtualisation.docker.rootless = { # Make docker run in a rootless mode for security reasons.
-  #   enable = true;
-  #   setSocketVariable = true;
-  # };
+  virtualisation = {
+    docker.enable = true; # Enable docker.
+    # docker.rootless = { # Make docker run in a rootless mode for security reasons.
+    #   enable = true;
+    #   setSocketVariable = true;
+    # };
+
+    oci-containers.backend = "docker";
+    oci-containers.containers = { # List all containers and options to run.
+      ollama = { # Run Ollama container.
+        # hostname = "ollama";
+        image = "ollama/ollama:rocm";
+        # image = "ollama/ollama";
+        volumes = [
+          "ollama:/root/.ollama"
+        ];
+        ports = [
+          "11434:11434"
+        ];
+        extraOptions = [
+          "--device=/dev/kfd"
+          "--device=/dev/dri"
+        ];
+      };
+      # ollama-webui = { # Run WebUI for Ollama.
+      #   hostname = "open-webui";
+      #   image = "ghcr.io/open-webui/open-webui:main";
+      # };
+    };
+  };
 
 # - Flatpak -
   services.flatpak.enable = true; # Enable Flatpak.
@@ -394,7 +420,7 @@
     nwg-look # Wayland alternative to lxappearance.
     cinnamon.nemo-with-extensions # Nemo file explorer
     cinnamon.nemo-fileroller
-    xfce.thunar # Thunar file explorer.
+    # xfce.thunar # Thunar file explorer.
     remmina # Remote desktop client.
     rofi-wayland # Wayland fork of Rofi app launcher.
     waybar # Wayland bar.
