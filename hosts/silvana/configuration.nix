@@ -394,6 +394,7 @@
     eza # ls replacement
     bat # cat replacement
     restic # Restic backuo utility.
+    tmux # Terminal multiplexer.
 
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
