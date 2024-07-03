@@ -395,6 +395,8 @@
     bat # cat replacement
     restic # Restic backuo utility.
     tmux # Terminal multiplexer.
+    xorg.xhost # Server access control program for X. (May be needed for Gparted?)
+    dig
 
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
