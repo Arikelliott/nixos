@@ -442,7 +442,8 @@
     ghostscript # Postscript interpreter for PDFs and stuff.
     # jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
     lua # Lua programming language
-    libsForQt5.polkit-kde-agent # KDE polkit agent.
+    # libsForQt5.polkit-kde-agent # KDE polkit agent.
+    lxqt.lxqt-policykit # LXQT polkit agent.
     bottles # User-friendly wrapper for WINE.
     pwvucontrol # Pipewire volume control interface.
 
