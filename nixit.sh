@@ -8,4 +8,4 @@
 # $2 - Get the kind of rebuild you'd like to do (e.g. switch, boot, etc.)
 
 
-sudo nixos-rebuild -I ./hosts/$1/configuration.nix $2
+sudo nixos-rebuild -I ./hosts/$1 $2 --upgrade

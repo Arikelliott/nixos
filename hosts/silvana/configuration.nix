@@ -11,6 +11,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./test.nix
     ];
 
 # - Other Imports -
@@ -398,6 +399,8 @@
     xorg.xhost # Server access control program for X. (May be needed for Gparted?)
     dig
 
+    fish
+
 # Admin/Desktop Tools:
     kitty # My preferred terminal program.
     baobab # Like WinDirStat. GTK graphical file usage viewer.
@@ -450,7 +453,7 @@
     pwvucontrol # Pipewire volume control interface.
 
 # Social:
-    discord # The popular chat app for lit gamers.
+    # discord # The popular chat app for lit gamers. Disabled while testing out vesktop.
     vesktop # Modded discord desktop client.
     betterdiscordctl # Discord client modder.
     irssi # Terminal-based IRC client.
