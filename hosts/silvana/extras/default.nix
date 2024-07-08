@@ -1,0 +1,6 @@
+{
+  imports =
+    [
+      ./extra-hardware.nix
+    ];
+}

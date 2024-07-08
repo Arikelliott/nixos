@@ -7,10 +7,13 @@
 
 # -------- IMPORTS --------
 
-# - Import Hardware Scan -
+# - Import All Modules -
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
+      ./extras
+
+      # ../modules/
     ];
 
 # - Other Imports -
