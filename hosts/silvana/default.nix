@@ -5,339 +5,60 @@
 
 {
 
+# - Define your hostname -
+  networking.hostName = "silvana";
+
 # -------- IMPORTS --------
 
 # - Import All Modules -
   imports =
     [
-      ./hardware-configuration.nix
-      ./extras
 
-      # ../modules/
+      # - Import configs exclusive to this host
+      ./hardware-configuration.nix # Auto-generated hardware-config 
+      ./extras # Manually added packages
+      # Includes:
+
+      # - Import General Settings
+      ../../modules/settings/nix-settings.nix # NixOS-specific general settings
+      ../../modules/settings/nix-maintenance.nix # NixOS maintenance settings
+      ../../modules/settings/general-settings.nix # General Linux system maintenance
+      ../../modules/settings/networking/default-networking-profile.nix # Basic universal networking settings
+      ../../modules/localization/timezones/detroit.nix # Set time zone
+      ../../modules/localization/default-localization-profile.nix # Set language, keyboard, etc.
+
+      # - Import Users
+      ../../modules/users/user-arik.nix # Add Arik
+      ../../modules/users/service-users/user-restic.nix # Add user account for Restic service
+
+      # - Import Software packages and settings -
+      ../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
+      ../../modules/software/networking/networkmanager.nix # Install NetworkManager
+      ../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
+      ../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
+      ../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
+      ../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
+      ../../modules/software/opentabletdriver.nix # Install OpenTabletDriver
+      ../../modules/software/zsh.nix # Install and enable ZSH and its extra software
+      ../../modules/software/ssh.nix  # Enable SSH
+      ../../modules/software/docker/docker-enable.nix # Install and configure Docker
+        ../../modules/software/docker/ollama.nix # Install and run Ollama docker container
+      ../../modules/software/flatpak/flatpak-enable.nix # Install and configure Flatpak
+
     ];
 
-# - Other Imports -
+# -------
 
 
 
-# # -------- BOOTLOADER AND PARTITIONING --------
 
 
-# --- Bootloader module
-# # - Setup Bootloader -
-#   boot.loader = {
-# 	  efi = {
-# 	    canTouchEfiVariables = true; # Whether the installation process is allowed to modify EFI boot variables.
-# 	  };
-# 	  grub = { # Enable GRUB as bootloader.
-# 	     enable = true;
-# 	     efiSupport = true;
-# 	     device = "nodev";
-#        useOSProber = true;
-# 	  };
-#   };
 
 
 
 
 
 
-
-
-# # - Mount Partitions -
-#   fileSystems."/home" = { # Mount home partition.
-#     device = "/dev/disk/by-uuid/bdee067f-4213-4889-b0c8-f69d4f5f3e7f";
-#     fsType = "ext4";
-#     options = ["defaults"]; # Mount options (optional). NOTE: Use square brackets around string.
-#   };
-
-#   fileSystems."/home/arik/.mount/media-archive" = { # Mount media drive.
-#     device = "/dev/disk/by-uuid/9ff69653-1756-423f-ab0b-03617a903ff6";
-#     fsType = "ext4";
-#     options = ["defaults"];
-#   };
-
-#   fileSystems."/home/arik/.mount/1tb-hdd" = { # Mount media drive.
-#     device = "/dev/disk/by-uuid/aefc0e6c-76c9-462d-b154-861aa982bc4e";
-#     fsType = "ext4";
-#     options = ["defaults"];
-#   };
-
-
-#   fileSystems."/home/arik/.mount/4tb-hdd" = { # Mount media drive.
-#     device = "/dev/disk/by-uuid/5f1af9c5-135b-4d34-8801-25193480ea32";
-#     fsType = "ext4";
-#     options = ["defaults"];
-#   };
-
-#   fileSystems."/home/arik/.mount/nas" = { # Mount NAS storage.
-#     device = "smorgasbord-server.lan:/home/arik/mount/nas";
-#     fsType = "nfs";
-#     options = [ "x-systemd.automount" "noauto" ]; # Enable lazy mounting. Only mounts when first accessed instead of at boot.
-#   };
-
-#   fileSystems."/home/arik/.mount/windows-ssd" = { # Mount media drive.
-#     device = "/dev/disk/by-uuid/247a2b30-2819-4744-b05a-c68cbc94f431";
-#     fsType = "ext4";
-#     options = ["defaults"];
-#   };
-
-
-# # - Enable Swap File -
-#   swapDevices = [ {
-#     device = "/var/lib/swapfile";
-#     size = 32*1024;
-#   } ];
-
-
-
-# -------- USER ACCOUNTS --------
-  # Define your user accounts. Don't forget to set a password with ‘passwd’!
-
-
-# --- User Extras
-  users.users.arik = {
-     isNormalUser = true;
-     initialPassword = "pw123";
-     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user using "wheel" group.
-     uid=1000; # Set User ID
-   };
-
-
-# --- Restic Software Module
-  users.users.restic = {
-    isNormalUser = true;
-  };
-
-
-
-# -------- BASIC SYSTEM CONFIGURATION --------
-
-# - NixOS -
-
-# --- Nix Settings Module
-  nix = {
-    settings.experimental-features = [ "nix-command" "flakes" ]; # Enable flakes and nix-command.
-
-
-# --- Nix Maintenance Module
-    settings.auto-optimise-store = true;
-    gc = {
-      automatic = true;
-      dates = "weekly";
-    };
-  };
-
-# - Systemd -
-
-# --- Something Settings Module
-  systemd.enableEmergencyMode = false;
-
-# - Networking -
-
-# --- Hostname Extra
-  networking.hostName = "silvana"; # Define your hostname.
-
-# --- Networkmanager Software Module
-  networking.networkmanager.enable = true;  # Enable NetworkManager
-
-# --- Networking Extra/Module
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain"; # Configure network proxy if necessary
-
-# - System Time -
-
-# --- Detroit Localization Module
-  time.timeZone = "America/Detroit"; # Set your time zone.
-
-# - Keyboard and Localization -
-
-# --- Something Localization Module
-  services.xserver.xkb.layout = "us"; # Configure keymap in X11.
-
-# - Printing -
-
-# --- Printing Module
-  services.printing.enable = true; # Enable CUPS to print documents.
-  services.printing.drivers = with pkgs; [
-    gutenprint
-    hplip
-    splix
-  ];
-
-# - Bluetooth -
-
-# --- Bluetooth Module
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-
-# - Sound -
-
-# --- Pipewire Sound Module
-  # sound.enable = true; # Enable default ALSA sound.
-  # security.rtkit.enable = true; # Enables RealtimeKit service, which handles scheduling?
-  # hardware.pulseaudio.enable = true;
-
-  # rtkit is optional but recommended
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-  };
-
-# - Mouse Input -
-
-# --- Touchpad Module
-  # services.xserver.libinput.enable = true; # Enable touchpad support (enabled default in most desktopManager).
-
-# - Drawing Tablets -
-
-# --- OpenTabletDriver Hardware Module
-  hardware.opentabletdriver.enable = true; # Enable OpenTabletDriver.
-
-# - Shell -
-
-# --- ZSH Default Software Module
-  programs.zsh.enable = true; # Enable zsh.
-  users.defaultUserShell = pkgs.zsh; # Set zsh as default shell.
-
-# - SSH -
-
-# --- SSH Default Software Module
-  services.openssh.enable = true; # Enable the OpenSSH daemon.
-  programs.ssh.enableAskPassword = false; # Disable Askpass (hopefully)
-
-# - Firewall -
-
-# --- Networking Extra/Module
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  networking.firewall.enable = false;
-
-# - Extra Init Commands -
-# This is for running shell commands on startup. All commands should be compatible with basic `sh` rather than bash.
-  # environment.extraInit = "
-  #   unset -v SSH_ASKPASS
-  # ";
-  # unset -v SSH_ASKPASS - Disables Askpass variable on startup so it won't bring up dialog for git and ssh.
-
-
-
-# -------- DESKTOP ENVIRONMENT CONFIGURATION --------
-
-
-# --- Hyprland Desktop Module
-
-# - Xserver -
-  services.xserver.enable = true; # Enable X11 windowing system.
-
-# - Display Manager -
-  # services.displayManager = {
-    # sddm = { # Settings for SDDM display manager.
-    #   enable = true; # Enable SDDM.
-    #   # wayland.enable = true; # Enable experimental Wayland support.
-    #   # theme = "sddm-chili-theme"; # Theme to use.
-    #   autoNumlock = true; # Enable num lock.
-    # };
-  #   defaultSession = "hyprland"; # Set pre-selected session when starting display manager.
-  # };
-
-  services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
-    lightdm.enable = false;
-  };
-
-# - Desktop Environment List: - 
-  # - GNOME # --- Currently disabled!
-  # services.xserver.desktopManager.gnome.enable = true; # Enable GNOME.
-  # environment.gnome.excludePackages = (with pkgs; [ # GNOME packages to exclude.
-  # ]) ++ (with pkgs.gnome; [
-  # ]);
-
-  # - Hyprland
-  programs.hyprland.enable = true; # Enable Hyprland.
-
-  # - BSPWM
-  # services.xserver.windowManager.bspwm.enable = true; # Enable BSPWM
-
-# - Policy Kit -
-  security.polkit.enable = true;
-
-
-# --- Something Software Module
-# - Disable xterm -
-  services.xserver.desktopManager.xterm.enable = false;
-
-# --- Look up what this does
-# - XDG Portal Settings -
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-  };
-
-
-
-# -------- SYSTEM SERVICES --------
-# NOTE: NixOS will install the required packagaes to make a service work even if
-# the package isn't specified in the packages list!
-# Find a list of services at: https://search.nixos.org/options?channel=23.11&show=jdk&size=50&sort=relevance&type=packages&query=jdk
-
-# --- RGB Module
-# - ckb-next -
-  hardware.ckb-next.enable = true; # Enable ckb-next daemon.
-
-# - OpenRGB -
-  services.hardware.openrgb.enable = true; # Enable OpenRGB daemon and other options.
-  # services.hardware.openrgb.motherboard = "amd"; # Ensure it's using AMD modules (should be automatically though).
-
-# --- UPS Module
-# - APC UPS Daemon -
-  services.apcupsd.enable = true;
-
-# - Docker -
-
-# --- Docker Software Module
-  users.extraGroups.docker.members = [ "arik" ]; # List user accounts with Docker access.
-  virtualisation = {
-    docker.enable = true; # Enable docker.
-    # docker.rootless = { # Make docker run in a rootless mode for security reasons.
-    #   enable = true;
-    #   setSocketVariable = true;
-    # };
-
-# --- Ollama Software Module
-    oci-containers.backend = "docker";
-    oci-containers.containers = { # List all containers and options to run.
-      ollama = { # Run Ollama container.
-        # hostname = "ollama";
-        image = "ollama/ollama:rocm";
-        # image = "ollama/ollama";
-        volumes = [
-          "ollama:/root/.ollama"
-        ];
-        ports = [
-          "11434:11434"
-        ];
-        extraOptions = [
-          "--device=/dev/kfd"
-          "--device=/dev/dri"
-        ];
-      };
-      # ollama-webui = { # Run WebUI for Ollama.
-      #   hostname = "open-webui";
-      #   image = "ghcr.io/open-webui/open-webui:main";
-      # };
-    };
-  };
-
-# - Flatpak -
-
-# --- Software Module
-  services.flatpak.enable = true; # Enable Flatpak.
 
 # - Spotify -
 
@@ -583,20 +304,10 @@
     papirus-icon-theme
   ];
 
-# - User Package Lists
 
-  # - Arik's packages
-  users.users.arik.packages = with pkgs; [ # Install these packages for this single user.
-    # example-package
-  ];
 
-# - Other -
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
-    enableSSHSupport = true;
   };
 
 

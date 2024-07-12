@@ -1,6 +1,8 @@
 {
-  imports =
-    [
-      ./extra-hardware.nix
-    ];
+imports =
+  [
+    ./extra-hardware.nix
+    ./rgb.nix
+    ./apc-ups.nix
+  ];
 }
