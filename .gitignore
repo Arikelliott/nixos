@@ -1,5 +1,5 @@
 # .gitignore
 result/
-nix-*
+# nix-* # Not sure why this was here?
 *.swp
 
