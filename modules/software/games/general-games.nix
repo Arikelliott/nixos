@@ -11,6 +11,6 @@
 	environment.systemPackages = with pkgs; [
 		prismlauncher # Minecraft instance manager.
 		mangohud # Game stat overlay software.
-	}
+	];
 
 }

@@ -43,7 +43,7 @@
 		../../modules/software/flatpak/flatpak-enable.nix # Install and configure Flatpak
 		../../modules/software/fonts.nix # Install default fonts
 		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
-		../../modules/software/games/general-gamesT.nix # Install Steam
+		../../modules/software/games/general-games.nix # Install Steam
 		../../modules/software/general-software.nix # General universal software
 		../../modules/software/music/spotify.nix # Install Spotify
 		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities

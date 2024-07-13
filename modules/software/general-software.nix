@@ -2,14 +2,13 @@
 
 { config, pkgs, ... }:
 
-}
+{
 
 	programs.git = {
 		enable = true; # Enable git
 		# userName  = "Arikelliott";
 		# userEmail = "arikelliott@protonmail.com";
 		config.init.defaultBranch = "main";
-		# };
 	};
 
 environment.systemPackages = with pkgs; [
