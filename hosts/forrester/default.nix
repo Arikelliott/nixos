@@ -31,6 +31,7 @@
 		# ../../modules/users/service-users/user-restic.nix # Add user account for Restic service # CAN ENABLE LATER
 
 		# - Import Software packages and settings -
+		../../modules/software/desktop-environments/bspwm.nix
 		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
 		../../modules/software/fonts.nix # Install default fonts
@@ -46,6 +47,7 @@
 		../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
 		../../modules/software/ssh.nix  # Enable SSH
 		../../modules/software/system-utils.nix # Sundry utilities
+		../../modules/software/touchpad-input.nix
 		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
 
     ];

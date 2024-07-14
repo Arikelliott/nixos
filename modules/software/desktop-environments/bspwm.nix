@@ -21,9 +21,9 @@
 
     # --- Look up what this does
     # - XDG Portal Settings -
-    xdg.portal = {
-        enable = true;\
-    };
+    # xdg.portal = {
+    #     enable = true;
+    # };
 
     environment.systemPackages = with pkgs; [
 		xorg.xhost # Server access control program for X. (May be needed for Gparted?)
