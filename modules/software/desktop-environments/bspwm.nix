@@ -5,10 +5,10 @@
     # - Xserver -
     services.xserver.enable = true; # Enable X11 windowing system.
 
-	services.xserver.displayManager.startx.enable = true; # Enable Startx to start a desktop environment with.
+	# services.xserver.displayManager.startx.enable = true; # Enable Startx to start a desktop environment with.
 
     services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
-        lightdm.enable = false;
+        lightdm.enable = true;
     };
 
     # - BSPWM
