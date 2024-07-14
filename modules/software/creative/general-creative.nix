@@ -15,7 +15,6 @@ environment.systemPackages = with pkgs; [
     # blender # 3D Modeling software.
     inkscape # Vector illustration program.
     krita # Photo editing and painting program.
-    spotify # Want a break from the ads? Try Spotify Premium!
     # calf # Open source audio plugins for musicians.
     # easyeffects # PipeWire audio effects.
     ffmpeg # Audio and video tool.
