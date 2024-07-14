@@ -49,9 +49,9 @@
 		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
 		../../modules/software/networking/networkmanager.nix # Install NetworkManager
 		../../modules/software/opentabletdriver.nix # Install OpenTabletDriver
-		../../modules/software/productivity.nix/desktop-utils.nix # GUI admin utilities
-		../../modules/software/productivity.nix/general-productivity.nix # 
-		../../modules/software/productivity.nix/text-editors.nix # Regular text editors
+		../../modules/software/productivity/desktop-utils.nix # GUI admin utilities
+		../../modules/software/productivity/general-productivity.nix # 
+		../../modules/software/productivity/text-editors.nix # Regular text editors
 		../../modules/software/social/chat-clients.nix # Discord, IRC, etc.
 		../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
 		../../modules/software/ssh.nix  # Enable SSH
@@ -79,4 +79,3 @@
 	system.stateVersion = "23.05"; # Did you read the comment?
 
 }
-
