@@ -2,6 +2,14 @@
 
 {
 
+    imports = [
+
+		# - Import configs exclusive to this host
+		./icons.nix
+        ./themes.nix
+
+    ];
+
     # - Xserver -
     services.xserver.enable = true; # Enable X11 windowing system.
 
@@ -51,6 +59,7 @@
 		swww # Fancy Wayland wallpaper setter and daemon.
 		waypaper # GUI frontend for swww.
 		loupe # GUI Image Viewer.
+        # lxappearance # Doesn't work on Wayland at all
 		nwg-look # Wayland alternative to lxappearance.
 		cinnamon.nemo-with-extensions # Nemo file explorer
 		cinnamon.nemo-fileroller
