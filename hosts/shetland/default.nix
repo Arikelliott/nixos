@@ -1,144 +1,51 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+# My NixOS Config
+# Author: Arik Elliott
 
 { config, lib, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
+
+# - Define your hostname -
+	networking.hostName = "shetland";
+
+# -------- IMPORTS --------
+
+# - Import All Modules -
+  	imports = [
+
+		# - Import configs exclusive to this host
+		./hardware-configuration.nix # Auto-generated hardware-config 
+		./extras # Manually added configs
+		# Includes:
+
+		# - Import General Settings
+		../../modules/settings/nixos-settings.nix # NixOS-specific general settings
+		../../modules/settings/nixos-maintenance.nix # NixOS maintenance settings
+		../../modules/settings/general-settings.nix # General Linux system maintenance
+		../../modules/settings/networking/default-networking-profile.nix # Basic universal networking settings
+		../../modules/localization/timezones/detroit.nix # Set time zone
+		../../modules/localization/default-localization-profile.nix # Set language, keyboard, etc.
+
+		# - Import Users
+		../../modules/users/user-arik.nix # Add Arik
+		../../modules/users/user-access.nix # Add Access
+
+		# - Import Software packages and settings -
+		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
+		../../modules/software/general-software.nix # General universal software
+		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
+		../../modules/software/networking/networkmanager.nix # Install NetworkManager
+		../../modules/software/productivity/text-editors.nix # Regular text editors
+		../../modules/software/ssh.nix  # Enable SSH
+		# ../../modules/software/zsh.nix # Install and enable ZSH and its extra software
+    ../../modules/software/dev/cockpit.nix # Enable Cockpit server monitoring
+
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader = {
-	efi = {
-	  canTouchEfiVariables = true;
-	};
-	grub = {
-	  enable = true;
-	  efiSupport = true;
-	  device = "nodev";
-	useOSProber = true;
-		};
-  };
-
-  fileSystems."/home/arik/mount" = { # Mount NAS partition.
-    device = "/dev/sdb1";
-    fsType = "ext4";
-    options = ["defaults"]; # Mount options (optional). NOTE: Use square brackets around string.
-  };
-
-  services.nfs.server.enable = true;
-  services.nfs.server.exports = "
-    /home/arik/mount         192.168.1.0/24(rw,fsid=0,no_subtree_check)
-  ";
+# -------
 
 
-
-
-
-
-
-  networking.hostName = "shetland"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
-  # Set your time zone.
-  time.timeZone = "America/Detroit";
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-
-  
-
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "us";
-  # services.xserver.xkb.options = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
-
-  # Enable git
-  programs.git = {
-    enable = true;
-    config.init.defaultBranch = "main";
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.arik= {
-    isNormalUser = true;
-    initialPassword = "pw123";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-     uid=1000; # Set User ID
-  #   packages = with pkgs; [
-  #     firefox
-  #     tree
-  #   ];
-  };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-  ];
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
-  programs.ssh.enableAskPassword = false;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  networking.firewall.enable = false;
-
-  # Cockpit
-  services.cockpit = {
-    enable = true;
-    port = 9090;
-    settings = {
-      WebService = {
-        AllowUnencrypted = true;
-      };
-    };
-  };
+# -------- SYSTEM STATE --------
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
