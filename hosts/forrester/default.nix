@@ -6,7 +6,7 @@
 {
 
 # - Define your hostname -
-	networking.hostName = "silvana";
+	networking.hostName = "forrester";
 
 # -------- IMPORTS --------
 
@@ -28,28 +28,18 @@
 
 		# - Import Users
 		../../modules/users/user-arik.nix # Add Arik
-		../../modules/users/user-access.nix # Add Access
-		../../modules/users/service-users/user-restic.nix # Add user account for Restic service
+		# ../../modules/users/service-users/user-restic.nix # Add user account for Restic service # CAN ENABLE LATER
 
 		# - Import Software packages and settings -
-		../../modules/software/amdgpu-utils.nix # Install AMD graphics utilities
+		../../modules/software/desktop-environments/gnome.nix
 		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
-		../../modules/software/creative/general-creative.nix # Media, makerspace, etc. software
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
-		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
-		../../modules/software/dev/java.nix # Install Java
-		../../modules/software/dev/lua.nix # Install lua
-		../../modules/software/docker/docker-enable.nix # Install and configure Docker
-		../../modules/software/docker/ollama.nix # Install and run Ollama docker container
-		../../modules/software/flatpak/flatpak-enable.nix # Install and configure Flatpak
 		../../modules/software/fonts.nix # Install default fonts
 		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
-		../../modules/software/games/general-games.nix # Install Steam
 		../../modules/software/general-software.nix # General universal software
 		../../modules/software/music/spotify.nix # Install Spotify
 		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
 		../../modules/software/networking/networkmanager.nix # Install NetworkManager
-		../../modules/software/opentabletdriver.nix # Install OpenTabletDriver
 		../../modules/software/productivity/desktop-utils.nix # GUI admin utilities
 		../../modules/software/productivity/general-productivity.nix # 
 		../../modules/software/productivity/text-editors.nix # Regular text editors
@@ -57,6 +47,7 @@
 		../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
 		../../modules/software/ssh.nix  # Enable SSH
 		../../modules/software/system-utils.nix # Sundry utilities
+		../../modules/software/touchpad-input.nix
 		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
 
     ];
@@ -77,6 +68,6 @@
 	# this value at the release version of the first install of this system.
 	# Before changing this value read the documentation for this option
 	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-	system.stateVersion = "23.05"; # Did you read the comment?
+	system.stateVersion = "24.05"; # Did you read the comment?
 
 }
