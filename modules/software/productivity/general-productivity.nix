@@ -9,6 +9,7 @@ environment.systemPackages = with pkgs; [
     # calibre # E-reader
     # evince # All-purpose document viewer (PDFs, etc.).
     hugo # Static website generator.
+    pandoc # General filetype converter (eg. md to html).
 
 ];
 
