@@ -13,3 +13,6 @@ This is the readme for my NixOS configuration.
 - https://nixos.wiki/wiki/flakes
 - https://vtimofeenko.com/posts/practical-nix-flake-anatomy-a-guided-tour-of-flake.nix/
 - https://drakerossman.com/blog/how-to-convert-default-nixos-to-nixos-with-flakes
+
+### Nix Itself
+- https://teu5us.github.io/nix-lib.html A list of built-in Nix functions as well as libraries
