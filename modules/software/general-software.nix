@@ -39,6 +39,7 @@ environment.systemPackages = with pkgs; [
     bat # cat replacement
     tmux # Terminal multiplexer.
 	dig
+    wev # Get wayland keypresses in terminal
 
 	# GUI software
 	firefox
