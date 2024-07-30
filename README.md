@@ -16,3 +16,16 @@ This is the readme for my NixOS configuration.
 
 ### Nix Itself
 - https://teu5us.github.io/nix-lib.html A list of built-in Nix functions as well as libraries
+
+### Handy Config References
+- https://github.com/MatthiasBenaets/nix-config
+
+### Useful Flakes
+- github:nixos/nixos-hardware
+- github:nix-community/home-manager
+- github:lnl7/nix-darwin
+- github:nix-community/NUR
+- github:nix-community/nixvim
+- git+https://github.com/hyprwm/Hyprland?submodules=1
+- github:KZDKM/Hyprspace
+- github:pjones/plasma-manager
