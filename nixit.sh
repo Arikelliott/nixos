@@ -10,4 +10,4 @@
 
 # sudo nixos-rebuild -I nixos-config=./hosts/$1 $2 --upgrade
 
-sudo nixos-rebuild $2 --flake "/home/arik/Documents/repos/nixos/flake.nix#$1"
+sudo nixos-rebuild $2 --flake "/home/arik/Documents/repos/nixos#$1"
