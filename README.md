@@ -7,6 +7,7 @@ This is the readme for my NixOS configuration.
 
 ## Stuff for Later:
 - https://learnxinyminutes.com/docs/nix/ (learn Nix language fast)
+- https://jorel.dev/NixOS4Noobs/garbage.html How to do garbage collection
 
 ### Flakes
 - https://nix.dev/manual/nix/2.18/command-ref/new-cli/nix3-flake#examples
@@ -29,3 +30,4 @@ This is the readme for my NixOS configuration.
 - git+https://github.com/hyprwm/Hyprland?submodules=1
 - github:KZDKM/Hyprspace
 - github:pjones/plasma-manager
+
