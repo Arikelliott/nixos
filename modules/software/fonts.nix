@@ -2,7 +2,7 @@
 
 {
 
-fonts.fonts = with pkgs; [
+fonts.packages = with pkgs; [
 
 	noto-fonts # Google's universal font.
 	font-awesome # scalable vector icon font.
