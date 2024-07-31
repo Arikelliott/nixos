@@ -2,7 +2,7 @@
 
 {
 
-environment.systemPackages = with pkgs; [
+fonts.fonts = with pkgs; [
 
 	noto-fonts # Google's universal font.
 	font-awesome # scalable vector icon font.
