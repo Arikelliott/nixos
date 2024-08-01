@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
 
 	nix = {
@@ -14,5 +16,11 @@
 			"electron-25.9.0"
 		];
 	};
+
+	environment.systemPackages = with pkgs; [
+
+    home-manager # Install Home Manager.
+
+	];
 
 }
