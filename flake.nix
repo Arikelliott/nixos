@@ -12,7 +12,7 @@
 		};
 	};
 
-	outputs = { self, nixpkgs, home-manager, ... }: {
+	outputs = inputs @ { self, nixpkgs, home-manager, ... }: { # Figure out what the "inputs @" bit does. Seems to work the same as without?
 
 		nixosConfigurations = {
 			agrew = nixpkgs.lib.nixosSystem {
