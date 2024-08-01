@@ -23,7 +23,7 @@ environment.systemPackages = with pkgs; [
     mpv # Media player.
     obs-studio # Video recording software.
     strawberry # Music player app.
-    cura # Slicer for 3D printing.
+    # cura # Slicer for 3D printing.
     # freecad # Open-source CAD software.
     # openscad # Programmatic CAD software.
 
