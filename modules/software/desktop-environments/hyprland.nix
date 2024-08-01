@@ -61,8 +61,8 @@
 		loupe # GUI Image Viewer.
         # lxappearance # Doesn't work on Wayland at all
 		nwg-look # Wayland alternative to lxappearance.
-		cinnamon.nemo-with-extensions # Nemo file explorer
-		cinnamon.nemo-fileroller
+		nemo-with-extensions # Nemo file explorer
+		nemo-fileroller
 		rofi-wayland # Wayland fork of Rofi app launcher.
 		waybar # Wayland bar.
 		wireshark # Packet analyzer.
