@@ -61,6 +61,13 @@
 
     ];
 
+	home-manager = {
+		users = {
+			extraSpecialArgs = { inherit inputs; };
+			arik = import ./home.nix;
+		};
+	};
+
 # -------
 
 
