@@ -1,7 +1,7 @@
 # My NixOS Config
 # Author: Arik Elliott
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
 
@@ -61,10 +61,18 @@
 
     ];
 
+	# - Import Home Manager files
 	home-manager = {
+		backupFileExtension = "hmbackup";
+		useGlobalPkgs = true;
+		useUserPackages = true;
+		extraSpecialArgs = { inherit inputs; };
 		users = {
-			extraSpecialArgs = { inherit inputs; };
-			arik = import ./home.nix;
+			arik = {
+				imports = [
+					./home.nix
+				];
+			};
 		};
 	};
 
