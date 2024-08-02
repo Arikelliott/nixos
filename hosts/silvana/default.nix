@@ -39,6 +39,7 @@
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
 		../../modules/software/dev/java.nix # Install Java
 		../../modules/software/dev/lua.nix # Install lua
+		../../modules/software/dev/nixd.nix # Install nixd LSP
 		../../modules/software/docker/docker-enable.nix # Install and configure Docker
 		../../modules/software/docker/ollama.nix # Install and run Ollama docker container
 		../../modules/software/flatpak/flatpak-enable.nix # Install and configure Flatpak
