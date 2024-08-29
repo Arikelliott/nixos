@@ -19,8 +19,8 @@
     };
 
     imports = [
-        ./kitty-color-theme-pywal.nix
-        # ./kitty-color-theme.nix
+        # ./kitty-color-theme-pywal.nix
+        ./kitty-color-theme.nix
     ];
 
 }
