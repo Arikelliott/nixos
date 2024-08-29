@@ -3,10 +3,14 @@
 
 { config, pkgs, inputs, ... }:
 
+let
+	hostname = "silvana";
+in
+
 {
 
 # - Define your hostname -
-	networking.hostName = "silvana";
+	networking.hostName = hostname;
 
 # -------- IMPORTS --------
 
@@ -70,6 +74,7 @@
 		extraSpecialArgs = { inherit inputs; };
 		users = {
 			arik = {
+				home.hostname = hostname;
 				imports = [
 					./home.nix
 				];
