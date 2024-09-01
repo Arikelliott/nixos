@@ -17,7 +17,7 @@
 	# };
 
 	services.restic.backups."general" = {
-		repository = "sftp:arik@192.168.1.3:/home/arik/mount/backups";
+		repository = "sftp:arik@192.168.50.3:/home/arik/mount/backups";
 		paths = [
 			"/var/lib"
 			"/home/arik"
