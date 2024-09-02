@@ -74,7 +74,7 @@ in
 		extraSpecialArgs = { inherit inputs; };
 		users = {
 			arik = {
-				home.hostname = hostname;
+				# home.hostname = hostname;
 				imports = [
 					./home.nix
 				];
