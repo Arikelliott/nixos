@@ -17,6 +17,8 @@
 	# };
 
 	services.restic.backups."general" = {
+		# IMPORTANT NOTE: Restic runs as root by default.
+		# If it's not working, try doing ssh keys for root to the nas
 		repository = "sftp:arik@192.168.50.3:/home/arik/mount/backups";
 		paths = [
 			"/var/lib"
