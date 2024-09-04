@@ -1,3 +1,6 @@
+# Handy guide to NixOS VFIO
+# https://kilo.bytesize.xyz/gpu-passthrough-on-nixos
+
 { pkgs, config, ... }:
 let
   	# Change this to your username.
