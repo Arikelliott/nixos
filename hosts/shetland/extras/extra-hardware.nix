@@ -19,7 +19,7 @@
 
 # - Mount Partitions -
     fileSystems."/home/arik/mount" = { # Mount NAS partition.
-        device = "/dev/sdb1";
+        device = "/dev/disk/by-uuid/3db407c1-670f-4861-be10-14a88aa92fab";
         fsType = "ext4";
         options = ["defaults"]; # Mount options (optional). NOTE: Use square brackets around string.
     };
