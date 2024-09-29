@@ -35,6 +35,7 @@ environment.systemPackages = with pkgs; [
     rclone # CLI syncing tool.
     ripgrep # Enhanced alternative to grep, I think.
     zoxide # A smart cd replacement.
+    fzf # Fuzzy finder.
     eza # ls replacement
     bat # cat replacement
     tmux # Terminal multiplexer.
