@@ -40,6 +40,7 @@ in
 		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
 		../../modules/software/creative/general-creative.nix # Media, makerspace, etc. software
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
+		../../modules/software/desktop-environments/cosmic.nix # Enable Cosmic desktop environment.
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
 		../../modules/software/dev/java.nix # Install Java
 		../../modules/software/dev/lua.nix # Install lua
