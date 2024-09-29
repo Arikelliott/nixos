@@ -25,7 +25,7 @@
     # };
 
     services.displayManager = { # Disable LightDM default when no other display manager is enabled.
-        cosmic.greeter.enable = false;
+        cosmic.greeter.enable = true;
     };
 
     # - Hyprland
