@@ -7,9 +7,13 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		# Add stuff to make Cosmic flake work. https://github.com/lilyinstarlight/nixos-cosmic
+		nixpkgs.follows = "nixos-cosmic/nixpkgs"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
 	};
 
-	outputs = inputs @ { self, nixpkgs, home-manager, ... }: # Figure out what the "inputs@" bit does. Seems to work the same as without?
+	outputs = inputs @ { self, nixpkgs, home-manager, nixos-cosmic, ... }: # Figure out what the "inputs@" bit does. Seems to work the same as without?
 	{
 		nixosConfigurations = {
 			agrew = nixpkgs.lib.nixosSystem {
@@ -50,6 +54,17 @@
 				modules = [
 					./hosts/silvana
 					home-manager.nixosModules.home-manager
+
+					# Begin Cosmic-related stuff
+					{
+            nix.settings = {
+              substituters = [ "https://cosmic.cachix.org/" ];
+              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            };
+          }
+					nixos-cosmic.nixosModules.default
+					# End Cosmic-related stuff
+
 				];
 			};
 		};
