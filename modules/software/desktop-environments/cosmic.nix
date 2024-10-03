@@ -13,23 +13,9 @@
     # - Xserver -
     services.xserver.enable = true; # Enable X11 windowing system.
 
-    # - Display Manager -
-    # services.displayManager = {
-        # sddm = { # Settings for SDDM display manager.
-        #   enable = true; # Enable SDDM.
-        #   # wayland.enable = true; # Enable experimental Wayland support.
-        #   # theme = "sddm-chili-theme"; # Theme to use.
-        #   autoNumlock = true; # Enable num lock.
-        # };
-    #   defaultSession = "hyprland"; # Set pre-selected session when starting display manager.
-    # };
+    services.displayManager.cosmic-greeter.enable = true;
 
-    services.displayManager = { # Disable LightDM default when no other display manager is enabled.
-        cosmic.greeter.enable = true;
-    };
-
-    # - Hyprland
-    services.desktopManager.cosmic.enable = true; # Enable Hyprland.
+    services.desktopManager.cosmic.enable = true;
 
 
 
