@@ -73,6 +73,7 @@
 		pwvucontrol # Pipewire volume control interface.
 		pywal # Color scheme generator/switcher.
 		stow # Symlink/dotfiles manager.
+        ags # GTK Widget making utility.
 		
 	];
 
