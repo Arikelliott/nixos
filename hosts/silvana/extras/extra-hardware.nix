@@ -42,12 +42,12 @@
     options = ["defaults"];
   };
 
-  fileSystems."/home/arik/.mount/nas" = { # Mount NAS storage.
-    # device = "smorgasbord-server.lan:/home/arik/mount/nas";
-    device = "192.168.50.3:/home/arik/mount/nas";
-    fsType = "nfs";
-    options = [ "x-systemd.automount" "noauto" ]; # Enable lazy mounting. Only mounts when first accessed instead of at boot.
-  };
+  # fileSystems."/home/arik/.mount/nas" = { # Mount NAS storage.
+  #   # device = "smorgasbord-server.lan:/home/arik/mount/nas";
+  #   device = "192.168.50.3:/home/arik/mount/nas";
+  #   fsType = "nfs";
+  #   options = [ "x-systemd.automount" "noauto" ]; # Enable lazy mounting. Only mounts when first accessed instead of at boot.
+  # };
 
   fileSystems."/home/arik/.mount/windows-ssd" = { # Mount media drive.
     device = "/dev/disk/by-uuid/247a2b30-2819-4744-b05a-c68cbc94f431";
