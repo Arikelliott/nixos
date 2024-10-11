@@ -23,12 +23,11 @@
 		../../modules/settings/nixos-maintenance.nix # NixOS maintenance settings
 		../../modules/settings/general-settings.nix # General Linux system maintenance
 		../../modules/settings/networking/default-networking-profile.nix # Basic universal networking settings
-		../../modules/localization/timezones/detroit.nix # Set time zone
+		../../modules/localization/timezones/chicago.nix # Set time zone
 		../../modules/localization/default-localization-profile.nix # Set language, keyboard, etc.
 
 		# - Import Users
 		../../modules/users/user-arik.nix # Add Arik
-		../../modules/users/user-access.nix # Add Access
 
 		# - Import Software packages and settings -
 		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
@@ -37,7 +36,7 @@
 		../../modules/software/networking/networkmanager.nix # Install NetworkManager
 		../../modules/software/productivity/text-editors.nix # Regular text editors
 		../../modules/software/ssh.nix  # Enable SSH
-		# ../../modules/software/zsh.nix # Install and enable ZSH and its extra software
+		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
     # ../../modules/software/dev/cockpit.nix # Enable Cockpit server monitoring
 
     ];
