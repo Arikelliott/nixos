@@ -16,6 +16,8 @@
 	outputs = inputs @ { self, nixpkgs, home-manager, nixos-cosmic, ... }: # Figure out what the "inputs@" bit does. Seems to work the same as without?
 	{
 		nixosConfigurations = {
+
+			# Linode server.
 			agrew = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
@@ -24,6 +26,7 @@
 				];
 			};
 
+			# Gateway laptop.
 			forrester = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
@@ -32,6 +35,7 @@
 				];
 			};
 
+			# Dell laptop.
 			savannah = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
@@ -40,6 +44,7 @@
 				];
 			};
 
+			# Dell Optiplex server.
 			shetland = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
@@ -48,6 +53,7 @@
 				];
 			};
 
+			# Main desktop PC.
 			silvana = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				specialArgs = { inherit inputs; };
