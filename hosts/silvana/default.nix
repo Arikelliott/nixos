@@ -1,7 +1,7 @@
 # My NixOS Config
 # Author: Arik Elliott
 
-{ config, pkgs, inputs, ... }:
+{ inputs, ... }:
 
 let
 	hostname = "silvana";
@@ -18,7 +18,7 @@ in
   	imports = [
 
 		# - Import configs exclusive to this host
-		./hardware-configuration.nix # Auto-generated hardware-config 
+		./hardware-configuration.nix # Auto-generated hardware-config
 		./extras # Manually added configs
 		# Includes:
 
@@ -57,7 +57,7 @@ in
 		../../modules/software/networking/networkmanager.nix # Install NetworkManager
 		../../modules/software/opentabletdriver.nix # Install OpenTabletDriver
 		../../modules/software/productivity/desktop-utils.nix # GUI admin utilities
-		../../modules/software/productivity/general-productivity.nix # 
+		../../modules/software/productivity/general-productivity.nix #
 		../../modules/software/productivity/text-editors.nix # Regular text editors
 		../../modules/software/social/chat-clients.nix # Discord, IRC, etc.
 		../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
