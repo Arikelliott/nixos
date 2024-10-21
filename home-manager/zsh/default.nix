@@ -12,10 +12,10 @@
 		# 	source = ./powerlevel10k;
 		# 	# recursive = true;
 		# };
-		# ".config/p10k.zsh" = {
-		#     enable = true;
-		# 	source = ./.p10k.zsh;
-		# };
+		".config/p10k.zsh" = {
+		    enable = true;
+			source = ./.p10k.zsh;
+		};
 	};
 }
 
