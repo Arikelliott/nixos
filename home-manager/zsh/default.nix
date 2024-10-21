@@ -7,15 +7,15 @@
 
 	# Import p10k and theme.
 	home.file = {
-	   ".config/powerlevel10k" = {
-			enable = true;
-			source = ./powerlevel10k;
-			recursive = true;
-		};
-		".config/p10k.zsh" = {
-		    enable = true;
-			source = ./.p10k.zsh;
-		};
+	 #   ".config/powerlevel10k" = {
+		# 	enable = true;
+		# 	source = ./powerlevel10k;
+		# 	# recursive = true;
+		# };
+		# ".config/p10k.zsh" = {
+		#     enable = true;
+		# 	source = ./.p10k.zsh;
+		# };
 	};
 }
 
