@@ -94,6 +94,6 @@
 
 	imports = [
 		../../home-manager/kitty
-		../../home-manager/zsh
+		../../home-manager/shell
 	];
 }
