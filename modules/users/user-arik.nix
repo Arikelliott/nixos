@@ -7,4 +7,10 @@ users.users.arik = {
     uid=1000; # Set User ID
 };
 
+nix.settings.trusted-users = [
+  "root"
+  "arik"
+  "@wheel"
+];
+
 }
