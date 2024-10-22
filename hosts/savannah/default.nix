@@ -14,7 +14,7 @@
   	imports = [
 
 		# - Import configs exclusive to this host
-		./hardware-configuration.nix # Auto-generated hardware-config 
+		./hardware-configuration.nix # Auto-generated hardware-config
 		./extras # Manually added configs
 		# Includes:
 
@@ -41,7 +41,7 @@
 		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
 		../../modules/software/networking/networkmanager.nix # Install NetworkManager
 		../../modules/software/productivity/desktop-utils.nix # GUI admin utilities
-		../../modules/software/productivity/general-productivity.nix # 
+		../../modules/software/productivity/general-productivity.nix #
 		../../modules/software/productivity/text-editors.nix # Regular text editors
 		../../modules/software/social/chat-clients.nix # Discord, IRC, etc.
 		../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
@@ -51,6 +51,23 @@
 		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
 
     ];
+
+	# - Import Home Manager files
+	home-manager = {
+		backupFileExtension = "hmbackup";
+		useGlobalPkgs = true;
+		useUserPackages = true;
+		extraSpecialArgs = { inherit inputs; };
+		users = {
+			arik = {
+				# home.hostname = hostname;
+				imports = [
+					./home.nix
+				];
+			};
+		};
+	};
+
 
 # -------
 

@@ -14,7 +14,7 @@
   	imports = [
 
 		# - Import configs exclusive to this host
-		./hardware-configuration.nix # Auto-generated hardware-config 
+		./hardware-configuration.nix # Auto-generated hardware-config
 		./extras # Manually added configs
 		# Includes:
 
@@ -40,6 +40,23 @@
     # ../../modules/software/dev/cockpit.nix # Enable Cockpit server monitoring
 
     ];
+
+	# - Import Home Manager files
+	home-manager = {
+		backupFileExtension = "hmbackup";
+		useGlobalPkgs = true;
+		useUserPackages = true;
+		extraSpecialArgs = { inherit inputs; };
+		users = {
+			arik = {
+				# home.hostname = hostname;
+				imports = [
+					./home.nix
+				];
+			};
+		};
+	};
+
 
 # -------
 
@@ -71,4 +88,3 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-
