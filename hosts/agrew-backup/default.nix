@@ -1,7 +1,7 @@
 # My NixOS Config
 # Author: Arik Elliott
 
-{ config, lib, pkgs, ... }:
+{ inputs, ... }:
 
 {
 
@@ -14,7 +14,7 @@
   	imports = [
 
 		# - Import configs exclusive to this host
-		./hardware-configuration.nix # Auto-generated hardware-config 
+		./hardware-configuration.nix # Auto-generated hardware-config
 		./extras # Manually added configs
 		# Includes:
 
@@ -72,4 +72,3 @@
   system.stateVersion = "24.05"; # Did you read the comment?
 
 }
-

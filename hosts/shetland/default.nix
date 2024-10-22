@@ -1,7 +1,7 @@
 # My NixOS Config
 # Author: Arik Elliott
 
-{ config, lib, pkgs, ... }:
+{ inputs, ... }:
 
 {
 
