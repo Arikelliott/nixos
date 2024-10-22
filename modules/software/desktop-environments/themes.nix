@@ -12,7 +12,7 @@
 	sierra-gtk-theme
 	lavanda-gtk-theme
 	paper-gtk-theme
-	qogir-gtk-theme
+	qogir-theme
 	nightfox-gtk-theme
 	mojave-gtk-theme
 	matrix-gtk-theme
