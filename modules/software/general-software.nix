@@ -41,6 +41,7 @@ environment.systemPackages = with pkgs; [
     tmux # Terminal multiplexer.
 	dig
     wev # Get wayland keypresses in terminal
+    xdg-ninja # Shell script which checks your $HOME for unwanted files and directories
 
 	# GUI software
 	firefox
