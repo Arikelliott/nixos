@@ -3,9 +3,17 @@
 {
     gtk = {
         enable = true;
+        font = {
+            name = "Futura Bk";
+            size = 11;
+        };
+        iconTheme = {
+            package = pkgs.whitesur-icon-theme;
+            name = "WhiteSur-dark";
+        };
         theme = {
-            package = pkgs.whitesur-gtk-theme;
-            name = "WhiteSur-Light";
+            package = pkgs.lavanda-gtk-theme;
+            name = "Lavanda-Sea";
         };
     };
 }
