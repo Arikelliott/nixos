@@ -57,12 +57,12 @@
 		# Use the variable name to generate the file path in your home directory.
 		# e.g. "joe.txt" will go in ~/, ".config/joe.txt" will go in ~/.config
 
-		"joe.txt" = {
-			# source = testytest/joe;
-			text = ''
-				fred
-			'';
-		};
+		# "joe.txt" = {
+		# 	# source = testytest/joe;
+		# 	text = ''
+		# 		fred
+		# 	'';
+		# };
 	};
 
 	# Home Manager can also manage your environment variables through

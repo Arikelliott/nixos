@@ -23,6 +23,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [
 					./hosts/agrew
+					home-manager.nixosModules.home-manager
 				];
 			};
 
@@ -32,6 +33,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [
 					./hosts/forrester
+					home-manager.nixosModules.home-manager
 				];
 			};
 
@@ -41,6 +43,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [
 					./hosts/savannah
+					home-manager.nixosModules.home-manager
 				];
 			};
 
@@ -50,6 +53,7 @@
 				specialArgs = { inherit inputs; };
 				modules = [
 					./hosts/shetland
+					home-manager.nixosModules.home-manager
 				];
 			};
 
@@ -63,11 +67,11 @@
 
 					# Begin Cosmic-related stuff
 					{
-            nix.settings = {
-              substituters = [ "https://cosmic.cachix.org/" ];
-              trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-            };
-          }
+                        nix.settings = {
+                        substituters = [ "https://cosmic.cachix.org/" ];
+                        trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+                        };
+                    }
 					nixos-cosmic.nixosModules.default
 					# End Cosmic-related stuff
 
