@@ -4,13 +4,15 @@
 
     services.displayManager.sddm = {
         enable = true;
-	package = pkgs.kdePackages.sddm;
+        package = pkgs.kdePackages.sddm;
         wayland.enable = true;
         autoNumlock = true;
 #        theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
 #        theme = "sddm-astronaut-theme";
-	theme = "chili";
+        settings = {
+            Theme = {
 
+        };
     };
     services.displayManager.defaultSession = "hyprland";
 

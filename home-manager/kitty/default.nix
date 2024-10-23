@@ -20,7 +20,8 @@
 
     imports = [
         # ./kitty-color-theme-pywal.nix
-        ./kitty-color-theme.nix
+        ./kitty-color-theme-catppuccin-frappe.nix
+        # ./kitty-color-theme-nord.nix
     ];
 
 }
