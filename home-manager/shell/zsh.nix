@@ -16,7 +16,7 @@
             source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
             # --- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
             # ~/.p10k.zsh is the where the powerlevel10k config you initially set is stored
-            [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+            [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
 
         '';
 
