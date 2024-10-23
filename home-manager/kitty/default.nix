@@ -16,12 +16,14 @@
             window_padding_width = 8;
             confirm_os_window_close = 0;
         };
+
+        themeFile = "Catppuccin-Mocha"; # For manually importing kitty themes
     };
 
-    imports = [
-        # ./kitty-color-theme-pywal.nix
-        ./kitty-color-theme-catppuccin-frappe.nix
-        # ./kitty-color-theme-nord.nix
-    ];
+    # imports = [ # For making custom kitty themes
+    #     # ./themes/kitty-color-theme-pywal.nix
+    #     ./themes/kitty-color-theme-catppuccin-frappe.nix
+    #     # ./themes/kitty-color-theme-nord.nix
+    # ];
 
 }
