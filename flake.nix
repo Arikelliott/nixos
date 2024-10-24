@@ -65,15 +65,15 @@
 					./hosts/silvana
 					home-manager.nixosModules.home-manager
 
-					# Begin Cosmic-related stuff
-    					# {
-         #                    nix.settings = {
-         #                    substituters = [ "https://cosmic.cachix.org/" ];
-         #                    trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-         #                    };
-         #                }
-    					# nixos-cosmic.nixosModules.default
-					# End Cosmic-related stuff
+            # Begin Cosmic-related stuff
+            # {
+            #     nix.settings = {
+            #         substituters = [ "https://cosmic.cachix.org/" ];
+            #         trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+            #     };
+            # }
+            # nixos-cosmic.nixosModules.default
+            # End Cosmic-related stuff
 
 				];
 			};
