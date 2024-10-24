@@ -94,5 +94,6 @@
 
 	imports = [
 		../../home-manager/shell
+		../../home-manager/nixtools
 	];
 }

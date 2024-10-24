@@ -95,5 +95,7 @@
 	imports = [
 		../../home-manager/kitty
 		../../home-manager/shell
+		../../home-manager/theme
+		../../home-manager/nixtools
 	];
 }
