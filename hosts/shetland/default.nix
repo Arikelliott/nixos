@@ -55,6 +55,12 @@
 					./home.nix
 				];
 			};
+			root = {
+				# home.hostname = hostname;
+				imports = [
+					./root.nix
+				];
+			};
 		};
 	};
 
