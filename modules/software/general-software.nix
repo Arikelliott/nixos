@@ -1,6 +1,6 @@
 # Essential software to install on all systems
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
 
@@ -45,6 +45,7 @@ environment.systemPackages = with pkgs; [
 
 	# GUI software
 	firefox
+	inputs.zen-browser.packages."${system}".default # Zen browser.
 	keepassxc # KeePassXC password manager.
 ];
 

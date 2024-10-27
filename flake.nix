@@ -7,6 +7,7 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		zen-browser.url = "github:MarceColl/zen-browser-flake";
 
 		# Add stuff to make Cosmic flake work. https://github.com/lilyinstarlight/nixos-cosmic
 		nixpkgs.follows = "nixos-cosmic/nixpkgs"; # NOTE: change "nixpkgs" to "nixpkgs-stable" to use stable NixOS release
