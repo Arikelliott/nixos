@@ -53,7 +53,13 @@
         historySubstringSearch.enable = true; # Search for part of a previous command by typing a pattern and searching for commands with that pattern
 
         # Commands to add into .zshrc
-        initExtra = '' '';
+        initExtra = ''
+		autoload -Uz +X compinit && compinit
+
+		## case insensitive path-completion
+		zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+		zstyle ':completion:*' menu select
+	'';
 
         # Commands to add to .zshrc before compinit section
         initExtraBeforeCompInit = '' '';
