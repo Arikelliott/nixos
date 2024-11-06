@@ -11,6 +11,8 @@ environment.systemPackages = with pkgs; [
     hugo # Static website generator.
     pandoc # General filetype converter (eg. md to html).
     libreoffice-fresh # LibreOffice
+    teams # Microsoft Teams
+    zoom # Video call software
 
 ];
 
