@@ -28,6 +28,7 @@
 
 		# - Import Users
 		../../modules/users/user-arik.nix # Add Arik
+		../../modules/users/user-dicenet.nix # Add Dicenet user
 
 		# - Import Software packages and settings -
 		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
@@ -54,6 +55,12 @@
 					./home.nix
 				];
 			};
+			dicenet = {
+                                # home.hostname = hostname;
+                                imports = [
+                                        ./dicenet.nix
+                                ];
+                        };
 			root = {
 				# home.hostname = hostname;
 				imports = [
