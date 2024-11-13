@@ -13,13 +13,13 @@
     };
 
     home.file = {
-            ".config/rasi/theme.rasi" = {
+            ".config/rasi/config.rasi" = {
                 enable = true;
-                source = ./theme.rasi;
+                source = ./config.rasi;
             };
     };
 
-	# xdg.configFile.".config/rofi/theme.rasi" = {
+	# xdg.configFile.".config/rofi/config.rasi" = {
 	# 	enable = true;
 	# 	text = ''
 
