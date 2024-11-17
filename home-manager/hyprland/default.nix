@@ -356,17 +356,17 @@
 			"$mainMod, mouse_up, workspace, e-1"
 
 			# Set random wallpaper
-			"$mainMod, W, exec, sh /home/arik/dotfiles/scripts/random-wall-setter.sh"
+			"$mainMod, W, exec, sh scripts/random-wall-setter.sh"
 			# Pick random wallpaper directory with Rofi
-			"$mainMod SHIFT, W, exec, sh /home/arik/dotfiles/scripts/set-wallpaper-dir.sh"
+			"$mainMod SHIFT, W, exec, sh scripts/set-wallpaper-dir.sh"
 
 			# For creating incompatibility with Windows LinkedIn keybind (see https://invent.kde.org/plasma/plasma-desktop/-/merge_requests/1731)
-			"$mainMod SHIFT CTRL ALT, L, exec, sh /home/arik/dotfiles/scripts/linus-keybind.sh"
+			"$mainMod SHIFT CTRL ALT, L, exec, sh scripts/linus-keybind.sh"
 
-			"$mainMod, G, exec, sh /home/arik/dotfiles/scripts/open-gparted.sh"
+			"$mainMod, G, exec, sh scripts/open-gparted.sh"
 
 			# Take screenshot
-			"$mainMod, Print, exec, sh /home/arik/dotfiles/scripts/screenshot.sh"
+			"$mainMod, Print, exec, sh scripts/screenshot.sh"
 
 			# Enable or disable displays
 			"$mainMod SHIFT, P, exec, sh ~/dotfiles/scripts/hypr-monitor-reset.sh"

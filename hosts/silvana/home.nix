@@ -95,6 +95,7 @@
 	imports = [
 		../../home-manager/kitty
 		../../home-manager/shell
+		../../home-manager/scripts
 		../../home-manager/theme
 		../../home-manager/nixtools
 		../../home-manager/hyprland

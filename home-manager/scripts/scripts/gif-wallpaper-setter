@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+xwinwrap -g 4180x2160 -fdt -ni -b -nf -un -o 1.0 -debug -- gifview -w %WID ~/Pictures/wallpapers/animated-pixel-art/pixel-art-gif-16.gif -a

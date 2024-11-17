@@ -1,0 +1,8 @@
+[Unit]
+After=mysql.service
+
+[Service]
+ExecStart=/usr/local/bin/disable-screensaver.sh
+
+[Install]
+WantedBy=default.target
