@@ -3,10 +3,14 @@
 
 { inputs, ... }:
 
+let
+	hostname = "savannah";
+in
+
 {
 
 # - Define your hostname -
-	networking.hostName = "savannah";
+	networking.hostName = hostname;
 
 # -------- IMPORTS --------
 
@@ -31,11 +35,16 @@
 		# ../../modules/users/service-users/user-restic.nix # Add user account for Restic service # CAN ENABLE LATER
 
 		# - Import Software packages and settings -
-		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
 		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
+		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
+		../../modules/software/dev/java.nix # Install Java
+		../../modules/software/dev/lua.nix # Install lua
+		../../modules/software/dev/nixd.nix # Install nixd LSP
+		../../modules/software/dev/python.nix # Install Python
 		../../modules/software/fonts.nix # Install default fonts
 		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
+		../../modules/software/games/general-games.nix # Install Steam
 		../../modules/software/general-software.nix # General universal software
 		../../modules/software/music/spotify.nix # Install Spotify
 		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
