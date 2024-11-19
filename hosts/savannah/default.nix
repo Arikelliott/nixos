@@ -75,12 +75,12 @@ in
 				];
 			};
 		};
-		root = {
-			# home.hostname = hostname;
-			imports = [
-				./root.nix
-			];
-		};
+	#	root = {
+	#		# home.hostname = hostname;
+	#		imports = [
+	#			./root.nix
+	#		];
+	#	};
 	};
 
 
