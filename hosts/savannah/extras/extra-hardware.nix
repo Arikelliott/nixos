@@ -4,9 +4,17 @@
 # -------- BOOTLOADER AND PARTITIONING --------
 
 # - Setup Bootloader -
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/nvme0n1";
-  boot.loader.grub.useOSProber = true;
+    boot.loader = {
+        efi = {
+            canTouchEfiVariables = true; # Whether the installation process is allowed to modify EFI boot variables.
+        };
+        grub = { # Enable GRUB as bootloader.
+            enable = true;
+            efiSupport = true;
+            device = "nodev";
+            useOSProber = true;
+        };
+    };
 
 # - Mount Partitions -
 #   fileSystems."/home/arik/.mount/nas" = { # Mount NAS storage.
