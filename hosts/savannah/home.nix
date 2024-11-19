@@ -93,11 +93,13 @@
 
 
 	imports = [
-    	../../home-manager/kitty
-    	../../home-manager/shell
-    	../../home-manager/scripts
-    	../../home-manager/theme
-    	../../home-manager/nixtools
-    	../../home-manager/hyprland
+    ../../home-manager/kitty
+    ../../home-manager/rofi
+    ../../home-manager/shell
+    ../../home-manager/scripts
+    ../../home-manager/theme
+    ../../home-manager/nixtools
+    ../../home-manager/hyprland
+    ../../home-manager/hyprland/configs/displays/savannah1.nix
 	];
 }
