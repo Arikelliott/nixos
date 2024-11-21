@@ -101,5 +101,6 @@
     ../../home-manager/nixtools
     ../../home-manager/hyprland
     ../../home-manager/hyprland/configs/displays/savannah1.nix
+    ../../home-manager/hyprland/configs/keybinds/savannah-keybinds.nix
 	];
 }

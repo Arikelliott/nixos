@@ -36,6 +36,7 @@ in
 
 		# - Import Software packages and settings -
 		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
+		../../modules/software/brightness.nix # Installs brightnessctl for screen brightness and keyboard backlight
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
 		../../modules/software/dev/java.nix # Install Java
