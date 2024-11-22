@@ -10,6 +10,7 @@ A collection of links to various Nix resources.
 - https://nixos.wiki/wiki/flakes
 - https://vtimofeenko.com/posts/practical-nix-flake-anatomy-a-guided-tour-of-flake.nix/
 - https://drakerossman.com/blog/how-to-convert-default-nixos-to-nixos-with-flakes
+- https://librephoenix.com/2024-02-10-using-both-stable-and-unstable-packages-on-nixos-at-the-same-time
 
 ### Nix Itself
 - https://teu5us.github.io/nix-lib.html A list of built-in Nix functions as well as libraries
@@ -26,4 +27,3 @@ A collection of links to various Nix resources.
 - git+https://github.com/hyprwm/Hyprland?submodules=1
 - github:KZDKM/Hyprspace
 - github:pjones/plasma-manager
-
