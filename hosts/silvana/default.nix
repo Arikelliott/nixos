@@ -43,6 +43,7 @@ in
 		# ../../modules/software/desktop-environments/cosmic.nix # Enable Cosmic desktop environment.
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
 		# ../../modules/software/desktop-environments/sddm # Enable SDDM display manager
+		../../modules/software/dev/cybersec.nix # Tools for cybersecurity uses.
 		../../modules/software/dev/java.nix # Install Java
 		../../modules/software/dev/lua.nix # Install lua
 		../../modules/software/dev/nixd.nix # Install nixd LSP
