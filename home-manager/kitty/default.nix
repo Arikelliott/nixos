@@ -20,8 +20,8 @@
         themeFile = "Catppuccin-Mocha"; # For manually importing kitty themes
         settings = {
             # blue:
-                color4 = "#04a5e5";
-                color12 = "#04a5e5";
+                color4 = "#3B83F7";
+                color12 = "#146AF5";
         };
     };
 
