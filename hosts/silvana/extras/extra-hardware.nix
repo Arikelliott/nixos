@@ -61,4 +61,7 @@
     device = "/var/lib/swapfile";
     size = 32*1024;
   } ];
+
+# - Enable OpenCL support -
+    hardware.amdgpu.opencl.enable = true;
 }
