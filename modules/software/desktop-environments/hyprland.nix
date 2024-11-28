@@ -46,7 +46,16 @@
         wlr.enable = true;
     };
 
-    environment.systemPackages = with pkgs.unstable; [
+    environment.systemPackages = (with pkgs; [
+
+        kdePackages.dolphin # KDE file explorer
+
+    ])
+
+    ++
+
+    (with pkgs.unstable; [
+
 		xorg.xhost # Server access control program for X. (May be needed for Gparted?)
 		gparted # GUI disk partitioning tool.
 		kitty # My preferred terminal program.
@@ -76,6 +85,6 @@
 		stow # Symlink/dotfiles manager.
         ags # GTK Widget making utility.
 
-	];
+	]);
 
 }
