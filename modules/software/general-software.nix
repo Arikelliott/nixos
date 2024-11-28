@@ -11,6 +11,8 @@
 		config.init.defaultBranch = "main";
 	};
 
+	programs.nix-ld.enable = true;
+
 environment.systemPackages = with pkgs; [
 
 	# CLI software
