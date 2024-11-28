@@ -30,6 +30,7 @@
 
     # - Hyprland
     programs.hyprland.enable = true; # Enable Hyprland.
+    programs.hyprland.package = pkgs.unstable.hyprland; # Use Unstable Hyprland package
 
     # - Policy Kit -
     security.polkit.enable = true;
@@ -45,7 +46,7 @@
         wlr.enable = true;
     };
 
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = with pkgs.unstable; [
 		xorg.xhost # Server access control program for X. (May be needed for Gparted?)
 		gparted # GUI disk partitioning tool.
 		kitty # My preferred terminal program.
@@ -74,7 +75,7 @@
 		pywal # Color scheme generator/switcher.
 		stow # Symlink/dotfiles manager.
         ags # GTK Widget making utility.
-		
+
 	];
 
 }
