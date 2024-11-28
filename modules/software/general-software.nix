@@ -49,6 +49,10 @@ environment.systemPackages = with pkgs; [
 	firefox
 	inputs.zen-browser.packages."${system}".default # Zen browser.
 	keepassxc # KeePassXC password manager.
+
+	# git specific software
+	gitui
+	lazygit
 ];
 
 }
