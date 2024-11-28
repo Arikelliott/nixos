@@ -10,7 +10,7 @@
     # ntfs3g # NTFS filesystem driver.
     usbutils # Tools for working with USB devices, such as lsusb.
     smartmontools # Hard drive health monitoring tools.
-    # exfatprogs # exFAT filesystem utilities.
+    exfatprogs # exFAT filesystem utilities.
     foomatic-db-engine # A big set of utilities for printing.
     ghostscript # Postscript interpreter for PDFs and stuff.
     # jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
