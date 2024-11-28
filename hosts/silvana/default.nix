@@ -36,6 +36,7 @@ in
 		../../modules/users/service-users/user-restic.nix # Add user account for Restic service
 
 		# - Import Software packages and settings -
+		../../modules/hardware/drivers.nix # Install additional hardware drivers.
 		../../modules/software/amdgpu-utils.nix # Install AMD graphics utilities
 		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
 		../../modules/software/creative/general-creative.nix # Media, makerspace, etc. software
