@@ -226,10 +226,13 @@
 				ignore_opacity = "on";
 				xray = "false";
 			};
-			drop_shadow = "true";
-			shadow_range = "40";
-			shadow_render_power = "4";
-			"col.shadow" = "rgba(00000044)";
+			shadow = {
+    			enabled = "true";
+    			range = "40";
+    			render_power = "4";
+    			color = "rgba(00000044)";
+    			color_inactive = "rgba(00000044)";
+			};
 		};
 
 		animations = {
