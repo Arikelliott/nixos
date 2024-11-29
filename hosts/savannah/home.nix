@@ -99,6 +99,7 @@
     ../../home-manager/scripts
     ../../home-manager/theme
     ../../home-manager/nixtools
+    ../../home-manager/git
     ../../home-manager/hyprland
     ../../home-manager/hyprland/configs/displays/savannah1.nix
     ../../home-manager/hyprland/configs/keybinds/savannah-keybinds.nix

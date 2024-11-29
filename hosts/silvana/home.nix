@@ -98,6 +98,7 @@
 		../../home-manager/scripts
 		../../home-manager/theme
 		../../home-manager/nixtools
+		../../home-manager/git
 		../../home-manager/hyprland
 		../../home-manager/hyprland/configs/displays/silvana1.nix
 	];

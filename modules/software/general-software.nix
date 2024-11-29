@@ -6,8 +6,6 @@
 
 	programs.git = {
 		enable = true; # Enable git
-		# userName  = "Arikelliott";
-		# userEmail = "arikelliott@protonmail.com";
 		config.init.defaultBranch = "main";
 	};
 
