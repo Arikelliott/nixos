@@ -81,6 +81,7 @@
             lso = "eza -A --oneline";
             ll = "eza -Al";
             cat = "bat --theme=base16";
+            lz = "lazygit";
         };
 
         # Aliases that substitute any part of a command
