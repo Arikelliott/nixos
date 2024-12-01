@@ -15,7 +15,7 @@
 		mangohud # Game stat overlay software.
 		mindustry-wayland # Mindustry game
 		heroic # Heroic game launcher
-		itch # itch.io launcher
+		# itch # itch.io launcher
 	];
 
 }
