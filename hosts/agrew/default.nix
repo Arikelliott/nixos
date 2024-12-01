@@ -40,7 +40,7 @@
 		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
     # ../../modules/software/dev/cockpit.nix # Enable Cockpit server monitoring
 		../../modules/software/dev/python.nix # Install Python, etc.
-		../../modules/software/dev/irc.nix # Enable Ergo IRC server
+		# ../../modules/software/dev/irc.nix # Enable Ergo IRC server
 
     ];
 
