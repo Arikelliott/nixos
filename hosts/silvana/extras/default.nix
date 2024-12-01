@@ -6,5 +6,6 @@ imports =
     ./apc-ups.nix
     ./restic-backups.nix
     ./vfio-config.nix
+    ./syncthing.nix
   ];
 }
