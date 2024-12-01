@@ -48,8 +48,6 @@
 
     environment.systemPackages = (with pkgs; [
 
-        kdePackages.dolphin # KDE file explorer
-
     ])
 
     ++
