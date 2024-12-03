@@ -33,7 +33,7 @@
     			inherit system;
                 specialArgs = { inherit inputs; };
                 modules = [
-                    ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+                    ({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
                     ./hosts/agrew
 					home-manager.nixosModules.home-manager
 				];
@@ -44,7 +44,7 @@
     			inherit system;
                 specialArgs = { inherit inputs; };
                 modules = [
-                    ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+                    ({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/forrester
 					home-manager.nixosModules.home-manager
 				];
@@ -55,7 +55,7 @@
     			inherit system;
                 specialArgs = { inherit inputs; };
                 modules = [
-                    ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+                    ({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/savannah
 					home-manager.nixosModules.home-manager
 				];
@@ -66,7 +66,7 @@
     			inherit system;
                 specialArgs = { inherit inputs; };
                 modules = [
-                    ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+                    ({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/shetland
 					home-manager.nixosModules.home-manager
 				];
@@ -77,7 +77,7 @@
     			inherit system;
                 specialArgs = { inherit inputs; };
                 modules = [
-                    ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+                    ({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/silvana
 					home-manager.nixosModules.home-manager
                     # Begin Cosmic-related stuff

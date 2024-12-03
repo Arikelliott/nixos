@@ -1,6 +1,6 @@
 # Essential software to install on all systems
 
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
 
