@@ -91,15 +91,6 @@
         };
 	};
 
-	# Import p10k and theme.
-	home.file = {
-	   ".config/powerlevel10k" = {
-			enable = true;
-			source = ./powerlevel10k;
-			recursive = true;
-		};
-	};
-
 	imports = [
 	    ./terminal-support.nix # Support for non-standard terminals
 		./kitty-term-support.nix # Support for kitty specifically
