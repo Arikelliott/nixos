@@ -48,7 +48,7 @@
 
     environment.systemPackages = (with inputs; [
 
-        inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
+
 
     ])
 

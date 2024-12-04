@@ -129,10 +129,10 @@
         GTK_THEME = "Materia-light"; # sets GTK theme
 
 		# see https://github.com/Libadoxon/mcmojave-hyprcursor
-		HYPRCURSOR_THEME = "McMojave"; # Use McMojave Hyprcursor theme
-		HYPRCURSOR_SIZE = "36"; # Set Hyprcursor size
+		# HYPRCURSOR_THEME = "bibata-modern-classic-hyprcursor"; # Use McMojave Hyprcursor theme
+		# HYPRCURSOR_SIZE = "24"; # Set Hyprcursor size
 		# see https://github.com/vinceliuice/McMojave-cursors
-		# XCURSOR_THEME = "McMojave"; # Set Xcursor theme
+		XCURSOR_THEME = "Adwaita"; # Set Xcursor theme
 		XCURSOR_SIZE = "24"; # Set Xcursor size
 
 		MOZ_ENABLE_WAYLAND = "1"; # notifies some stuff that it's running on Wayland
