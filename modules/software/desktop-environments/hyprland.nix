@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
 
@@ -46,7 +46,9 @@
         wlr.enable = true;
     };
 
-    environment.systemPackages = (with pkgs; [
+    environment.systemPackages = (with inputs; [
+
+        inputs.mcmojave-hyprcursor.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     ])
 

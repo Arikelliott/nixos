@@ -127,7 +127,14 @@
     home.sessionVariables = {
         # EDITOR = "emacs";
         GTK_THEME = "Materia-light"; # sets GTK theme
-		XCURSOR_SIZE = "24"; # sets cursor size
+
+		# see https://github.com/Libadoxon/mcmojave-hyprcursor
+		HYPRCURSOR_THEME = "McMojave"; # Use McMojave Hyprcursor theme
+		HYPRCURSOR_SIZE = "36"; # Set Hyprcursor size
+		# see https://github.com/vinceliuice/McMojave-cursors
+		# XCURSOR_THEME = "McMojave"; # Set Xcursor theme
+		XCURSOR_SIZE = "24"; # Set Xcursor size
+
 		MOZ_ENABLE_WAYLAND = "1"; # notifies some stuff that it's running on Wayland
 
 		GDK_BACKEND = "wayland,x11"; # GTK: Use wayland if available, fall back to x11 if not.
