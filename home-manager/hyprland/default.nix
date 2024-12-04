@@ -128,10 +128,8 @@
         # EDITOR = "emacs";
         GTK_THEME = "Materia-light"; # sets GTK theme
 
-		# see https://github.com/Libadoxon/mcmojave-hyprcursor
-		# HYPRCURSOR_THEME = "bibata-modern-classic-hyprcursor"; # Use McMojave Hyprcursor theme
-		# HYPRCURSOR_SIZE = "24"; # Set Hyprcursor size
-		# see https://github.com/vinceliuice/McMojave-cursors
+		# HYPRCURSOR_THEME = ""; # Set Hyprcursor theme
+		# HYPRCURSOR_SIZE = ""; # Set Hyprcursor size
 		XCURSOR_THEME = "Adwaita"; # Set Xcursor theme
 		XCURSOR_SIZE = "24"; # Set Xcursor size
 
