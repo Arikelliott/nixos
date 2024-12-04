@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
 	programs.zsh = {
 		enable = true;
@@ -13,7 +15,7 @@
             source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
             fi
             # --- Enable p10k theme
-            source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
+            source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
             # --- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
             # ~/.p10k.zsh is the where the powerlevel10k config you initially set is stored
             [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
