@@ -301,9 +301,9 @@
 			"$mainMod, P, pseudo, # dwindle"
 
 			# Volume controls
-			",XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
-			",XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
-			",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
+			# ",XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
+			# ",XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
+			# ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
 
 			# Move focus with mainMod + arrow keys
 			"$mainMod, left, workspace, r-1"
@@ -374,9 +374,6 @@
 			"$mainMod SHIFT CTRL ALT, L, exec, sh scripts/linus-keybind.sh"
 
 			"$mainMod, G, exec, sh scripts/open-gparted.sh"
-
-			# Take screenshot
-			"$mainMod, Print, exec, sh scripts/screenshot.sh"
 
 			# Enable or disable displays
 			"$mainMod SHIFT, P, exec, sh ~/dotfiles/scripts/hypr-monitor-reset.sh"
