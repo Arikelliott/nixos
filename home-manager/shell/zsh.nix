@@ -74,7 +74,6 @@
         # All your typical aliases
         shellAliases = {
             cbonsai = "cbonsai -li --time=0.5";
-            cat-token = "cat ~/Documents/repos/.personal-access-token1";
             cp = "cp -i";
             df = "df -H";
             free = "free -m";
