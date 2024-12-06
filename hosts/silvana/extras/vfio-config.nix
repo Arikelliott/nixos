@@ -32,24 +32,24 @@ in {
 	# Enable virtualisation programs. These will be used by virt-manager to run your VM.
 	virtualisation = {
 		libvirtd = {
-		enable = true;
-		extraConfig = ''
-			user="${user}"
-		'';
+    		enable = true;
+    		extraConfig = ''
+    			user="${user}"
+    		'';
 
-		# Don't start any VMs automatically on boot.
-		onBoot = "ignore";
-		# Stop all running VMs on shutdown.
-		onShutdown = "shutdown";
+    		# Don't start any VMs automatically on boot.
+    		onBoot = "ignore";
+    		# Stop all running VMs on shutdown.
+    		onShutdown = "shutdown";
 
-		qemu = {
-			package = pkgs.qemu_kvm;
-			# ovmf = enabled; # Doesn't seem to be a valid option
-			verbatimConfig = ''
-				namespaces = []
-			user = "+${builtins.toString config.users.users.${user}.uid}"
-			'';
-		};
+    		qemu = {
+    			package = pkgs.qemu_kvm;
+    			ovmf.enable = true;
+    			verbatimConfig = ''
+    				namespaces = []
+     			    user = "+${builtins.toString config.users.users.${user}.uid}"
+    			'';
+    		};
 		};
 	};
 
