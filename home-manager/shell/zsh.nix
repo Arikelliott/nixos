@@ -83,6 +83,7 @@
             ll = "eza -Al";
             cat = "bat --theme=base16";
             lz = "lazygit";
+            nixdev = "nix develop --command zsh";
         };
 
         # Aliases that substitute any part of a command
