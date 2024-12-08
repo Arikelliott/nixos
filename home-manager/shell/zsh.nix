@@ -38,8 +38,8 @@
         };
         # Environment variables to start session with:
         envExtra = ''
-            PATH="$PATH:/home/arik/.local/share/gem/ruby/3.0.0/bin"
-	    PATH="$PATH:/home/arik/.local/bin/"
+            # PATH="$PATH:/home/arik/.local/share/gem/ruby/3.0.0/bin"
+            PATH="$PATH:/home/arik/.local/bin/"
         '';
         history = {
             append = true; # Adds new commands in history to list instead of overwriting?
