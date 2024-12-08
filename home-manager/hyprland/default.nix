@@ -410,6 +410,8 @@
         windowrulev2 = [
             # "stayfocused, title:^()$,class:^(steam)$"
             # "minsize 1 1, title:^()$,class:^(steam)$"
+            "float, size 30% 30%, class:xdg-desktop-portal-gtk"
+            "float, size 172 502, title:^(Authentication Required)$"
         ];
         # Some things are layers, not windows. Rofi for example. They have different limits
         # http://wiki.hyprland.org/Configuring/Window-Rules/#layer-rules for more info
