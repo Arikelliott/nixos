@@ -3,7 +3,7 @@
 {
 
 	environment.systemPackages = with pkgs; [
-	    # ruby_3_4
+		hugo
 	    # jekyll # Static site generator engine
     ];
 
