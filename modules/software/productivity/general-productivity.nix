@@ -13,6 +13,7 @@ environment.systemPackages = with pkgs; [
     libreoffice # LibreOffice
     teams-for-linux # Microsoft Teams
     zoom-us # Video call software
+    hydrus # Image tagging and organizing software for desktop
 
 ];
 
