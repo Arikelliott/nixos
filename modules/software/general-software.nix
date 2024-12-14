@@ -42,6 +42,7 @@ environment.systemPackages = with pkgs; [
 	dig
     wev # Get wayland keypresses in terminal
     xdg-ninja # Shell script which checks your $HOME for unwanted files and directories
+    rdfind # Utility for finding and removing duplicate files
 
 	# GUI software
 	firefox
