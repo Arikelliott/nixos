@@ -38,11 +38,11 @@
   boot.swraid.enable = true;
 
 
-#  fileSystems."/home/arik/mount/cdrive" = { # Mount media drive.
-#    device = "/dev/disk/by-uuid/5f1af9c5-135b-4d34-8801-25193480ea32";
-#    fsType = "ext4";
-#    options = ["defaults"];
-#  };
+ fileSystems."/home/arik/mount/cdrive" = { # Mount 1TB SSD drive.
+   device = "/dev/disk/by-uuid/a030f9c6-c4e4-49e9-a18c-4769e3f3e8ac";
+   fsType = "ext4";
+   options = ["defaults"];
+ };
 
   # fileSystems."/home/arik/mount/nas" = { # Mount NAS storage.
   #   device = "172.234.215.187:/home/arik/mount";
