@@ -6,7 +6,7 @@
     enable = true;
     group = "users";
     user = "arik";
-    dataDir = "/home/arik/Sync";
+    dataDir = "/home/arik/Sync/default";
     configDir = "/home/arik/.config/syncthing";
   };
 
