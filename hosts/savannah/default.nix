@@ -38,6 +38,7 @@ in
 		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
 		../../modules/software/brightness.nix # Installs brightnessctl for screen brightness and keyboard backlight
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
+		../../modules/software/desktop-environments/grub-theme.nix # GRUB Theme
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
 		../../modules/software/dev/java.nix # Install Java
 		../../modules/software/dev/lua.nix # Install lua
