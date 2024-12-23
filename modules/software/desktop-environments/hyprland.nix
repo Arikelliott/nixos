@@ -73,6 +73,8 @@
 		nwg-look # Wayland alternative to lxappearance.
 		nemo-with-extensions # Nemo file explorer
 		nemo-fileroller
+		nautilus
+		nautilus-open-any-terminal
 		rofi-wayland # Wayland fork of Rofi app launcher.
 		waybar # Wayland bar.
 		wireshark # Packet analyzer.
