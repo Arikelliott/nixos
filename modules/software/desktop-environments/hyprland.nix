@@ -46,6 +46,9 @@
         wlr.enable = true;
     };
 
+    programs.thunar.enable = true;
+    programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
+
     environment.systemPackages = (with inputs; [
 
 
@@ -71,10 +74,10 @@
 		loupe # GUI Image Viewer.
         # lxappearance # Doesn't work on Wayland at all
 		nwg-look # Wayland alternative to lxappearance.
-		nemo-with-extensions # Nemo file explorer
-		nemo-fileroller
-		nautilus
-		nautilus-open-any-terminal
+		# nemo-with-extensions # Nemo file explorer
+		# nemo-fileroller
+		# nautilus
+		# nautilus-open-any-terminal
 		rofi-wayland # Wayland fork of Rofi app launcher.
 		waybar # Wayland bar.
 		wireshark # Packet analyzer.
