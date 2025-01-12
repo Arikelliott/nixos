@@ -31,6 +31,7 @@ environment.systemPackages = with pkgs; [
     # openscad # Programmatic CAD software.
     love # Love2D, a 2D game engine that used Lua scripting.
     libresprite # Pixel art software, FOSS fork of aseprite.
+    blockbench # 3D modeling software (for Minecraft mainly)
     # aseprite # Pixel art software.
 
 ];
