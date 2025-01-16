@@ -2,7 +2,7 @@
 
 {
 
-environment.systemPackages = (with pkgs; [
+environment.systemPackages = with pkgs; [
 
 	audacity # Audio editing suite.
     lmms # Linux music production software.
@@ -33,14 +33,7 @@ environment.systemPackages = (with pkgs; [
     libresprite # Pixel art software, FOSS fork of aseprite.
     blockbench # 3D modeling software (for Minecraft mainly)
     # aseprite # Pixel art software.
-    # k3b # KDE disk burning utility
 
-])
-
-++
-
-(with pkgs.unstable; [
-	kdePackages.k3b
-]);
+];
 
 }
