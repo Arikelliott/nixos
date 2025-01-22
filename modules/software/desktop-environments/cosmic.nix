@@ -39,7 +39,6 @@
 		nemo-fileroller
 		# rofi-wayland # Wayland fork of Rofi app launcher.
 		# waybar # Wayland bar.
-		wireshark # Packet analyzer.
 		wlr-randr # Wayland xrandr clone.
 		wshowkeys # Shows keys being pressed (Wayland session only).
 		# libsForQt5.polkit-kde-agent # KDE polkit agent.
@@ -47,7 +46,7 @@
 		pwvucontrol # Pipewire volume control interface.
 		pywal # Color scheme generator/switcher.
 		stow # Symlink/dotfiles manager.
-		
+
 	];
 
 }

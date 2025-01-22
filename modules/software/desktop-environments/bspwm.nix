@@ -40,7 +40,6 @@
 		cinnamon.nemo-fileroller
 		rofi # Rofi app launcher.
 		polybar # Wayland bar.
-		wireshark # Packet analyzer.
 		xorg.xrandr # Xrandr.
 		arandr # xrandr GUI frontend.
 		lxqt.lxqt-policykit # LXQT polkit agent.
