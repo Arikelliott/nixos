@@ -21,7 +21,7 @@
             };
             open-webui = { # Run WebUI for Ollama.
                 hostname = "open-webui";
-                image = "ghcr.io/open-webui/open-webui:main";
+                image = "ghcr.io/open-webui/open-webui:latest";
                 volumes = [
                     "open-webui:/app/backend/data"
                 ];
