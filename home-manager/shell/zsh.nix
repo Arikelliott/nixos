@@ -84,6 +84,7 @@
             cat = "bat --theme=base16";
             lz = "lazygit";
             nixdev = "nix develop --command zsh";
+	    hyprland = "Hyprland";
         };
 
         # Aliases that substitute any part of a command
