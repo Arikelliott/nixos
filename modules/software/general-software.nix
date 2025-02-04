@@ -16,6 +16,13 @@ environment.systemPackages = with pkgs; [
 	# CLI software
 	gotop # Fancy top-like process viewer.
 	htop # Top-like process viewer with a few more features.
+	s-tui
+	atop
+	iftop
+	iotop
+	nvtop
+	pkgs.linuxPackages_latest.perf
+	wavemon
 	wget # Webpage downloader utility thing.
 	tree # Shows contents of directories recursively.
 	ranger # TUI file manager.
