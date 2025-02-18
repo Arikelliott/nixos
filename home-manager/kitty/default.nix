@@ -8,7 +8,7 @@
             # package = pkgs.meslo-lgs-nf;
             # name = "Roboto";
             package = pkgs.dejavu_fonts;
-            name = "DejaVu Sans";
+            name = "DejaVuSansM Nerd Font";
             size = 10.0;
         };
 
