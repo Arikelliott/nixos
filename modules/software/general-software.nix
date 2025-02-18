@@ -20,7 +20,7 @@ environment.systemPackages = with pkgs; [
 	atop
 	iftop
 	iotop
-	nvtop
+	nvtopPackages.full
 	pkgs.linuxPackages_latest.perf
 	wavemon
 	wget # Webpage downloader utility thing.
