@@ -35,7 +35,11 @@
     options = ["defaults"];
   };
 
-  boot.swraid.enable = true;
+	boot.swraid = {
+		enable = true;
+		mdadmConf = "MAILADDR=nobody@nowhere";
+	};
+
 
 
  fileSystems."/home/arik/mount/cdrive" = { # Mount 1TB SSD drive.
