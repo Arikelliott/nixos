@@ -57,12 +57,16 @@
 
         # Commands to add into .zshrc
         initExtra = ''
-		autoload -Uz +X compinit && compinit
+	       	if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	          exec tmux attach
+	        fi
 
-		## case insensitive path-completion
-		zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-		zstyle ':completion:*' menu select
-	'';
+        	autoload -Uz +X compinit && compinit
+
+			## case insensitive path-completion
+			zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+			zstyle ':completion:*' menu select
+		'';
 
         # Commands to add to .zshrc before compinit section
         initExtraBeforeCompInit = '' '';
@@ -84,7 +88,7 @@
             cat = "bat --theme=base16";
             lz = "lazygit";
             nixdev = "nix develop --command zsh";
-	    hyprland = "Hyprland";
+            hyprland = "Hyprland";
         };
 
         # Aliases that substitute any part of a command
