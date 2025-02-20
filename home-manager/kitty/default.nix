@@ -7,8 +7,10 @@
         font = {
             # package = pkgs.meslo-lgs-nf;
             # name = "Roboto";
-            package = pkgs.dejavu_fonts;
-            name = "DejaVuSansM Nerd Font";
+            # package = pkgs.dejavu_fonts;
+            # name = "DejaVuSansM Nerd Font";
+            package = pkgs.jetbrains-mono;
+            name = "JetBrainsMonoNL NF";
             size = 10.0;
         };
 
