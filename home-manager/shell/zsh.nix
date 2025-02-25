@@ -57,9 +57,9 @@
 
         # Commands to add into .zshrc
         initExtra = ''
-	       	if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-	          exec tmux attach
-	        fi
+	       	# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	        #   exec tmux attach
+	        # fi
 
         	autoload -Uz +X compinit && compinit
 

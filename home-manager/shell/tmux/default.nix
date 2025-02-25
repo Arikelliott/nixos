@@ -38,6 +38,8 @@ programs.tmux = {
 
 		# Bind ctrl + f for launching fuzzy finder
 		TMUX_FZF_LAUNCH_KEY="C-f"
+
+		run ~/.config/tmux/tmux-theme.tmux
 	'';
 
 };
@@ -51,7 +53,14 @@ programs.fzf = {
 };
 
 # imports = [
-#	./tmux-theme.nix
-#];
+# 	./tmux-theme.nix
+# ];
+
+home.file = {
+	".config/tmux/tmux-theme.tmux" = {
+		enable = true;
+		source = ./tmux-theme.tmux;
+	};
+};
 
 }
