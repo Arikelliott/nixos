@@ -10,7 +10,7 @@
     amdgpu_top # AMD GPU CLI monitoring tool.
     lact # AMDGPU GUI software. *****
     vulkan-tools # Utils for Vulkan
-    vulkan-cts # Vulkan conformance tests I guess
+    # vulkan-cts # Vulkan conformance tests I guess
 
 	];
 

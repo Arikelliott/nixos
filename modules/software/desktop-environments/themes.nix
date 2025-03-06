@@ -4,7 +4,7 @@
 
     environment.systemPackages = with pkgs; [
         materia-theme
-        catppuccin
+        # catppuccin
         catppuccin-gtk
 	rose-pine-gtk-theme
 	whitesur-gtk-theme
