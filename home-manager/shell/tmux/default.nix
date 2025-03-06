@@ -17,6 +17,7 @@ programs.tmux = {
 		# tmuxPlugins.vim-tmux-focus-events # vim integration
 		tmuxPlugins.tmux-fzf # Adds fzf integration
 		# tmuxPlugins.power-theme # Powerline-style theme, might make my own later
+		tmuxPlugins.catppuccin # catppuccin theme
 
 
 		{
@@ -39,7 +40,7 @@ programs.tmux = {
 		# Bind ctrl + f for launching fuzzy finder
 		TMUX_FZF_LAUNCH_KEY="C-f"
 
-		run ~/.config/tmux/tmux-theme.tmux
+		# run ~/.config/tmux/tmux-theme.tmux
 	'';
 
 };
@@ -56,11 +57,11 @@ programs.fzf = {
 # 	./tmux-theme.nix
 # ];
 
-home.file = {
-	".config/tmux/tmux-theme.tmux" = {
-		enable = true;
-		source = ./tmux-theme.tmux;
-	};
-};
+# home.file = {
+# 	".config/tmux/tmux-theme.tmux" = {
+# 		enable = true;
+# 		source = ./tmux-theme.tmux;
+# 	};
+# };
 
 }
