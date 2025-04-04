@@ -49,9 +49,9 @@
     programs.thunar.enable = true;
     programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
 
-    environment.systemPackages = (with inputs; [
+    environment.systemPackages = (with pkgs; [
 
-
+    	kdePackages.ark # Graphical file archival tool
 
     ])
 
@@ -89,6 +89,7 @@
 		stow # Symlink/dotfiles manager.
         ags # GTK Widget making utility.
         eww # Elkowar's wacky widgets.
+        xdg-desktop-portal-hyprland
 	]);
 
 }
