@@ -43,6 +43,7 @@ in
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
 		# ../../modules/software/desktop-environments/cosmic.nix # Enable Cosmic desktop environment.
 		../../modules/software/desktop-environments/grub-theme.nix # GRUB Theme
+		../../modules/software/desktop-environments/gnome.nix # Enable GNOME
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
 		../../modules/software/desktop-environments/sddm # Enable SDDM display manager
 		../../modules/software/dev/benchmarking.nix # Benchmarking utils
