@@ -8,6 +8,7 @@ environment.systemPackages = with pkgs; [
     neovim # Extensible vim fork.
     # vscodium # Fancy GUI IDE.
     zed-editor # New IDE trying to replace vscodium.
+    jetbrains.idea-community-bin
     xfce.mousepad # basic text editor from XFCE.
 
 ];
