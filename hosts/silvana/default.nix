@@ -44,7 +44,7 @@ in
 		# ../../modules/software/desktop-environments/cosmic.nix # Enable Cosmic desktop environment.
 		../../modules/software/desktop-environments/grub-theme.nix # GRUB Theme
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
-		# ../../modules/software/desktop-environments/sddm # Enable SDDM display manager
+		../../modules/software/desktop-environments/sddm # Enable SDDM display manager
 		../../modules/software/dev/benchmarking.nix # Benchmarking utils
 		../../modules/software/dev/cybersec.nix # Tools for cybersecurity uses.
 		../../modules/software/dev/java.nix # Install Java
