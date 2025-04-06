@@ -402,12 +402,9 @@
         # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
         windowrule = [
             # "float, ^(org.gnome.Calculator)$"
-            "float, org.gnome.Calculator" # both of these work, dunno what the regex does
-            "float, org.kde.polkit-kde-authentication-agent-1"
+            "float, class:org.gnome.Calculator" # both of these work, dunno what the regex does
+            "float, class:org.kde.polkit-kde-authentication-agent-1"
             "float,class:^(thunar)$,title:^(File Operation Progress)$"
-        ];
-        # Make the Steam dropdown menus work properly
-        windowrulev2 = [
             # "stayfocused, title:^()$,class:^(steam)$"
             # "minsize 1 1, title:^()$,class:^(steam)$"
             "float, size 30% 30%, class:xdg-desktop-portal-gtk"
