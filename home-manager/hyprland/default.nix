@@ -146,7 +146,7 @@
 		XDG_SESSION_TYPE = "wayland";
 		XDG_SESSION_DESKTOP = "Hyprland";
 
-		HYPRSHOT_DIR = "~/Pictures/screenshots"; # Set Hyprshot to save to specific directory
+		HYPRSHOT_DIR = "Pictures/screenshots"; # Set Hyprshot to save to specific directory
     };
 
 
