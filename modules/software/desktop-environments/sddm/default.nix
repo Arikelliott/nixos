@@ -10,7 +10,7 @@
 #        theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
 		theme = "sddm-astronaut";
     };
-    services.displayManager.defaultSession = "hyprland";
+    # services.displayManager.defaultSession = "hyprland";
 
     environment.systemPackages = with pkgs; [
         sddm-sugar-dark # broken currently, will need to manually add and edit the package

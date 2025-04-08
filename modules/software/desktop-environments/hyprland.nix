@@ -3,48 +3,48 @@
 {
 
     imports = [
-
 		# - Import configs exclusive to this host
 		./icons.nix
         ./themes.nix
-
     ];
 
     # - Xserver -
     services.xserver.enable = true; # Enable X11 windowing system.
-
-    # - Display Manager -
-    # services.displayManager = {
-        # sddm = { # Settings for SDDM display manager.
-        #   enable = true; # Enable SDDM.
-        #   # wayland.enable = true; # Enable experimental Wayland support.
-        #   # theme = "sddm-chili-theme"; # Theme to use.
-        #   autoNumlock = true; # Enable num lock.
-        # };
-    #   defaultSession = "hyprland"; # Set pre-selected session when starting display manager.
-    # };
-
     services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
         lightdm.enable = false;
     };
 
     # - Hyprland
     programs.hyprland.enable = true; # Enable Hyprland.
-    programs.hyprland.package = pkgs.unstable.hyprland; # Use Unstable Hyprland package
+    programs.hyprland.package = pkgs.unstable.hyprland; # Use Unstable Hyprland package\
 
-    # - Policy Kit -
-    security.polkit.enable = true;
-
+    # - Enable UWSM Support https://wiki.hyprland.org/Useful-Utilities/Systemd-start/
+    programs.uwsm.enable = true;
+    programs.hyprland.withUWSM = true;
+   #  programs.uwsm.waylandCompositors = {
+	  #  	hyprland = {
+			# prettyName = "Hyprland";
+			# comment = "Hyprland compositor managed by UWSM";
+			# binPath = "/run/current-system/sw/bin/Hyprland";
+	  #   };
+   #  };
+    services.displayManager.defaultSession = "hyprland-uwsm";
 
     # - Disable xterm -
     services.xserver.desktopManager.xterm.enable = false;
 
-    # --- Look up what this does
     # - XDG Portal Settings -
     xdg.portal = {
         enable = true;
         wlr.enable = true;
+        extraPortals = (with pkgs; [
+        	xdg-desktop-portal-gtk
+         	kdePackages.xdg-desktop-portal-kde
+        ]);
     };
+    # - Policy Kit -
+    security.polkit.enable = true;
+    qt.enable = true;
 
     programs.thunar.enable = true;
     programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
