@@ -6,6 +6,7 @@ environment.systemPackages = with pkgs; [
 
 	audacity # Audio editing suite.
     lmms # Linux music production software.
+    openutau # Open-source UTAU alternative.
     libsForQt5.kdenlive # KDE's video editor.
     # ft2-clone # Fasttracker II clone.
     furnace # Chiptune tracker.
