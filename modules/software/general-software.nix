@@ -10,6 +10,10 @@
 	};
 
 	programs.nix-ld.enable = true;
+	programs.vim = {
+		enable = true;
+		defaultEditor = true;
+	};
 
 environment.systemPackages = with pkgs; [
 
