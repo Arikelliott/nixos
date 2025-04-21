@@ -89,6 +89,7 @@
             lz = "lazygit";
             nixdev = "nix develop --command zsh";
             hyprland = "Hyprland";
+		rm = "rm -I";
         };
 
         # Aliases that substitute any part of a command
