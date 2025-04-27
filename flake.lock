@@ -1,6 +1,5 @@
 {
   "nodes": {
-<<<<<<< HEAD
     "devshell": {
       "inputs": {
         "nixpkgs": [
@@ -120,21 +119,6 @@
       "original": {
         "owner": "hercules-ci",
         "repo": "gitignore.nix",
-=======
-    "flake-compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1717312683,
-        "narHash": "sha256-FrlieJH50AuvagamEvWMIE6D2OAnERuDboFDYAED/dE=",
-        "owner": "nix-community",
-        "repo": "flake-compat",
-        "rev": "38fd3954cf65ce6faf3d0d45cd26059e059f07ea",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "flake-compat",
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
         "type": "github"
       }
     },
@@ -145,32 +129,20 @@
         ]
       },
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1745557122,
         "narHash": "sha256-eqSo9ugzsqhFgaDFYUZj943nurlX4L6f+AW0skJ4W+M=",
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "dd26f75fb4ec1c731d4b1396eaf4439ce40a91c1",
-=======
-        "lastModified": 1743788974,
-        "narHash": "sha256-2LeVyQZI2wTkSzMLvnN/kJjXVWp4HCVUoq17Bv8TNTk=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "0f5908daf890c3d7e7052bef1d6deb0f2710aaa1",
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
-<<<<<<< HEAD
         "ref": "release-24.11",
-=======
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
         "repo": "home-manager",
         "type": "github"
       }
     },
-<<<<<<< HEAD
     "home-manager_2": {
       "inputs": {
         "nixpkgs": [
@@ -240,32 +212,11 @@
         "owner": "lnl7",
         "ref": "nix-darwin-24.11",
         "repo": "nix-darwin",
-=======
-    "nixos-cosmic": {
-      "inputs": {
-        "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs",
-        "nixpkgs-stable": "nixpkgs-stable",
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1743774400,
-        "narHash": "sha256-QZ6cjUrxoQbqB4CY5ogP/bJW1c73yVpCehKEfUS/0g8=",
-        "owner": "lilyinstarlight",
-        "repo": "nixos-cosmic",
-        "rev": "061a22595ad5dc0385436d0903d31d880b12c8d3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "lilyinstarlight",
-        "repo": "nixos-cosmic",
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1745487689,
         "narHash": "sha256-FQoi3R0NjQeBAsEOo49b5tbDPcJSMWc3QhhaIi9eddw=",
         "owner": "nixos",
@@ -275,33 +226,6 @@
       },
       "original": {
         "owner": "nixos",
-=======
-        "lastModified": 1743583204,
-        "narHash": "sha256-F7n4+KOIfWrwoQjXrL2wD9RhFYLs2/GGe/MQY1sSdlE=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "2c8d3f48d33929642c1c12cd243df4cc7d2ce434",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-stable": {
-      "locked": {
-        "lastModified": 1743576891,
-        "narHash": "sha256-vXiKURtntURybE6FMNFAVpRPr8+e8KoLPrYs9TGuAKc=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "44a69ed688786e98a101f02b712c313f1ade37ab",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
         "ref": "nixos-24.11",
         "repo": "nixpkgs",
         "type": "github"
@@ -309,19 +233,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1745526057,
         "narHash": "sha256-ITSpPDwvLBZBnPRS2bUcHY3gZSwis/uTe255QgMtTLA=",
         "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "f771eb401a46846c1aebd20552521b233dd7e18b",
-=======
-        "lastModified": 1743583204,
-        "narHash": "sha256-F7n4+KOIfWrwoQjXrL2wD9RhFYLs2/GGe/MQY1sSdlE=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "2c8d3f48d33929642c1c12cd243df4cc7d2ce434",
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
         "type": "github"
       },
       "original": {
@@ -347,7 +263,6 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
     "nixvim": {
       "inputs": {
         "devshell": "devshell",
@@ -428,29 +343,10 @@
       "inputs": {
         "nixpkgs": [
           "nixvim",
-=======
-    "root": {
-      "inputs": {
-        "home-manager": "home-manager",
-        "nixos-cosmic": "nixos-cosmic",
-        "nixpkgs": [
-          "nixos-cosmic",
-          "nixpkgs"
-        ],
-        "nixpkgs-unstable": "nixpkgs-unstable",
-        "zen-browser": "zen-browser"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "nixos-cosmic",
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
           "nixpkgs"
         ]
       },
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1744961264,
         "narHash": "sha256-aRmUh0AMwcbdjJHnytg1e5h5ECcaWtIFQa6d9gI85AI=",
         "owner": "numtide",
@@ -461,18 +357,6 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
-=======
-        "lastModified": 1743682350,
-        "narHash": "sha256-S/MyKOFajCiBm5H5laoE59wB6w0NJ4wJG53iAPfYW3k=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "c4a8327b0f25d1d81edecbb6105f74d7cf9d7382",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
->>>>>>> parent of 3630775 (Trying to fix tabbing in all files)
         "type": "github"
       }
     },
