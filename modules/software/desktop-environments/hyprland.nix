@@ -5,7 +5,7 @@
 	imports = [
 		# - Import configs exclusive to this host
 		./icons.nix
-	./themes.nix
+		./themes.nix
 	];
 
 	# - Xserver -
@@ -16,18 +16,10 @@
 
 	# - Hyprland
 	programs.hyprland.enable = true; # Enable Hyprland.
-	programs.hyprland.package = pkgs.unstable.hyprland; # Use Unstable Hyprland package\
 
 	# - Enable UWSM Support https://wiki.hyprland.org/Useful-Utilities/Systemd-start/
 	programs.uwsm.enable = true;
 	programs.hyprland.withUWSM = true;
-	#	programs.uwsm.waylandCompositors = {
-		#		hyprland = {
-			# prettyName = "Hyprland";
-			# comment = "Hyprland compositor managed by UWSM";
-			# binPath = "/run/current-system/sw/bin/Hyprland";
-		#	};
-	#	};
 	services.displayManager.defaultSession = "hyprland-uwsm";
 
 	# - Disable xterm -
@@ -49,16 +41,9 @@
 	programs.thunar.enable = true;
 	programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
 
-	environment.systemPackages = (with pkgs; [
+	environment.systemPackages = with pkgs; [
 
 		kdePackages.ark # Graphical file archival tool
-
-	])
-
-	++
-
-	(with pkgs.unstable; [
-
 		xorg.xhost # Server access control program for X. (May be needed for Gparted?)
 		gparted # GUI disk partitioning tool.
 		kitty # My preferred terminal program.
@@ -90,6 +75,6 @@
 	ags # GTK Widget making utility.
 	eww # Elkowar's wacky widgets.
 	xdg-desktop-portal-hyprland
-	]);
+	];
 
 }
