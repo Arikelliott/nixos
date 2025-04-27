@@ -2,32 +2,32 @@
 
 {
 
-    # - Xserver -
-    services.xserver.enable = true; # Enable X11 windowing system.
+	# - Xserver -
+	services.xserver.enable = true; # Enable X11 windowing system.
 
 	# services.xserver.displayManager.startx.enable = true; # Enable Startx to start a desktop environment with.
 
-    services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
-        lightdm.enable = true;
-    };
+	services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
+	lightdm.enable = true;
+	};
 
-    # - BSPWM
+	# - BSPWM
 	services.xserver.windowManager.bspwm.enable = true; # Enable BSPWM
 
-    # - Policy Kit -
-    security.polkit.enable = true;
+	# - Policy Kit -
+	security.polkit.enable = true;
 
 
-    # - Disable xterm -
-    services.xserver.desktopManager.xterm.enable = false;
+	# - Disable xterm -
+	services.xserver.desktopManager.xterm.enable = false;
 
-    # --- Look up what this does
-    # - XDG Portal Settings -
-    # xdg.portal = {
-    #     enable = true;
-    # };
+	# --- Look up what this does
+	# - XDG Portal Settings -
+	# xdg.portal = {
+	#	enable = true;
+	# };
 
-    environment.systemPackages = with pkgs; [
+	environment.systemPackages = with pkgs; [
 		xorg.xhost # Server access control program for X. (May be needed for Gparted?)
 		gparted # GUI disk partitioning tool.
 		xfce.xfce4-terminal # My preferred kitty substitute.

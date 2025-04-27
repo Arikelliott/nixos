@@ -2,11 +2,11 @@
 
 {
 
-    services.spotifyd.enable = true; # Enable Spotify daemon.
+	services.spotifyd.enable = true; # Enable Spotify daemon.
 
 	environment.systemPackages = with pkgs; [
 
-    spotify
+	spotify
 
 	];
 

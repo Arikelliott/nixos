@@ -7,9 +7,9 @@
 	};
 
 	environment.systemPackages = with pkgs; [
-	    # clpeak # openCL benchmarking tool
+		# clpeak # openCL benchmarking tool
 		iperf3d
 		iperf
-    ];
+	];
 
 }

@@ -2,10 +2,10 @@
 
 {
 
-    environment.systemPackages = with pkgs; [
-        materia-theme
-        # catppuccin
-        catppuccin-gtk
+	environment.systemPackages = with pkgs; [
+	materia-theme
+	# catppuccin
+	catppuccin-gtk
 	rose-pine-gtk-theme
 	whitesur-gtk-theme
 	tokyonight-gtk-theme
@@ -28,6 +28,6 @@
 	colloid-gtk-theme
 	andromeda-gtk-theme
 	adapta-gtk-theme
-    ];
+	];
 
 }

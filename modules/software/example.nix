@@ -7,7 +7,7 @@
 # Adding both stable and unstable packages.
 environment.systemPackages = (with pkgs; [
 
-    chromium
+	chromium
 
 ])
 
@@ -15,7 +15,7 @@ environment.systemPackages = (with pkgs; [
 
 (with pkgs.unstable; [
 
-    zaz
+	zaz
 
 ]);
 

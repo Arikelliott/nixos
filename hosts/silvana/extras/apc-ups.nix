@@ -1,7 +1,7 @@
 {
 
-    # --- UPS Module
-    # - APC UPS Daemon -
-    services.apcupsd.enable = true;
+	# --- UPS Module
+	# - APC UPS Daemon -
+	services.apcupsd.enable = true;
 
 }

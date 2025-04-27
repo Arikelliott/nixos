@@ -1,6 +1,6 @@
 {
-  imports =
-    [
-      ./extra-hardware.nix
-    ];
+	imports =
+	[
+	./extra-hardware.nix
+	];
 }

@@ -1,18 +1,18 @@
 {
 
-    # Add support for special terminals
+	# Add support for special terminals
 
 programs.zsh = {
-    initExtra = ''
+	initExtra = ''
 
-    # Support for cool-retro-term hotkeys
-    if [ $TERM = 'xterm' ]
-    then
-        bindkey '^H' backward-delete-char
-    else
-    fi
+	# Support for cool-retro-term hotkeys
+	if [ $TERM = 'xterm' ]
+	then
+	bindkey '^H' backward-delete-char
+	else
+	fi
 
-    # Add support here for TTY color schemes:
+	# Add support here for TTY color schemes:
 
 
 	'';

@@ -2,62 +2,62 @@
 
 {
 
-    imports = [
+	imports = [
 		# - Import configs exclusive to this host
 		./icons.nix
-        ./themes.nix
-    ];
+	./themes.nix
+	];
 
-    # - Xserver -
-    services.xserver.enable = true; # Enable X11 windowing system.
-    services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
-        lightdm.enable = false;
-    };
+	# - Xserver -
+	services.xserver.enable = true; # Enable X11 windowing system.
+	services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
+	lightdm.enable = false;
+	};
 
-    # - Hyprland
-    programs.hyprland.enable = true; # Enable Hyprland.
-    programs.hyprland.package = pkgs.unstable.hyprland; # Use Unstable Hyprland package\
+	# - Hyprland
+	programs.hyprland.enable = true; # Enable Hyprland.
+	programs.hyprland.package = pkgs.unstable.hyprland; # Use Unstable Hyprland package\
 
-    # - Enable UWSM Support https://wiki.hyprland.org/Useful-Utilities/Systemd-start/
-    programs.uwsm.enable = true;
-    programs.hyprland.withUWSM = true;
-   #  programs.uwsm.waylandCompositors = {
-	  #  	hyprland = {
+	# - Enable UWSM Support https://wiki.hyprland.org/Useful-Utilities/Systemd-start/
+	programs.uwsm.enable = true;
+	programs.hyprland.withUWSM = true;
+	#	programs.uwsm.waylandCompositors = {
+		#		hyprland = {
 			# prettyName = "Hyprland";
 			# comment = "Hyprland compositor managed by UWSM";
 			# binPath = "/run/current-system/sw/bin/Hyprland";
-	  #   };
-   #  };
-    services.displayManager.defaultSession = "hyprland-uwsm";
+		#	};
+	#	};
+	services.displayManager.defaultSession = "hyprland-uwsm";
 
-    # - Disable xterm -
-    services.xserver.desktopManager.xterm.enable = false;
+	# - Disable xterm -
+	services.xserver.desktopManager.xterm.enable = false;
 
-    # - XDG Portal Settings -
-    xdg.portal = {
-        enable = true;
-        wlr.enable = true;
-        extraPortals = (with pkgs; [
-        	xdg-desktop-portal-gtk
-         	kdePackages.xdg-desktop-portal-kde
-        ]);
-    };
-    # - Policy Kit -
-    security.polkit.enable = true;
-    qt.enable = true;
+	# - XDG Portal Settings -
+	xdg.portal = {
+	enable = true;
+	wlr.enable = true;
+	extraPortals = (with pkgs; [
+		xdg-desktop-portal-gtk
+	 	kdePackages.xdg-desktop-portal-kde
+	]);
+	};
+	# - Policy Kit -
+	security.polkit.enable = true;
+	qt.enable = true;
 
-    programs.thunar.enable = true;
-    programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
+	programs.thunar.enable = true;
+	programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
 
-    environment.systemPackages = (with pkgs; [
+	environment.systemPackages = (with pkgs; [
 
-    	kdePackages.ark # Graphical file archival tool
+		kdePackages.ark # Graphical file archival tool
 
-    ])
+	])
 
-    ++
+	++
 
-    (with pkgs.unstable; [
+	(with pkgs.unstable; [
 
 		xorg.xhost # Server access control program for X. (May be needed for Gparted?)
 		gparted # GUI disk partitioning tool.
@@ -72,7 +72,7 @@
 		swww # Fancy Wayland wallpaper setter and daemon.
 		waypaper # GUI frontend for swww.
 		loupe # GUI Image Viewer.
-        # lxappearance # Doesn't work on Wayland at all
+	# lxappearance # Doesn't work on Wayland at all
 		nwg-look # Wayland alternative to lxappearance.
 		# nemo-with-extensions # Nemo file explorer
 		# nemo-fileroller
@@ -87,9 +87,9 @@
 		pwvucontrol # Pipewire volume control interface.
 		pywal # Color scheme generator/switcher.
 		stow # Symlink/dotfiles manager.
-        ags # GTK Widget making utility.
-        eww # Elkowar's wacky widgets.
-        xdg-desktop-portal-hyprland
+	ags # GTK Widget making utility.
+	eww # Elkowar's wacky widgets.
+	xdg-desktop-portal-hyprland
 	]);
 
 }

@@ -1,5 +1,5 @@
 {
 
-    services.flatpak.enable = true; # Enable Flatpak.
+	services.flatpak.enable = true; # Enable Flatpak.
 
 }

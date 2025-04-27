@@ -1,5 +1,5 @@
 {
 
-    hardware.opentabletdriver.enable = true; # Enable OpenTabletDriver.
+	hardware.opentabletdriver.enable = true; # Enable OpenTabletDriver.
 
 }

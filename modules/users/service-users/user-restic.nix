@@ -1,7 +1,7 @@
 {
 
 users.users.restic = {
-    isNormalUser = true;
+	isNormalUser = true;
 };
 
 }

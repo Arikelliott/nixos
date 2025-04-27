@@ -1,7 +1,7 @@
 {
 
-    wayland.windowManager.hyprland.settings.exec = [
+	wayland.windowManager.hyprland.settings.exec = [
 			"~/scripts/openrgb.sh"
-    ];
+	];
 
 }

@@ -9,10 +9,10 @@
 	
 	
 	# security.wrappers.restic = { # Run restic as non-root special user. Not sure if it's necessary or not?
-	#   source = "${pkgs.restic.out}/bin/restic";
-	#   owner = "restic";
-	#   group = "users";
-	#   permissions = "u=rwx,g=,o=";
+	#	source = "${pkgs.restic.out}/bin/restic";
+	#	owner = "restic";
+	#	group = "users";
+	#	permissions = "u=rwx,g=,o=";
 	#	capabilities = "cap_dac_read_search=+ep";
 	# };
 

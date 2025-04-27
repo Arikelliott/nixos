@@ -22,8 +22,8 @@
 
 	environment.systemPackages = with pkgs; [
 
-        home-manager # Install Home Manager.
-        nil # Language server for Nix.
+	home-manager # Install Home Manager.
+	nil # Language server for Nix.
 
 	];
 

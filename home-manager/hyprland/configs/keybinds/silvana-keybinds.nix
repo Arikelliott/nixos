@@ -1,6 +1,6 @@
 {
 
-    wayland.windowManager.hyprland.settings.bind = [
+	wayland.windowManager.hyprland.settings.bind = [
 
 			# Volume controls
 			"$mainMod, F12, exec, wpctl set-volume @DEFAULT_SINK@ 5%+"
@@ -10,6 +10,6 @@
 			# Take screenshot
 			"$mainMod, Print, exec, sh scripts/screenshot.sh"
 
-    ];
+	];
 
 }

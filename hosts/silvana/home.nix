@@ -33,7 +33,7 @@
 		# # configuration. For example, this adds a command 'my-hello' to your
 		# # environment:
 		# (pkgs.writeShellScriptBin "my-hello" ''
-		#   echo "Hello, ${config.home.username}!"
+		#	echo "Hello, ${config.home.username}!"
 		# '')
 	];
 
@@ -47,8 +47,8 @@
 
 		# # You can also set the file content immediately.
 		# ".gradle/gradle.properties".text = ''
-		#   org.gradle.console=verbose
-		#   org.gradle.daemon.idletimeout=3600000
+		#	org.gradle.console=verbose
+		#	org.gradle.daemon.idletimeout=3600000
 		# '';
 
 		# My notes:
@@ -71,15 +71,15 @@
 	# through Home Manager then you have to manually source 'hm-session-vars.sh'
 	# located at either
 	#
-	#  ~/.nix-profile/etc/profile.d/hm-session-vars.sh
+	#	~/.nix-profile/etc/profile.d/hm-session-vars.sh
 	#
 	# or
 	#
-	#  ~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
+	#	~/.local/state/nix/profiles/profile/etc/profile.d/hm-session-vars.sh
 	#
 	# or
 	#
-	#  /etc/profiles/per-user/arik/etc/profile.d/hm-session-vars.sh
+	#	/etc/profiles/per-user/arik/etc/profile.d/hm-session-vars.sh
 	#
 	home.sessionVariables = {
 		# EDITOR = "emacs";

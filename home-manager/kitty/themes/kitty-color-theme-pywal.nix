@@ -1,7 +1,7 @@
 {
 
-    programs.kitty.settings = {
-        include =  "~/.cache/wal/colors-kitty.conf";
-    };
+	programs.kitty.settings = {
+	include =	"~/.cache/wal/colors-kitty.conf";
+	};
 
 }

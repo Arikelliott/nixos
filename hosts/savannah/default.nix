@@ -15,7 +15,7 @@ in
 # -------- IMPORTS --------
 
 # - Import All Modules -
-  	imports = [
+		imports = [
 
 		# - Import configs exclusive to this host
 		./hardware-configuration.nix # Auto-generated hardware-config
@@ -56,12 +56,12 @@ in
 		../../modules/software/productivity/text-editors.nix # Regular text editors
 		../../modules/software/social/chat-clients.nix # Discord, IRC, etc.
 		../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
-		../../modules/software/ssh.nix  # Enable SSH
+		../../modules/software/ssh.nix	# Enable SSH
 		../../modules/software/system-utils.nix # Sundry utilities
 		../../modules/software/touchpad-input.nix
 		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
 
-    ];
+	];
 
 	# - Import Home Manager files
 	home-manager = {

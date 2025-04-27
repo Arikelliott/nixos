@@ -11,21 +11,21 @@
 	# programs.k3b.enable = true;
 
 	security.wrappers = {
-      cdrdao = {
-        setuid = true;
-        owner = "root";
-        group = "cdrom";
-        permissions = "u+wrx,g+x";
-        source = "${pkgs.cdrdao}/bin/cdrdao";
-      };
-      cdrecord = {
-        setuid = true;
-        owner = "root";
-        group = "cdrom";
-        permissions = "u+wrx,g+x";
-        source = "${pkgs.cdrtools}/bin/cdrecord";
-      };
-    };
+	cdrdao = {
+	setuid = true;
+	owner = "root";
+	group = "cdrom";
+	permissions = "u+wrx,g+x";
+	source = "${pkgs.cdrdao}/bin/cdrdao";
+	};
+	cdrecord = {
+	setuid = true;
+	owner = "root";
+	group = "cdrom";
+	permissions = "u+wrx,g+x";
+	source = "${pkgs.cdrtools}/bin/cdrecord";
+	};
+	};
 
 	environment.systemPackages = with pkgs.unstable; [
 		kdePackages.k3b

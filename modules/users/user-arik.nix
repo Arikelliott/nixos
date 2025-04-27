@@ -1,16 +1,16 @@
 {
 
 users.users.arik = {
-    isNormalUser = true;
-    initialPassword = "pw123";
-    extraGroups = [ "wheel" "cdrom" "wireshark" ]; # Enable ‘sudo’ for the user using "wheel" group.
-    uid=1000; # Set User ID
+	isNormalUser = true;
+	initialPassword = "pw123";
+	extraGroups = [ "wheel" "cdrom" "wireshark" ]; # Enable ‘sudo’ for the user using "wheel" group.
+	uid=1000; # Set User ID
 };
 
 nix.settings.trusted-users = [
-  "root"
-  "arik"
-  "@wheel"
+	"root"
+	"arik"
+	"@wheel"
 ];
 
 }

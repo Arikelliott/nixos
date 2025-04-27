@@ -1,11 +1,11 @@
 { pkgs, ... }:
 
 {
-  imports =
-    [
-      ./extra-hardware.nix
-      ./syncthing.nix
-    ];
+	imports =
+	[
+	./extra-hardware.nix
+	./syncthing.nix
+	];
 
 
 

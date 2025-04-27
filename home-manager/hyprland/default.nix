@@ -1,38 +1,38 @@
 { ... }:
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #   _   _                  _                 _
-    #  | | | |_   _ _ __  _ __| | __ _ _ __   __| |
-    #  | |_| | | | | '_ \| '__| |/ _` | '_ \ / _` |
-    #  |  _  | |_| | |_) | |  | | (_| | | | | (_| |
-    #  |_| |_|\__, | .__/|_|  |_|\__,_|_| |_|\__,_|
-    #        |___/|_|
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #
-    # Arik's Hyprland config
-    # Git repo: https://github.com/Arikelliott/nixos
-    # Figlet fonts: default, smslant.flf
-    # Built using Hyprland https://hyprland.org/
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	_	_			_		 _
+	#	| | | |_	_ _ __	_ __| | __ _ _ __	__| |
+	#	| |_| | | | | '_ \| '__| |/ _` | '_ \ / _` |
+	#	|	_	| |_| | |_) | |	| | (_| | | | | (_| |
+	#	|_| |_|\__, | .__/|_|	|_|\__,_|_| |_|\__,_|
+	#	|___/|_|
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#
+	# Arik's Hyprland config
+	# Git repo: https://github.com/Arikelliott/nixos
+	# Figlet fonts: default, smslant.flf
+	# Built using Hyprland https://hyprland.org/
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 {
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#
 
-    # wayland.windowManager.hyprland.extraConfig = ""; # Extra configuration lines to add to ‘~/.config/hypr/hyprland.conf’.
+	# wayland.windowManager.hyprland.extraConfig = ""; # Extra configuration lines to add to ‘~/.config/hypr/hyprland.conf’.
 
 
-    #
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	#
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    wayland.windowManager.hyprland = {
+	wayland.windowManager.hyprland = {
 		enable = true; # Configure Hyprland with home-manager
 		systemd = {
-		    enable = true; # Enable systemd service I guess?
+			enable = true; # Enable systemd service I guess?
 			# enableXdgAutostart = true; # Whether to enable autostart of applications using systemd-xdg-autostart-generator(8).
 		};
 		xwayland.enable = true; # Enable XWayland
@@ -41,59 +41,59 @@
 
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #   _______  ________________  __  ___  _   _____   ___  ____
-    #  / ___/ / / / __/_  __/ __ \/  |/  / | | / / _ | / _ \/ __/
-    # / /__/ /_/ /\ \  / / / /_/ / /|_/ /  | |/ / __ |/ , _/\ \
-    # \___/\____/___/ /_/  \____/_/  /_/   |___/_/ |_/_/|_/___/
-    #
-    # Custom variables to use later
-    # How to use custom variables: http://wiki.hyprland.org/Configuring/Keywords/#defining-variables
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	_______	________________	__	___	_	_____	___	____
+	#	/ ___/ / / / __/_	__/ __ \/	|/	/ | | / / _ | / _ \/ __/
+	# / /__/ /_/ /\ \	/ / / /_/ / /|_/ /	| |/ / __ |/ , _/\ \
+	# \___/\____/___/ /_/	\____/_/	/_/	|___/_/ |_/_/|_/___/
+	#
+	# Custom variables to use later
+	# How to use custom variables: http://wiki.hyprland.org/Configuring/Keywords/#defining-variables
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    wayland.windowManager.hyprland.settings = {
+	wayland.windowManager.hyprland.settings = {
 		"$mainMod" = "SUPER";
 	};
 
 
 
 	# - - - - - - - - - - - - - - - - - - - - - - - - -
-    #    ___  ___________  __   _____  ______
-    #   / _ \/  _/ __/ _ \/ /  / _ \ \/ / __/
-    #  / // // /_\ \/ ___/ /__/ __ |\  /\ \
-    # /____/___/___/_/  /____/_/ |_|/_/___/
-    #
-    # Sets display set up, similar to xrandr
-    # See https://wiki.hyprland.org/Configuring/Monitors/ for more info
-    # use wlr-randr to get display info
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	___	___________	__	_____	______
+	#	/ _ \/	_/ __/ _ \/ /	/ _ \ \/ / __/
+	#	/ // // /_\ \/ ___/ /__/ __ |\	/\ \
+	# /____/___/___/_/	/____/_/ |_|/_/___/
+	#
+	# Sets display set up, similar to xrandr
+	# See https://wiki.hyprland.org/Configuring/Monitors/ for more info
+	# use wlr-randr to get display info
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    wayland.windowManager.hyprland.settings = {
-        "monitor" = ",preferred,auto,auto"; # Set default if no config is provided
-    };
+	wayland.windowManager.hyprland.settings = {
+	"monitor" = ",preferred,auto,auto"; # Set default if no config is provided
+	};
 
-    # ! Import monitor config with individual host home.nix files !
-    # Important for later: https://github.com/TheMaxMur/NixOS-Configuration/blob/master/home/modules/hyprland/monitors/default.nix
-    # ^ Might let us import a single file and change settings based on variables,
-    # also a good reference for how to set it up.
+	# ! Import monitor config with individual host home.nix files !
+	# Important for later: https://github.com/TheMaxMur/NixOS-Configuration/blob/master/home/modules/hyprland/monitors/default.nix
+	# ^ Might let us import a single file and change settings based on variables,
+	# also a good reference for how to set it up.
 
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #    _____  ___________
-    #   / __/ |/_/ __/ ___/
-    #  / _/_>  </ _// /__
-    # /___/_/|_/___/\___/
-    #
-    # Executes any programs, scripts, etc. that should be autostarted
-    # See https://wiki.hyprland.org/Configuring/Dispatchers/#list-of-dispatchers for more info
-    # also https://wiki.hyprland.org/Configuring/Keywords/#executing
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	_____	___________
+	#	/ __/ |/_/ __/ ___/
+	#	/ _/_>	</ _// /__
+	# /___/_/|_/___/\___/
+	#
+	# Executes any programs, scripts, etc. that should be autostarted
+	# See https://wiki.hyprland.org/Configuring/Dispatchers/#list-of-dispatchers for more info
+	# also https://wiki.hyprland.org/Configuring/Keywords/#executing
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    wayland.windowManager.hyprland.settings = {
+	wayland.windowManager.hyprland.settings = {
 		# Executes any programs, scripts, etc. that should be autostarted
 
 		# EXEC-ONCE: RUN THESE ONLY AT STARTUP
@@ -113,20 +113,20 @@
 	};
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #    _____  ___   __
-    #   / __/ |/ / | / /
-    #  / _//    /| |/ /
-    # /___/_/|_/ |___/
-    #
-    # Sets environment variables as needed
-    # See https://wiki.hyprland.org/Configuring/Environment-variables/ for more info
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	_____	___	__
+	#	/ __/ |/ / | / /
+	#	/ _//	/| |/ /
+	# /___/_/|_/ |___/
+	#
+	# Sets environment variables as needed
+	# See https://wiki.hyprland.org/Configuring/Environment-variables/ for more info
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    home.sessionVariables = {
-        # EDITOR = "emacs";
-        GTK_THEME = "Materia-light"; # sets GTK theme
+	home.sessionVariables = {
+	# EDITOR = "emacs";
+	GTK_THEME = "Materia-light"; # sets GTK theme
 
 		# HYPRCURSOR_THEME = ""; # Set Hyprcursor theme
 		# HYPRCURSOR_SIZE = ""; # Set Hyprcursor size
@@ -147,65 +147,65 @@
 		XDG_SESSION_DESKTOP = "Hyprland";
 
 		HYPRSHOT_DIR = "Pictures/screenshots"; # Set Hyprshot to save to specific directory
-    };
+	};
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #    ___  _____   ___________________
-    #   / _ \/ __/ | / /  _/ ___/ __/ __/
-    #  / // / _/ | |/ // // /__/ _/_\ \
-    # /____/___/ |___/___/\___/___/___/
-    #
-    # Configure input, gestures, and custom devices
-    # See the following pages:
-    # - http://wiki.hyprland.org/Configuring/Variables/#input
-    # - https://wiki.hyprland.org/Configuring/Variables/#gestures
-    # - https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	___	_____	___________________
+	#	/ _ \/ __/ | / /	_/ ___/ __/ __/
+	#	/ // / _/ | |/ // // /__/ _/_\ \
+	# /____/___/ |___/___/\___/___/___/
+	#
+	# Configure input, gestures, and custom devices
+	# See the following pages:
+	# - http://wiki.hyprland.org/Configuring/Variables/#input
+	# - https://wiki.hyprland.org/Configuring/Variables/#gestures
+	# - https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    # Split into multiple per-device configs linked to in home.nix later?
-    # imports = [
+	# Split into multiple per-device configs linked to in home.nix later?
+	# imports = [
 	# 	./configs/devices.nix # Import devices configs
 	# ];
 
 	# Input
 
 	wayland.windowManager.hyprland.settings = {
-        input = {
-            kb_layout = "us";
-            # kb_variant = "";
-            # kb_model = "";
-            # kb_options = "";
-            # kb_rules = "";
-            numlock_by_default = "true";
-            follow_mouse = "1";
-            touchpad = {
-                natural_scroll = "false";
-            };
-            sensitivity = "0"; # -1.0 - 1.0, 0 means no modification.
-        };
-        gestures = { # Gestures
-            # See https://wiki.hyprland.org/Configuring/Variables/ for more
-            workspace_swipe = "false";
-        };
-    };
+	input = {
+		kb_layout = "us";
+		# kb_variant = "";
+		# kb_model = "";
+		# kb_options = "";
+		# kb_rules = "";
+		numlock_by_default = "true";
+		follow_mouse = "1";
+		touchpad = {
+		natural_scroll = "false";
+		};
+		sensitivity = "0"; # -1.0 - 1.0, 0 means no modification.
+	};
+	gestures = { # Gestures
+		# See https://wiki.hyprland.org/Configuring/Variables/ for more
+		workspace_swipe = "false";
+	};
+	};
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #  _   _____   ___  _______   ___  __   ________
-    # | | / / _ | / _ \/  _/ _ | / _ )/ /  / __/ __/
-    # | |/ / __ |/ , _// // __ |/ _  / /__/ _/_\ \
-    # |___/_/ |_/_/|_/___/_/ |_/____/____/___/___/
-    #
-    # Configure all variables
-    # See http://wiki.hyprland.org/Configuring/Variables/ for more info
-    #
-    # - DOES NOT INCLUDE CERTAIN VARIABLES -
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	_	_____	___	_______	___	__	________
+	# | | / / _ | / _ \/	_/ _ | / _ )/ /	/ __/ __/
+	# | |/ / __ |/ , _// // __ |/ _	/ /__/ _/_\ \
+	# |___/_/ |_/_/|_/___/_/ |_/____/____/___/___/
+	#
+	# Configure all variables
+	# See http://wiki.hyprland.org/Configuring/Variables/ for more info
+	#
+	# - DOES NOT INCLUDE CERTAIN VARIABLES -
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    wayland.windowManager.hyprland.settings = {
+	wayland.windowManager.hyprland.settings = {
 
 		general = {
 			gaps_in = "5";
@@ -232,16 +232,16 @@
 				xray = "false";
 			};
 			shadow = {
-    			enabled = "true";
-    			range = "40";
-    			render_power = "4";
-    			color = "rgba(00000044)";
-    			color_inactive = "rgba(00000044)";
+				enabled = "true";
+				range = "40";
+				render_power = "4";
+				color = "rgba(00000044)";
+				color_inactive = "rgba(00000044)";
 			};
 		};
 
 		animations = {
-       		enabled = "true";
+			enabled = "true";
 			bezier = [
 				"myBezier, 0, 1, 0, 1"
 				"linear, 0, 0, 0, 0"
@@ -276,18 +276,18 @@
 	};
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #    __ ________  _____  _____  _____  ____
-    #   / //_/ __/\ \/ / _ )/  _/ |/ / _ \/ __/
-    #  / ,< / _/   \  / _  |/ //    / // /\ \
-    # /_/|_/___/   /_/____/___/_/|_/____/___/
-    #
-    # Creates all keybinds
-    # See https://wiki.hyprland.org/Configuring/Binds/ for more info
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	__ ________	_____	_____	_____	____
+	#	/ //_/ __/\ \/ / _ )/	_/ |/ / _ \/ __/
+	#	/ ,< / _/	\	/ _	|/ //	/ // /\ \
+	# /_/|_/___/	/_/____/___/_/|_/____/___/
+	#
+	# Creates all keybinds
+	# See https://wiki.hyprland.org/Configuring/Binds/ for more info
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    wayland.windowManager.hyprland.settings = {
+	wayland.windowManager.hyprland.settings = {
 		# Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 
 		bind = [
@@ -380,55 +380,55 @@
 		];
 
 		bindm = [
-    		# Move/resize windows with mainMod + LMB/RMB and dragging
-    		"$mainMod, mouse:272, movewindow"
-    		"$mainMod, mouse:273, resizewindow"
-        ];
+			# Move/resize windows with mainMod + LMB/RMB and dragging
+			"$mainMod, mouse:272, movewindow"
+			"$mainMod, mouse:273, resizewindow"
+	];
 	};
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #  _      _______  _____  ____ _      __  ___  __  ____   ________
-    # | | /| / /  _/ |/ / _ \/ __ \ | /| / / / _ \/ / / / /  / __/ __/
-    # | |/ |/ // //    / // / /_/ / |/ |/ / / , _/ /_/ / /__/ _/_\ \
-    # |__/|__/___/_/|_/____/\____/|__/|__/ /_/|_|\____/____/___/___/
-    #
-    # Configure custom window rules (e.g. make certain apps floating by default)
-    # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more info
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	_	_______	_____	____ _	__	___	__	____	________
+	# | | /| / /	_/ |/ / _ \/ __ \ | /| / / / _ \/ / / / /	/ __/ __/
+	# | |/ |/ // //	/ // / /_/ / |/ |/ / / , _/ /_/ / /__/ _/_\ \
+	# |__/|__/___/_/|_/____/\____/|__/|__/ /_/|_|\____/____/___/___/
+	#
+	# Configure custom window rules (e.g. make certain apps floating by default)
+	# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more info
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    wayland.windowManager.hyprland.settings = {
-        # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
-        windowrule = [
-            # "float, ^(org.gnome.Calculator)$"
-            "float, class:org.gnome.Calculator" # both of these work, dunno what the regex does
-            "float, class:org.kde.polkit-kde-authentication-agent-1"
-            "float,class:^(thunar)$,title:^(File Operation Progress)$"
-            # "stayfocused, title:^()$,class:^(steam)$"
-            # "minsize 1 1, title:^()$,class:^(steam)$"
-            "float, size 30% 30%, class:xdg-desktop-portal-gtk"
-            "float, size 172 502, title:^(Authentication Required)$"
-        ];
-        # Some things are layers, not windows. Rofi for example. They have different limits
-        # http://wiki.hyprland.org/Configuring/Window-Rules/#layer-rules for more info
-        # https://www.reddit.com/r/hyprland/comments/163if0n/comment/jy2zjmq/?utm_source=share&utm_medium=web2x&context=3
-        layerrule = [
-            "blur, rofi"
-            # "blur, waybar"
-        ];
-    };
+	wayland.windowManager.hyprland.settings = {
+	# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
+	windowrule = [
+		# "float, ^(org.gnome.Calculator)$"
+		"float, class:org.gnome.Calculator" # both of these work, dunno what the regex does
+		"float, class:org.kde.polkit-kde-authentication-agent-1"
+		"float,class:^(thunar)$,title:^(File Operation Progress)$"
+		# "stayfocused, title:^()$,class:^(steam)$"
+		# "minsize 1 1, title:^()$,class:^(steam)$"
+		"float, size 30% 30%, class:xdg-desktop-portal-gtk"
+		"float, size 172 502, title:^(Authentication Required)$"
+	];
+	# Some things are layers, not windows. Rofi for example. They have different limits
+	# http://wiki.hyprland.org/Configuring/Window-Rules/#layer-rules for more info
+	# https://www.reddit.com/r/hyprland/comments/163if0n/comment/jy2zjmq/?utm_source=share&utm_medium=web2x&context=3
+	layerrule = [
+		"blur, rofi"
+		# "blur, waybar"
+	];
+	};
 
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
-    #  ________ ________  ___________
-    # /_  __/ // / __/  |/  / __/ __/
-    #  / / / _  / _// /|_/ / _/_\ \
-    # /_/ /_//_/___/_/  /_/___/___/
-    #
-    # Placeholder for future theme support
-    #
-    # - - - - - - - - - - - - - - - - - - - - - - - - -
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
+	#	________ ________	___________
+	# /_	__/ // / __/	|/	/ __/ __/
+	#	/ / / _	/ _// /|_/ / _/_\ \
+	# /_/ /_//_/___/_/	/_/___/___/
+	#
+	# Placeholder for future theme support
+	#
+	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 

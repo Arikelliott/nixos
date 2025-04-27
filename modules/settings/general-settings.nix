@@ -1,6 +1,6 @@
 {
 
-    systemd.enableEmergencyMode = false;
+	systemd.enableEmergencyMode = false;
 
 	programs.gnupg.agent = {
 		enable = true;

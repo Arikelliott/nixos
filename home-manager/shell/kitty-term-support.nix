@@ -1,15 +1,15 @@
 {
 
-    # Add support for special terminals
+	# Add support for special terminals
 
 programs.zsh = {
-    initExtra = ''
+	initExtra = ''
 
-    if [ $TERM = 'xterm-kitty' ]
-    then
-        alias ssh='kitty +kitten ssh'
-    else
-    fi
+	if [ $TERM = 'xterm-kitty' ]
+	then
+	alias ssh='kitty +kitten ssh'
+	else
+	fi
 
 	'';
 };
