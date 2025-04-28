@@ -1,4 +1,7 @@
-{ inputs, pkgs, lib, ... }:
+{ inputs, ... }:
+
+	# My Nixvim config
+	# See https://nix-community.github.io/nixvim/24.11/ for more info on configuration
 
 {
 
