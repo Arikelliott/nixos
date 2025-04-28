@@ -103,5 +103,6 @@
 		../../home-manager/hyprland/configs/displays/silvana1.nix
 		../../home-manager/hyprland/configs/extra/silvana-extra.nix
 		../../home-manager/hyprland/configs/keybinds/silvana-keybinds.nix
+		# ../../home-manager/neovim
 	];
 }

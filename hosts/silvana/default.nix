@@ -74,6 +74,8 @@ in
 		../../modules/software/system-utils.nix # Sundry utilities
 		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
 
+		../../modules/software/neovim
+
 	];
 
 	# - Import Home Manager files
