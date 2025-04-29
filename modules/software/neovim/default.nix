@@ -20,6 +20,15 @@
 			lualine.enable = true;
 			bufferline.enable = true;
 			web-devicons.enable = true;
+			nix.enable = true;
+                        nix-develop.enable = true;
+                        treesitter.enable = true; # I think it structures file syntax highlighting better?
+
+                        # Setup keybinds for oil, telescope, which-key
+			oil.enable = true; # Menu for browsing files, etc
+			telescope.enable = true; # fuzzy finder search for files and many other things
+                        which-key.enable = true; # Shows currently used keybinds. Not sure if it works for plugin keybinds
+
                         wilder = { # Popup menu for command suggestions (whenever you type :, /, or ?
                           enable = true;
                           enableCmdlineEnter = true;
@@ -32,6 +41,10 @@
                             wilder.popupmenu_renderer()
                           '';
                         };
+
+                        # Pair these together in the future:
+                        # - zen-mode
+                        # - twilight
 
 
 
