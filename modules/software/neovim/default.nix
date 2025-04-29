@@ -20,6 +20,18 @@
 			lualine.enable = true;
 			bufferline.enable = true;
 			web-devicons.enable = true;
+                        wilder = { # Popup menu for command suggestions (whenever you type :, /, or ?
+                          enable = true;
+                          enableCmdlineEnter = true;
+                          modes = [
+                            ":"
+                            "/"
+                            "?"
+                          ];
+                          renderer = ''
+                            wilder.popupmenu_renderer()
+                          '';
+                        };
 
 
 
