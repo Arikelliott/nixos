@@ -7,7 +7,8 @@ environment.systemPackages = with pkgs; [
 	chromium
 	obsidian # Personal note-taking and thought organizing app.
 	# calibre # E-reader
-	# evince # All-purpose document viewer (PDFs, etc.).
+    # evince # All-purpose document viewer (PDFs, etc.).
+    zathura # another all purpose doc viewer. check Nix options for it.
 	hugo # Static website generator.
 	pandoc # General filetype converter (eg. md to html).
 	libreoffice # LibreOffice
