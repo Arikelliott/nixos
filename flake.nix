@@ -11,7 +11,8 @@
 		nixvim = {
 			url = "github:nix-community/nixvim/nixos-24.11";
 			inputs.nixpkgs.follows = "nixpkgs";
-		};
+        };
+        spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 	};
 
 	outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home-manager, ... }: # Figure out what the "inputs@" bit does. Seems to work the same as without?
