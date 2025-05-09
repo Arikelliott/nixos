@@ -1,13 +1,24 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
 
-	services.spotifyd.enable = true; # Enable Spotify daemon.
+    # services.spotifyd.enable = true; # Enable Spotify daemon.
+	# environment.systemPackages = with pkgs; [
+	#   spotify
+	# ];
 
-	environment.systemPackages = with pkgs; [
+    imports = [
+      inputs.spicetify-nix.nixosModules.default
+    ];
 
-	spotify
+    programs.spicetify = 
+    let
+      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+    in
+    {
+      enable = true;
+      theme = spicePkgs.themes.text;
 
-	];
-
+      colorScheme = "RosePineMoon";
+    };
 }
