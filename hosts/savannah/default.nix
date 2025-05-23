@@ -40,6 +40,7 @@ in
 		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
 		../../modules/software/desktop-environments/grub-theme.nix # GRUB Theme
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
+		../../modules/software/desktop-environments/sddm # Enable SDDM display manager
 		../../modules/software/dev/java.nix # Install Java
 		../../modules/software/dev/lua.nix # Install lua
 		../../modules/software/dev/nixd.nix # Install nixd LSP
