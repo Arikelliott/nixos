@@ -14,8 +14,7 @@
 		materia-theme # Materia GTK theme.
 		material-icons # Google's Material icons.
 		papirus-icon-theme
-		nerdfonts
 
-	];
+	] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
 }
