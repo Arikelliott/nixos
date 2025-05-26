@@ -6,22 +6,6 @@
 		dotDir = ".config/zsh"; # Where zsh configs are stored
 		# zprof.enable = true; # Runs at the beginning of a zsh session and prints out the time it takes for .zshrc commands to start
 
-		# Commands to add at top of .zshrc
-		initExtraFirst = ''
-		# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-		# Initialization code that may require console input (password prompts, [y/n]
-		# confirmations, etc.) must go above this block; everything else may go below.
-		if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-		source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-		fi
-		# --- Enable p10k theme
-		source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-		# --- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-		# ~/.p10k.zsh is the where the powerlevel10k config you initially set is stored
-		[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
-
-	'';
-
 	enableCompletion = true; # Not exactly sure what this does honestly. Tab autocomplete seems to work with it set to false.
 	autosuggestion = { # zsh autosuggestions
 		enable = true;
@@ -56,7 +40,21 @@
 	historySubstringSearch.enable = true; # Search for part of a previous command by typing a pattern and searching for commands with that pattern
 
 	# Commands to add into .zshrc
-	initExtra = ''
+	initContent = ''
+		# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+		# Initialization code that may require console input (password prompts, [y/n]
+		# confirmations, etc.) must go above this block; everything else may go below.
+		if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+		source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+		fi
+		# --- Enable p10k theme
+		source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+		# --- To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+		# ~/.p10k.zsh is the where the powerlevel10k config you initially set is stored
+		[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
+
+
+
 			# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 		#	exec tmux attach
 		# fi
@@ -66,10 +64,7 @@
 			## case insensitive path-completion
 			zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 			zstyle ':completion:*' menu select
-		'';
-
-	# Commands to add to .zshrc before compinit section
-	initExtraBeforeCompInit = '' '';
+	'';
 
 	# Commands added to .zprofile and .zlogout that run when starting or quitting a zsh session
 	# profileExtra = "";

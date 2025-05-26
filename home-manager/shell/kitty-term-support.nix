@@ -3,7 +3,7 @@
 	# Add support for special terminals
 
 programs.zsh = {
-	initExtra = ''
+	initContent = ''
 
 	if [ $TERM = 'xterm-kitty' ]
 	then
