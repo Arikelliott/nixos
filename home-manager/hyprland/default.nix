@@ -273,6 +273,10 @@
 			disable_logs = "false";
 			enable_stdout_logs = "true";
 		};
+
+		ecosystem = {
+			no_donation_nag = "true";
+		};
 	};
 
 
