@@ -14,7 +14,7 @@ environment.systemPackages = with pkgs; [
 	# klystrack # C64/Amiga/NES tracker.
 	blender-hip # HIP/ROCm version of Blender?
 	# blender # 3D Modeling software.
-	gimp # Raster editing program.
+	gimp3 # Raster editing program.
 	inkscape # Vector illustration program.
 	krita # Photo editing and painting program.
 	# calf # Open source audio plugins for musicians.
