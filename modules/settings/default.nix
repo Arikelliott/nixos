@@ -2,10 +2,21 @@
 
 {
 
+	systemd.enableEmergencyMode = false;
+
+	programs.gnupg.agent = {
+		enable = true;
+	};
+
 	nix = {
 		settings = {
 			experimental-features = [ "nix-command" "flakes" ]; # Enable flakes and nix-command.
 			warn-dirty = false;
+		};
+		settings.auto-optimise-store = true;
+		gc = {
+			automatic = true;
+			dates = "weekly";
 		};
 	};
 
@@ -22,8 +33,8 @@
 
 	environment.systemPackages = with pkgs; [
 
-	home-manager # Install Home Manager.
-	nil # Language server for Nix.
+		home-manager # Install Home Manager.
+		nil # Language server for Nix.
 
 	];
 

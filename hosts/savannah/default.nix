@@ -23,9 +23,7 @@ in
 		# Includes:
 
 		# - Import General Settings
-		../../modules/settings/nixos-settings.nix # NixOS-specific general settings
-		../../modules/settings/nixos-maintenance.nix # NixOS maintenance settings
-		../../modules/settings/general-settings.nix # General Linux system maintenance
+		../../modules/settings # General settings
 		../../modules/settings/networking/default-networking-profile.nix # Basic universal networking settings
 		../../modules/localization/timezones/detroit.nix # Set time zone
 		../../modules/localization/default-localization-profile.nix # Set language, keyboard, etc.
