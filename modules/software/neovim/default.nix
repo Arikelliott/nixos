@@ -74,7 +74,11 @@
                 nixd.enable = true;
             };
             };
-        };
+		};
+		clipboard = {
+			providers.wl-copy.enable = true; # Use wl-copy for wayland and xsel for Xorg
+			register = "unnamedplus";
+		};
     };
 
 }

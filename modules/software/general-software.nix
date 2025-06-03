@@ -53,6 +53,7 @@ environment.systemPackages = with pkgs; [
 	wev # Get wayland keypresses in terminal
 	xdg-ninja # Shell script which checks your $HOME for unwanted files and directories
 	rdfind # Utility for finding and removing duplicate files
+	wl-clipboard-rs # Wayland clipboard utilities, written in Rust
 
 	# GUI software
 	firefox

@@ -104,6 +104,8 @@
 			"lxqt-policykit-agent" # KDE polkit software (recommended by Vaxry), handles authentication. https://wiki.archlinux.org/title/Polkit
 			"ckb-next -b" # starts ckb-next corsair mouse software
 			# "sh ~/dotfiles/rgb/rgb.sh off" # Autoruns RGB (currently defaults to "off")
+			"wl-paste --type text --watch cliphist store" # Stores only text data
+			"wl-paste --type image --watch cliphist store" # Stores only image data
 		];
 
 		# EXEC: RUN THESE EVERY HYPRLAND RELOAD
