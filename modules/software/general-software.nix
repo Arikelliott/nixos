@@ -58,6 +58,7 @@ environment.systemPackages = with pkgs; [
 	# GUI software
 	firefox
 	keepassxc # KeePassXC password manager.
+	kpcli # KeePass CLI utility.
 
 	# git specific software
 	gitui
