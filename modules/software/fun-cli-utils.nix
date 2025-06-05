@@ -13,6 +13,7 @@
 	cool-retro-term # An overly-fancy terminal emulator.
 	spotdl # Spotify music downloader.
 	onthespot # Spotify GUI music downloader.
+	id3v2 # Music metadata viewing and editing tool.
 
 	])
 
