@@ -11,6 +11,8 @@
 	glow # Utility for rendering Markdown in the terminal.
 	neofetch # System info fetcher and snowflake displayer.
 	cool-retro-term # An overly-fancy terminal emulator.
+	spotdl # Spotify music downloader.
+	onthespot # Spotify GUI music downloader.
 
 	])
 
