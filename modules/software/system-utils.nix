@@ -18,6 +18,7 @@
 	ghostscript # Postscript interpreter for PDFs and stuff.
 	# jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
 	gvfs # Virtual Filesystem support library
+	easytag # GUI ID3 song metadata viewer and editor.
 
 	];
 
