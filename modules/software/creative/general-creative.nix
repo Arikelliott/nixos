@@ -25,6 +25,7 @@ environment.systemPackages = with pkgs; [
 	ffmpegthumbnailer # Generates thumbnails of images and video for file browsers, etc.
 	helvum # GTK Patchbay for PipeWire.
 	mpv # Media player.
+	rmpc # TUI Music Player
 	obs-studio # Video recording software.
 	strawberry # Music player app.
 	# cura # Slicer for 3D printing.
