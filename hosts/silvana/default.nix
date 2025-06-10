@@ -59,6 +59,7 @@ in
 		../../modules/software/games/general-games.nix # Install Steam
 		../../modules/software/general-software.nix # General universal software
 		../../modules/software/music/k3b.nix # Install K3B KDE music burner
+		../../modules/software/music/mpd.nix # Run mpd server
 		../../modules/software/music/spotify.nix # Install Spotify
 		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
 		../../modules/software/networking/networkmanager.nix # Install NetworkManager
