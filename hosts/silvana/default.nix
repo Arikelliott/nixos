@@ -43,6 +43,7 @@ in
 		../../modules/software/desktop-environments/grub-theme.nix # GRUB Theme
 		../../modules/software/desktop-environments/gnome.nix # Enable GNOME
 		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
+		../../modules/software/desktop-environments/niri.nix # Enable Niri
 		../../modules/software/desktop-environments/sddm # Enable SDDM display manager
 		../../modules/software/dev/benchmarking.nix # Benchmarking utils
 		../../modules/software/dev/cybersec.nix # Tools for cybersecurity uses.

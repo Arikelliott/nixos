@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -12,31 +12,29 @@
 	# - Xserver -
 	services.xserver.enable = true; # Enable X11 windowing system.
 	services.xserver.displayManager = { # Disable LightDM default when no other display manager is enabled.
-	lightdm.enable = false;
+		lightdm.enable = false;
 	};
 
 	# - Hyprland
-	programs.hyprland.enable = true; # Enable Hyprland.
-
-	# - Enable UWSM Support https://wiki.hyprland.org/Useful-Utilities/Systemd-start/
-	programs.uwsm.enable = true;
-	programs.hyprland.withUWSM = true;
-	services.displayManager.defaultSession = "hyprland-uwsm";
+	programs.niri.enable = true; # Enable Hyprland.
 
 	# - Disable xterm -
 	services.xserver.desktopManager.xterm.enable = false;
 
 	# - XDG Portal Settings -
 	xdg.portal = {
-	enable = true;
-	wlr.enable = true;
-	extraPortals = (with pkgs; [
-		xdg-desktop-portal-gtk
-	 	kdePackages.xdg-desktop-portal-kde
-	]);
+		enable = true;
+		wlr.enable = true;
+		extraPortals = (with pkgs; [
+			xdg-desktop-portal-gtk
+			kdePackages.xdg-desktop-portal-kde
+			xdg-desktop-portal-gnome
+		]);
 	};
 	# - Policy Kit -
+	services.gnome.gnome-keyring.enable = true;
 	security.polkit.enable = true;
 	qt.enable = true;
+
 
 }
