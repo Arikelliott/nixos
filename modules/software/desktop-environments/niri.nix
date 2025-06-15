@@ -15,8 +15,8 @@
 		lightdm.enable = false;
 	};
 
-	# - Hyprland
-	programs.niri.enable = true; # Enable Hyprland.
+	# - Niri
+	programs.niri.enable = true; # Enable Niri.
 
 	# - Disable xterm -
 	services.xserver.desktopManager.xterm.enable = false;
