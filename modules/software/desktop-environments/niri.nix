@@ -36,5 +36,8 @@
 	security.polkit.enable = true;
 	qt.enable = true;
 
+	environment.systemPackages = with pkgs; [
+		xwayland-satellite
+	];
 
 }
