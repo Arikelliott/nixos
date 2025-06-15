@@ -3,21 +3,21 @@
 {
 
 	services.displayManager.sddm = {
-	enable = true;
-	package = pkgs.kdePackages.sddm;
-	wayland.enable = true;
-	autoNumlock = true;
-#	theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
+		enable = true;
+		package = pkgs.kdePackages.sddm;
+		wayland.enable = true;
+		autoNumlock = true;
+		# theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
 		theme = "sddm-astronaut";
 	};
 	# services.displayManager.defaultSession = "hyprland";
 
 	environment.systemPackages = with pkgs; [
-	sddm-sugar-dark # broken currently, will need to manually add and edit the package
-	sddm-astronaut #
-	sddm-chili-theme
+		sddm-sugar-dark # broken currently, will need to manually add and edit the package
+		sddm-astronaut #
+		sddm-chili-theme
 
-	libsForQt5.sddm
+		libsForQt5.sddm
 	];
 
 }
