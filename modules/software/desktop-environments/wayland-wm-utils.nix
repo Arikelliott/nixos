@@ -34,6 +34,8 @@
 		# libsForQt5.polkit-kde-agent # KDE polkit agent.
 		lxqt.lxqt-policykit # LXQT polkit agent.
 		pwvucontrol # Pipewire volume control interface.
+		better-control # General purpose GTK control panel.
+		mission-center # GTK Task Manager style system monitir.
 		pywal # Color scheme generator/switcher.
 		stow # Symlink/dotfiles manager.
 		ags # GTK Widget making utility.
