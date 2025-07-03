@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ...}:
 
 {
 
@@ -42,6 +42,7 @@
 		eww # Elkowar's wacky widgets.
 		xdg-desktop-portal-hyprland
 		mako # Lightweight Wayland notification daemon.
+		inputs.quickshell.packages.${pkgs.system}.default # Quickshell, a Qt-based shell/widget maker
 
 	];
 
