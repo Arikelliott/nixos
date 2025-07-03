@@ -20,6 +20,9 @@
 		};
 	};
 
+# - Enable support for unpatched dynamic binaries on NixOS -
+	programs.nix-ld.enable = true;
+
 # - Enable non-free software packages -
 	nixpkgs.config.allowUnfreePredicate = _: true;
 
