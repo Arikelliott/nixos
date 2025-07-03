@@ -37,6 +37,7 @@
 	environment.systemPackages = with pkgs; [
 
 		home-manager # Install Home Manager.
+		chezmoi # Cross-device dotfile manager.
 		nil # Language server for Nix.
 
 	];
