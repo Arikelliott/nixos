@@ -7,5 +7,8 @@ imports =
 	./restic-backups.nix
 	./vfio-config.nix
 	./syncthing.nix
+
+	#Adding to test stability
+	./kernel.nix
 	];
 }
