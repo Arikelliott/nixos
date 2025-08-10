@@ -28,7 +28,7 @@
 
 		# - Import Users
 		../../modules/users/user-arik.nix # Add Arik
-		../../modules/users/user-access.nix # Add Access
+		# ../../modules/users/user-access.nix # Add Access
 
 		# - Import Software packages and settings -
 		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
