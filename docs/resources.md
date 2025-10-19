@@ -28,3 +28,12 @@ A collection of links to various Nix resources.
 - git+https://github.com/hyprwm/Hyprland?submodules=1
 - github:KZDKM/Hyprspace
 - github:pjones/plasma-manager
+
+
+### Unsorted
+- https://nix-community.github.io/stylix/configuration.html#configuration
+- https://devenv.sh/
+- https://direnv.net/
+- https://github.com/cachix/cachix
+- https://www.chezmoi.io/quick-start/#start-using-chezmoi-on-your-current-machine
+- https://haril.dev/en/blog/2023/04/08/chezmoi-basic-settings
