@@ -24,19 +24,10 @@ in
 		../../modules/localization/default-localization-profile.nix # Set language, keyboard, etc.
 
 		# - Import Users
-		../../modules/users/user-arik.nix # Add Arik
+		../../modules/users/user-arik.nix # Add Arik user.
 
 		# - Import Software packages and settings -
-		# ../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
-		# ../../modules/software/brightness.nix # Installs brightnessctl for screen brightness and keyboard backlight
-		# ../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
-		# ../../modules/software/desktop-environments/grub-theme.nix # GRUB Theme
-		# ../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
-		# ../../modules/software/desktop-environments/sddm # Enable SDDM display manager
-		# ../../modules/software/dev/java.nix # Install Java
-		# ../../modules/software/dev/lua.nix # Install lua
 		# ../../modules/software/dev/nixd.nix # Install nixd LSP
-		# ../../modules/software/dev/python.nix # Install Python
 		# ../../modules/software/fonts.nix # Install default fonts
 		# ../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
 		# ../../modules/software/games/general-games.nix # Install Steam
@@ -57,7 +48,7 @@ in
 
 	];
 
-	# - Import Home Manager files
+	# - Home Manager
 	home-manager = {
 		backupFileExtension = "hmbackup";
 		useGlobalPkgs = true;
