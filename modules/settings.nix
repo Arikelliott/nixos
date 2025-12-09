@@ -2,6 +2,8 @@
 
 {
 
+# - NIX STUFF -
+
 	systemd.enableEmergencyMode = false;
 
 	programs.gnupg.agent = {
@@ -22,7 +24,7 @@
 
 
 
-# - NETWORKING
+# - NETWORKING -
 
 	networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain"; # Configure network proxy if necessary
 	# - Firewall -
@@ -32,9 +34,13 @@
 	# Or disable the firewall altogether.
 	networking.firewall.enable = false;
 
+# - SSH -
 
+	services.openssh.enable = true; # Enable the OpenSSH daemon.
+	programs.ssh.enableAskPassword = false; # Disable Askpass (hopefully)
+	programs.ssh.startAgent = true;
 
-# - PACKAGE STUFF
+# - PACKAGE STUFF -
 
 # - Enable support for unpatched dynamic binaries on NixOS -
 	programs.nix-ld.enable = true;
@@ -55,6 +61,7 @@
 		home-manager # Install Home Manager.
 		chezmoi # Cross-device dotfile manager.
 		nil # Language server for Nix.
+		nixd # Other language server for Nix.
 		ntfs3g # Add NTFS drivers.
 
 	];

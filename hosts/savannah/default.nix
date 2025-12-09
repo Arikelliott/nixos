@@ -27,10 +27,6 @@ in
 		../../modules/users/user-arik.nix # Add Arik user.
 
 		# - Import Software packages and settings -
-		# ../../modules/software/dev/nixd.nix # Install nixd LSP
-		# ../../modules/software/fonts.nix # Install default fonts
-		# ../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
-		# ../../modules/software/games/general-games.nix # Install Steam
 		# ../../modules/software/general-software.nix # General universal software
 		# ../../modules/software/music/spotify.nix # Install Spotify
 		# ../../modules/software/neovim # Add Neovim
@@ -41,7 +37,6 @@ in
 		# ../../modules/software/productivity/text-editors.nix # Regular text editors
 		# ../../modules/software/social/chat-clients.nix # Discord, IRC, etc.
 		# ../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
-		# ../../modules/software/ssh.nix	# Enable SSH
 		# ../../modules/software/system-utils.nix # Sundry utilities
 		# ../../modules/software/touchpad-input.nix
 		# ../../modules/software/zsh.nix # Install and enable ZSH and its extra software

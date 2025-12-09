@@ -7,6 +7,7 @@
 		../../modules/sddm-astronaut.nix # Import SDDM with Astronaut theme
 		../../modules/sleek-grub-theme.nix # Import GRUB theme
 		../../modules/hyprland.nix # Enable Hyprland WM
+		../../modules/fonts.nix # Add default fonts
 	];
 
 	# - Install Thunar -
@@ -14,6 +15,14 @@
 	programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
 
 	# -------- GAMES --------
+
+	# - STEAM -
+	programs.steam = {
+		enable = true;
+		remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+		dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+	};
+
 
 
 	# -------- SYNCTHING --------
@@ -72,7 +81,7 @@
 
 
 	# -------- PACKAGES --------
-	environment.systemPackages = with pkgs; [
+	environment.systemPackages = (with pkgs; [
 
 		# Install syncthing
 		syncthing
@@ -83,8 +92,35 @@
 		# Install brightness controls
 		brightnessctl
 
-		kitty # Terminal
+		kitty # My default terminal.
+		cool-retro-term # An overly-fancy terminal emulator.
 
-	];
+		# Fun terminal utils
+		feh # A light-weight image viewer.
+		figlet # Generate ASCII word art.
+		gallery-dl # Download images galleries from image hosting sites.
+		ytfzf # Find, download, and watch Youtube videos from the terminal.
+		glow # Utility for rendering Markdown in the terminal.
+		neofetch # System info fetcher and snowflake displayer.
+		spotdl # Spotify music downloader.
+		onthespot # Spotify GUI music downloader.
+		id3v2 # Music metadata viewing and editing tool.
+
+		# GAMES
+		prismlauncher # Minecraft instance manager.
+		# mangohud # Game stat overlay software.
+		# mindustry-wayland # Mindustry game
+		# heroic # Heroic game launcher
+		# itch # itch.io launcher
+
+	])
+
+	++
+
+	(with pkgs.unstable; [
+
+		yt-dlp # Youtube/video downloader, youtube-dl fork.
+
+	]);
 
 }
