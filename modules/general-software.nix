@@ -14,6 +14,20 @@
 		enable = true;
 	};
 
+	services.flatpak.enable = true; # Enable Flatpak.
+
+	programs.mtr.enable = true; # Adds ping and traceroute?
+	networking.networkmanager.enable = true;
+
+
+	# -------- ZSH --------
+	programs.zsh.enable = true; # Enable zsh.
+	users.defaultUserShell = pkgs.zsh; # Set zsh as default shell.
+	environment.pathsToLink = [ "/share/zsh" ];
+	programs.starship.enable = true;
+
+
+
 environment.systemPackages = with pkgs; [
 
 	# CLI software
@@ -55,6 +69,7 @@ environment.systemPackages = with pkgs; [
 	rdfind # Utility for finding and removing duplicate files
 	wl-clipboard-rs # Wayland clipboard utilities, written in Rust
 	lazygit
+	starship
 ];
 
 }

@@ -26,21 +26,6 @@ in
 		# - Import Users
 		../../modules/users/user-arik.nix # Add Arik user.
 
-		# - Import Software packages and settings -
-		# ../../modules/software/general-software.nix # General universal software
-		# ../../modules/software/music/spotify.nix # Install Spotify
-		# ../../modules/software/neovim # Add Neovim
-		# ../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
-		# ../../modules/software/networking/networkmanager.nix # Install NetworkManager
-		# ../../modules/software/productivity/desktop-utils.nix # GUI admin utilities
-		# ../../modules/software/productivity/general-productivity.nix #
-		# ../../modules/software/productivity/text-editors.nix # Regular text editors
-		# ../../modules/software/social/chat-clients.nix # Discord, IRC, etc.
-		# ../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
-		# ../../modules/software/system-utils.nix # Sundry utilities
-		# ../../modules/software/touchpad-input.nix
-		# ../../modules/software/zsh.nix # Install and enable ZSH and its extra software
-
 	];
 
 	# - Home Manager

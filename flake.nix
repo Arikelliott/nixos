@@ -12,7 +12,6 @@
 			url = "github:nix-community/nixvim/nixos-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
         };
-		spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 		quickshell = {
 			# add ?ref=<tag> to track a tag
 			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
