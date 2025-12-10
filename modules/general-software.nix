@@ -54,14 +54,6 @@ environment.systemPackages = with pkgs; [
 	xdg-ninja # Shell script which checks your $HOME for unwanted files and directories
 	rdfind # Utility for finding and removing duplicate files
 	wl-clipboard-rs # Wayland clipboard utilities, written in Rust
-
-	# GUI software
-	firefox
-	keepassxc # KeePassXC password manager.
-	kpcli # KeePass CLI utility.
-
-	# git specific software
-	gitui
 	lazygit
 ];
 

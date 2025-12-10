@@ -95,6 +95,10 @@
 		kitty # My default terminal.
 		cool-retro-term # An overly-fancy terminal emulator.
 
+		firefox
+		keepassxc # KeePassXC password manager.
+		kpcli # KeePass CLI utility.
+
 		# Fun terminal utils
 		feh # A light-weight image viewer.
 		figlet # Generate ASCII word art.
