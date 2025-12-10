@@ -26,6 +26,7 @@ in
 
 		# - Import Users
 		../../modules/users/user-arik.nix # Add Arik user.
+		../../modules/users/user-anyara.nix # Add Anyara user.
 
 	];
 
