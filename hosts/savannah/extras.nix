@@ -11,6 +11,15 @@
 		../../modules/neovim.nix # Enable Neovim
 	];
 
+	# - GNOME -
+	services.xserver.enable = true;
+	services.xserver.displayManager.gdm.enable = true;
+	services.xserver.desktopManager.gnome.enable = true;
+	# Disable certain preinstalled software
+	services.gnome.games.enable = false;
+	services.gnome.core-developer-tools.enable = false;
+
+
 	# - Install Thunar -
 	programs.thunar.enable = true;
 	programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
@@ -183,6 +192,9 @@
 		# jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
 		gvfs # Virtual Filesystem support library
 		easytag # GUI ID3 song metadata viewer and editor.
+
+
+		# --- GNOME EXTENSIONS ---
 
 	])
 
