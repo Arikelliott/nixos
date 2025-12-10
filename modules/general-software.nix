@@ -16,9 +16,6 @@
 
 	services.flatpak.enable = true; # Enable Flatpak.
 
-	programs.mtr.enable = true; # Adds ping and traceroute?
-	networking.networkmanager.enable = true;
-
 
 	# -------- ZSH --------
 	programs.zsh.enable = true; # Enable zsh.

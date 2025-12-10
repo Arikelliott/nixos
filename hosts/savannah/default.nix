@@ -20,6 +20,7 @@ in
 		./hardware-configuration.nix # Auto-generated hardware-config
 		./extras.nix # Manually added configs
 		../../modules/settings.nix # General settings
+		../../modules/general-software.nix
 		../../modules/localization/timezones/detroit.nix # Set time zone
 		../../modules/localization/default-localization-profile.nix # Set language, keyboard, etc.
 

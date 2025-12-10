@@ -33,6 +33,8 @@
 	# networking.firewall.allowedUDPPorts = [ ... ];
 	# Or disable the firewall altogether.
 	networking.firewall.enable = false;
+	programs.mtr.enable = true; # Adds ping and traceroute?
+	networking.networkmanager.enable = true; # Enable networkmanager
 
 # - SSH -
 
