@@ -13,11 +13,10 @@
 
 	# - GNOME -
 	services.xserver.enable = true;
-	services.xserver.displayManager.gdm.enable = true;
 	services.xserver.desktopManager.gnome.enable = true;
 	# Disable certain preinstalled software
 	services.gnome.games.enable = false;
-	services.gnome.core-developer-tools.enable = false;
+	# services.gnome.core-developer-tools.enable = false;
 
 
 	# - Install Thunar -
@@ -27,11 +26,11 @@
 	# -------- GAMES --------
 
 	# - STEAM -
-	programs.steam = {
-		enable = true;
-		remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-		dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-	};
+	# programs.steam = {
+	# 	enable = true;
+	# 	remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+	# 	dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+	# };
 
 	# -------- UTILITIES --------
 	services.gvfs.enable = true; # Mount, trash, and other functionalities
