@@ -35,10 +35,10 @@
 			# Linode server.
 			agrew = nixpkgs.lib.nixosSystem {
 				inherit system;
-		specialArgs = { inherit inputs; };
-		modules = [
-			({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
-			./hosts/agrew
+				specialArgs = { inherit inputs; };
+				modules = [
+					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+					./hosts/agrew
 					home-manager.nixosModules.home-manager
 				];
 			};
@@ -46,9 +46,9 @@
 			# Gateway laptop.
 			forrester = nixpkgs.lib.nixosSystem {
 				inherit system;
-		specialArgs = { inherit inputs; };
-		modules = [
-			({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+				specialArgs = { inherit inputs; };
+				modules = [
+					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/forrester
 					home-manager.nixosModules.home-manager
 				];
@@ -57,9 +57,9 @@
 			# Dell laptop.
 			savannah = nixpkgs.lib.nixosSystem {
 				inherit system;
-		specialArgs = { inherit inputs; };
-		modules = [
-			({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+				specialArgs = { inherit inputs; };
+				modules = [
+					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/savannah
 					home-manager.nixosModules.home-manager
 				];
@@ -68,9 +68,9 @@
 			# Dell Optiplex server.
 			shetland = nixpkgs.lib.nixosSystem {
 				inherit system;
-		specialArgs = { inherit inputs; };
-		modules = [
-			({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+				specialArgs = { inherit inputs; };
+				modules = [
+					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/shetland
 					home-manager.nixosModules.home-manager
 				];
@@ -79,9 +79,9 @@
 			# Main desktop PC.
 			silvana = nixpkgs.lib.nixosSystem {
 				inherit system;
-		specialArgs = { inherit inputs; };
-		modules = [
-			({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+				specialArgs = { inherit inputs; };
+				modules = [
+					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/silvana
 					home-manager.nixosModules.home-manager
 				];
