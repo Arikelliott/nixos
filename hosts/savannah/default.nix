@@ -15,7 +15,7 @@ in
 # -------- IMPORTS --------
 
 # - Import All Modules -
-		imports = [
+	imports = [
 
 		./hardware-configuration.nix # Auto-generated hardware-config
 		./extras.nix # Manually added configs
@@ -42,7 +42,6 @@ in
 				# manage.
 				home.username = "arik";
 				home.homeDirectory = "/home/arik";
-				# hostname = hostname
 
 				# Home Manager release your system is compatible with. Don't change except on fresh install!!!
 				home.stateVersion = "23.11";
