@@ -2,12 +2,17 @@
 
 {
 
+	# This file is just for future referral purposes now.
+	# I need a better Restic/backup solution in the future,
+	# and it'll need to be set up differently since I don't
+	# currently have a homeserver to backup to.
+
 	environment.systemPackages = with pkgs; [
 		restic
 	];
-	
-	
-	
+
+
+
 	# security.wrappers.restic = { # Run restic as non-root special user. Not sure if it's necessary or not?
 	#	source = "${pkgs.restic.out}/bin/restic";
 	#	owner = "restic";
@@ -29,7 +34,7 @@
 		];
 		timerConfig = { # Follows systemd-timer rules.
 			OnCalendar = "Mon,Wed,Fri *-*-* 7:*:*"; # Every mon/wed/fri at 7am.
-			Persistent = true; 
+			Persistent = true;
 		};
 		passwordFile = "/etc/nixos/restic-password";
 		initialize = true;

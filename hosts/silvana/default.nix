@@ -15,66 +15,19 @@ in
 # -------- IMPORTS --------
 
 # - Import All Modules -
-		imports = [
+	imports = [
 
-		# - Import configs exclusive to this host
 		./hardware-configuration.nix # Auto-generated hardware-config
-		./extras # Manually added configs
-		# Includes:
-
-		# - Import General Settings
-		../../modules/settings # General settings
-		../../modules/settings/networking/default-networking-profile.nix # Basic universal networking settings
+		./extras.nix # Manually added configs
+		../../modules/settings.nix # General settings
+		../../modules/general-software.nix
 		../../modules/localization/timezones/detroit.nix # Set time zone
 		../../modules/localization/default-localization-profile.nix # Set language, keyboard, etc.
 
 		# - Import Users
-		../../modules/users/user-arik.nix # Add Arik
+		../../modules/users/user-arik.nix # Add Arik user.
 		# ../../modules/users/user-access.nix # Add Access
-		../../modules/users/service-users/user-restic.nix # Add user account for Restic service
-
-		# - Import Software packages and settings -
-		../../modules/hardware/drivers.nix # Install additional hardware drivers.
-		../../modules/software/amdgpu-utils.nix # Install AMD graphics utilities
-		../../modules/software/bluetooth-profile.nix # Install and enable bluetooth
-		../../modules/software/creative/general-creative.nix # Media, makerspace, etc. software
-		../../modules/software/cups-printing-profile.nix # Install CUPS printer drivers
-		# ../../modules/software/desktop-environments/cosmic.nix # Enable Cosmic desktop environment.
-		../../modules/software/desktop-environments/grub-theme.nix # GRUB Theme
-		../../modules/software/desktop-environments/gnome.nix # Enable GNOME
-		../../modules/software/desktop-environments/hyprland.nix # Enable Hyprland
-		../../modules/software/desktop-environments/niri.nix # Enable Niri
-		../../modules/software/desktop-environments/sddm # Enable SDDM display manager
-		../../modules/software/dev/benchmarking.nix # Benchmarking utils
-		../../modules/software/dev/cybersec.nix # Tools for cybersecurity uses.
-		../../modules/software/dev/java.nix # Install Java
-		../../modules/software/dev/lua.nix # Install lua
-		../../modules/software/dev/nixd.nix # Install nixd LSP
-		../../modules/software/dev/python.nix # Install Python
-		../../modules/software/dev/webdev.nix # Software for web development
-		../../modules/software/docker/docker-enable.nix # Install and configure Docker
-		../../modules/software/docker/ollama.nix # Install and run Ollama docker container
-		../../modules/software/flatpak/flatpak-enable.nix # Install and configure Flatpak
-		../../modules/software/fonts.nix # Install default fonts
-		../../modules/software/fun-cli-utils.nix # Handy and silly CLI tools
-		../../modules/software/games/general-games.nix # Install Steam
-		../../modules/software/general-software.nix # General universal software
-		../../modules/software/music/k3b.nix # Install K3B KDE music burner
-		../../modules/software/music/mpd.nix # Run mpd server
-		../../modules/software/music/spotify.nix # Install Spotify
-		../../modules/software/networking/networking-utils.nix # Install and configure networking utilities
-		../../modules/software/networking/networkmanager.nix # Install NetworkManager
-		../../modules/software/opentabletdriver.nix # Install OpenTabletDriver
-		../../modules/software/productivity/desktop-utils.nix # GUI admin utilities
-		../../modules/software/productivity/general-productivity.nix #
-		../../modules/software/productivity/text-editors.nix # Regular text editors
-		../../modules/software/social/chat-clients.nix # Discord, IRC, etc.
-		../../modules/software/sound-modules/pipewire.nix # Install Pipewire for audio
-		../../modules/software/ssh.nix	# Enable SSH
-		../../modules/software/system-utils.nix # Sundry utilities
-		../../modules/software/zsh.nix # Install and enable ZSH and its extra software
-
-		../../modules/software/neovim
+		# ../../modules/users/service-users/user-restic.nix # Add user account for Restic service
 
 	];
 
@@ -86,15 +39,51 @@ in
 		extraSpecialArgs = { inherit inputs; };
 		users = {
 			arik = {
-				# home.hostname = hostname;
+				# Home Manager needs a bit of information about you and the paths it should
+				# manage.
+				home.username = "arik";
+				home.homeDirectory = "/home/arik";
+
+				# Home Manager release your system is compatible with. Don't change except on fresh install!!!
+				home.stateVersion = "23.11";
+
+				home.sessionVariables = {
+					# EDITOR = "emacs";
+					# CUPCAKE = "fred";
+				};
+
+				# Let Home Manager install and manage itself.
+				programs.home-manager.enable = true;
+
 				imports = [
-					./home.nix
+					../../home-manager/kitty
+					../../home-manager/shell
+					../../home-manager/scripts
+					../../home-manager/theme
+					../../home-manager/nixtools
+					../../home-manager/git
+					../../home-manager/hyprland
+					../../home-manager/hyprland/configs/displays/silvana1.nix
+					../../home-manager/hyprland/configs/extra/silvana-extra.nix
+					../../home-manager/hyprland/configs/keybinds/silvana-keybinds.nix
 				];
 			};
 			root = {
-				# home.hostname = hostname;
+				# Home Manager needs a bit of information about you and the paths it should
+				# manage.
+				home.username = "root";
+				home.homeDirectory = "/root";
+
+				# Home Manager release.
+				home.stateVersion = "23.11";
+
+				# Let Home Manager install and manage itself.
+				programs.home-manager.enable = true;
+
 				imports = [
-					./root.nix
+					../../home-manager/shell
+					../../home-manager/theme
+					../../home-manager/nixtools
 				];
 			};
 		};
