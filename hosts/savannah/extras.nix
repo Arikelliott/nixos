@@ -16,7 +16,6 @@
 	services.xserver.desktopManager.gnome.enable = true;
 	# Disable certain preinstalled software
 	services.gnome.games.enable = false;
-	# services.gnome.core-developer-tools.enable = false;
 
 
 	# - Install Thunar -
