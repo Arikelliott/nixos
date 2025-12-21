@@ -24,7 +24,6 @@
 	graphite-gtk-theme
 	fluent-gtk-theme
 	everforest-gtk-theme
-	deepin.deepin-gtk-theme
 	colloid-gtk-theme
 	andromeda-gtk-theme
 	adapta-gtk-theme

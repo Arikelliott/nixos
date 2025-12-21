@@ -13,9 +13,10 @@
 
 	# - GNOME -
 	services.xserver.enable = true;
-	services.xserver.desktopManager.gnome.enable = true;
+	services.desktopManager.gnome.enable = true;
 	# Disable certain preinstalled software
 	services.gnome.games.enable = false;
+	services.gnome.gcr-ssh-agent.enable = false;
 
 
 	# - Install Thunar -
@@ -131,7 +132,6 @@
 		glow # Utility for rendering Markdown in the terminal.
 		neofetch # System info fetcher and snowflake displayer.
 		spotdl # Spotify music downloader.
-		onthespot # Spotify GUI music downloader.
 		id3v2 # Music metadata viewing and editing tool.
 
 		# GUI Desktop Utils
@@ -155,7 +155,7 @@
 		libreoffice # LibreOffice
 		teams-for-linux # Microsoft Teams
 		zoom-us # Video call software
-		hydrus # Image tagging and organizing software for desktop
+		# hydrus # Image tagging and organizing software for desktop
 
 		# TEXT EDITORS
 		vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.

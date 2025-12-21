@@ -35,7 +35,7 @@ environment.systemPackages = with pkgs; [
 	iftop
 	iotop
 	nvtopPackages.full
-	pkgs.linuxPackages_latest.perf
+	perf
 	wavemon
 	wget # Webpage downloader utility thing.
 	tree # Shows contents of directories recursively.

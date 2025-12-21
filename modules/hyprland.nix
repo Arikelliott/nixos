@@ -54,7 +54,7 @@
 		hyprpicker # Wayland color picker.
 		swww # Fancy Wayland wallpaper setter and daemon.
 		nwg-look # Wayland alternative to lxappearance.
-		rofi-wayland # Wayland fork of Rofi app launcher.
+		rofi # A launcher menu app.
 		waybar # Wayland bar.
 		wlr-randr # Wayland xrandr clone.
 		wshowkeys # Shows keys being pressed (Wayland session only).
@@ -65,7 +65,7 @@
 		pywal # Color scheme generator/switcher.
 		xdg-desktop-portal-hyprland
 		mako # Lightweight Wayland notification daemon.
-		inputs.quickshell.packages.${pkgs.system}.default # Quickshell, a Qt-based shell/widget maker
+		inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default # Quickshell, a Qt-based shell/widget maker
 	];
 
 }

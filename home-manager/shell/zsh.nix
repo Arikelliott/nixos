@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
 	programs.zsh = {
 		enable = true;
-		dotDir = ".config/zsh"; # Where zsh configs are stored
+		dotDir = "${config.xdg.configHome}/zsh"; # Where zsh configs are stored
 		# zprof.enable = true; # Runs at the beginning of a zsh session and prints out the time it takes for .zshrc commands to start
 
 	enableCompletion = true; # Not exactly sure what this does honestly. Tab autocomplete seems to work with it set to false.
