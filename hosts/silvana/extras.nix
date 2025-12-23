@@ -83,6 +83,12 @@
 		};
 	};
 
+	# - Taikscale -
+	services.tailscale = {
+		enable = true;
+		useRoutingFeatures = "both";
+	};
+
 	# - k3b CD Burner -
 	security.wrappers = {
 		cdrdao = {
