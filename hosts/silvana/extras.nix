@@ -89,6 +89,13 @@
 		useRoutingFeatures = "both";
 	};
 
+	# - Jellyfin -
+	services.jellyfin = {
+		enable = true;
+		openFirewall = true;
+		user = "arik";
+	};
+
 	# - k3b CD Burner -
 	security.wrappers = {
 		cdrdao = {
@@ -351,6 +358,9 @@
 		gvfs # Virtual Filesystem support library
 		easytag # GUI ID3 song metadata viewer and editor.
 		kdePackages.k3b # for k3b CD Burner.
+		jellyfin
+		jellyfin-web
+		jellyfin-ffmpeg
 
 
 		# --- GNOME EXTENSIONS ---
