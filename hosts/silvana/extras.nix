@@ -83,7 +83,7 @@
 		};
 	};
 
-	# - Taikscale -
+	# - Tailscale -
 	services.tailscale = {
 		enable = true;
 		useRoutingFeatures = "both";
