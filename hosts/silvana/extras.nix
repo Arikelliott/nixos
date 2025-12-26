@@ -96,6 +96,17 @@
 		user = "arik";
 	};
 
+	# - Immich -
+	services.immich = {
+		enable = true;
+		port = 2283;
+		accelerationDevices = null;
+		openFirewall = true;
+		host = "0.0.0.0";
+		# mediaLocation = "/home/arik/Pictures/immich";
+	};
+		
+
 	# - k3b CD Burner -
 	security.wrappers = {
 		cdrdao = {
