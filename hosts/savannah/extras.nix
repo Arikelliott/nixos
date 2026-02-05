@@ -18,6 +18,13 @@
 	services.gnome.games.enable = false;
 	services.gnome.gcr-ssh-agent.enable = false;
 
+	# - Cosmic -
+ 	services.desktopManager.cosmic = {
+ 		enable = true;
+ 		xwayland.enable	= true;
+ 	};
+ 	services.system76-scheduler.enable = true;
+
 
 	# - Install Thunar -
 	programs.thunar.enable = true;
