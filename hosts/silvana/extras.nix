@@ -83,11 +83,29 @@
 		};
 	};
 
-	# - Taikscale -
+	# - Tailscale -
 	services.tailscale = {
 		enable = true;
 		useRoutingFeatures = "both";
 	};
+
+	# - Jellyfin -
+	services.jellyfin = {
+		enable = true;
+		openFirewall = true;
+		user = "arik";
+	};
+
+	# - Immich -
+	services.immich = {
+		enable = true;
+		port = 2283;
+		accelerationDevices = null;
+		openFirewall = true;
+		host = "0.0.0.0";
+		# mediaLocation = "/home/arik/Pictures/immich";
+	};
+		
 
 	# - k3b CD Burner -
 	security.wrappers = {
@@ -288,7 +306,6 @@
 		# TEXT EDITORS
 		vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 		zed-editor # New IDE trying to replace vscodium.
-		jetbrains.idea-community-bin
 		xfce.mousepad # basic text editor from XFCE.
 
 		# CREATIVE TOOLS
@@ -351,6 +368,9 @@
 		gvfs # Virtual Filesystem support library
 		easytag # GUI ID3 song metadata viewer and editor.
 		kdePackages.k3b # for k3b CD Burner.
+		jellyfin
+		jellyfin-web
+		jellyfin-ffmpeg
 
 
 		# --- GNOME EXTENSIONS ---

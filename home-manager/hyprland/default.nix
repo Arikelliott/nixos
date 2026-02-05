@@ -100,7 +100,7 @@
 		exec-once = [
 			"waybar" # top bar
 			"dunst" # notification daemon
-			"swww init" # Wayland wallpaper setter/animator https://github.com/Horus645/swww
+			"swww-daemon" # Wayland wallpaper setter/animator https://github.com/Horus645/swww
 			"lxqt-policykit-agent" # KDE polkit software (recommended by Vaxry), handles authentication. https://wiki.archlinux.org/title/Polkit
 			# "ckb-next -b" # starts ckb-next corsair mouse software
 			# "sh ~/dotfiles/rgb/rgb.sh off" # Autoruns RGB (currently defaults to "off")
@@ -189,7 +189,7 @@
 	};
 	gestures = { # Gestures
 		# See https://wiki.hyprland.org/Configuring/Variables/ for more
-		workspace_swipe = "false";
+		workspace_swipe_touch = "false";
 	};
 	};
 

@@ -167,7 +167,6 @@
 		# TEXT EDITORS
 		vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 		zed-editor # New IDE trying to replace vscodium.
-		jetbrains.idea-community-bin
 		xfce.mousepad # basic text editor from XFCE.
 
 		# SOCIAL
