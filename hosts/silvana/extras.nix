@@ -345,6 +345,7 @@
 
 		# GAMES
 		prismlauncher # Minecraft instance manager.
+		packwiz # Minecraft modpack/instance CLI manager with Git integration.
 		mangohud # Game stat overlay software.
 		# mindustry-wayland # Mindustry game
 		# heroic # Heroic game launcher
