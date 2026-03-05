@@ -1,7 +1,7 @@
 # My NixOS Config
 # Author: Arik Elliott
 
-{ inputs, ... }:
+{ inputs, config, lib, ... }:
 
 let
 	hostname = "savannah";
@@ -66,6 +66,12 @@ in
 				../../home-manager/hyprland/configs/displays/savannah1.nix
 				../../home-manager/hyprland/configs/keybinds/savannah-keybinds.nix
 				];
+	
+					wayland.windowManager.hyprland.settings.general = {
+						gaps_in = lib.mkForce "0";
+						gaps_out = lib.mkForce "0";
+						border_size = lib.mkForce "0";
+					};
 			};
 		};
 	};

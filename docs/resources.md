@@ -15,6 +15,7 @@ A collection of links to various Nix resources.
 
 ### Nix Itself
 - https://teu5us.github.io/nix-lib.html A list of built-in Nix functions as well as libraries
+- https://librephoenix.com/2023-12-26-nixos-conditional-config-and-custom-options How to override stuff and make your own options
 
 ### Handy Config References
 - https://github.com/MatthiasBenaets/nix-config
