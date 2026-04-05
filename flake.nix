@@ -17,6 +17,10 @@
 			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
 			inputs.nixpkgs.follows = "nixpkgs-unstable"; # Needs to follow Unstable
 		};
+		noctalia = {
+			url = "github:noctalia-dev/noctalia-shell";
+			inputs.nixpkgs.follows = "nixpkgs-unstable";
+		};
 	};
 
 	outputs = inputs @ { self, nixpkgs, nixpkgs-unstable, home-manager, ... }: # Figure out what the "inputs@" bit does. Seems to work the same as without?
@@ -51,6 +55,7 @@
 					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/savannah
 					home-manager.nixosModules.home-manager
+					./noctalia.nix
 				];
 			};
 
