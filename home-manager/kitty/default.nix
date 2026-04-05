@@ -21,12 +21,12 @@
 		cursor_trail_decay = "0.1 0.4";
 	};
 
-	themeFile = "Catppuccin-Mocha"; # For manually importing kitty themes
-	settings = {
-		# blue:
-		color4 = "#3B83F7";
-		color12 = "#146AF5";
-	};
+	# themeFile = "noctalia"; # For manually importing kitty themes
+	# settings = {
+	# 	# blue:
+	# 	color4 = "#3B83F7";
+	# 	color12 = "#146AF5";
+	# };
 	};
 
 	# imports = [ # For making custom kitty themes
