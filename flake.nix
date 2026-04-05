@@ -44,6 +44,7 @@
 					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
 					./hosts/silvana
 					home-manager.nixosModules.home-manager
+					./noctalia.nix
 				];
 			};
 

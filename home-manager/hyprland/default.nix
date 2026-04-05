@@ -54,6 +54,7 @@
 
 	wayland.windowManager.hyprland.settings = {
 		"$mainMod" = "SUPER";
+		"$ipc" = "noctalia-shell ipc call";
 	};
 
 
@@ -98,14 +99,15 @@
 
 		# EXEC-ONCE: RUN THESE ONLY AT STARTUP
 		exec-once = [
-			"waybar" # top bar
-			"dunst" # notification daemon
-			"swww-daemon" # Wayland wallpaper setter/animator https://github.com/Horus645/swww
+			# "waybar" # top bar
+			# "dunst" # notification daemon
+			# "swww-daemon" # Wayland wallpaper setter/animator https://github.com/Horus645/swww
 			"lxqt-policykit-agent" # KDE polkit software (recommended by Vaxry), handles authentication. https://wiki.archlinux.org/title/Polkit
 			# "ckb-next -b" # starts ckb-next corsair mouse software
 			# "sh ~/dotfiles/rgb/rgb.sh off" # Autoruns RGB (currently defaults to "off")
 			"wl-paste --type text --watch cliphist store" # Stores only text data
 			"wl-paste --type image --watch cliphist store" # Stores only image data
+			"noctalia-shell" # run Noctalia on start
 		];
 
 		# EXEC: RUN THESE EVERY HYPRLAND RELOAD
@@ -127,8 +129,8 @@
 	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
 	home.sessionVariables = {
-	# EDITOR = "emacs";
-	GTK_THEME = "Materia-light"; # sets GTK theme
+		# EDITOR = "emacs";
+		GTK_THEME = "Materia-light"; # sets GTK theme
 
 		# HYPRCURSOR_THEME = ""; # Set Hyprcursor theme
 		# HYPRCURSOR_SIZE = ""; # Set Hyprcursor size
@@ -301,13 +303,37 @@
 			"$mainMod SHIFT, E, exit,"
 			"$mainMod, T, togglefloating,"
 			"$mainMod, F, fullscreen,"
-			"$mainMod, Space, exec, sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh # Opens Rofi on Windows+Space"
 			"$mainMod, P, pseudo, # dwindle"
+
+			# SHELL
+			# "$mainMod, Space, exec, sh /home/arik/dotfiles/rofi/.config/rofi/launcher/run.sh # Opens Rofi on Windows+Space"
+			"$mainMod, Space, exec, $ipc launcher toggle" # Opens Noctalia launcher
+			"$mainMod, W, exec, $ipc wallpaper toggle" # Opens Noctalia wallpaper selector
+			"$mainMod, Return, exec, kitty"
+
+
+			# Set random wallpaper
+			# "$mainMod, W, exec, sh scripts/random-wall-setter.sh"
+			# Pick random wallpaper directory with Rofi
+			# "$mainMod SHIFT, W, exec, sh scripts/set-wallpaper-dir.sh"
+
+			# For creating incompatibility with Windows LinkedIn keybind (see https://invent.kde.org/plasma/plasma-desktop/-/merge_requests/1731)
+			"$mainMod SHIFT CTRL ALT, L, exec, sh scripts/linus-keybind.sh"
+
+			"$mainMod, G, exec, sh scripts/open-gparted.sh"
+
+			# Enable or disable displays
+			"$mainMod SHIFT, P, exec, sh ~/dotfiles/scripts/hypr-monitor-reset.sh"
+
+			"$mainMod CTRL, P, exec, sh ~/dotfiles/scripts/set-wallpaper-dir.sh"
 
 			# Volume controls
 			# ",XF86AudioRaiseVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5%"
 			# ",XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%"
 			# ",XF86AudioMute, exec, pactl set-sink-mute @DEFAULT_SINK@ toggle"
+
+
+
 
 			# Move focus with mainMod + arrow keys
 			"$mainMod, left, workspace, r-1"
@@ -363,26 +389,11 @@
 			"$mainMod SHIFT, KP_Prior, movetoworkspacesilent, 9"
 			"$mainMod SHIFT, KP_Insert, movetoworkspacesilent, 10"
 
-			# KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right,KP_Home,KP_Up,KP_Prior,KP_Insert
-
 			# Scroll through existing workspaces with mainMod + scroll
 			"$mainMod, mouse_down, workspace, e+1"
 			"$mainMod, mouse_up, workspace, e-1"
 
-			# Set random wallpaper
-			"$mainMod, W, exec, sh scripts/random-wall-setter.sh"
-			# Pick random wallpaper directory with Rofi
-			"$mainMod SHIFT, W, exec, sh scripts/set-wallpaper-dir.sh"
-
-			# For creating incompatibility with Windows LinkedIn keybind (see https://invent.kde.org/plasma/plasma-desktop/-/merge_requests/1731)
-			"$mainMod SHIFT CTRL ALT, L, exec, sh scripts/linus-keybind.sh"
-
-			"$mainMod, G, exec, sh scripts/open-gparted.sh"
-
-			# Enable or disable displays
-			"$mainMod SHIFT, P, exec, sh ~/dotfiles/scripts/hypr-monitor-reset.sh"
-
-			"$mainMod CTRL, P, exec, sh ~/dotfiles/scripts/set-wallpaper-dir.sh"
+			# KP_End,KP_Down,KP_Next,KP_Left,KP_Begin,KP_Right,KP_Home,KP_Up,KP_Prior,KP_Insert
 		];
 
 		bindm = [
