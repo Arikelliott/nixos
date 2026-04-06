@@ -19,6 +19,7 @@
 		confirm_os_window_close = 0;
 		cursor_trail = 3;
 		cursor_trail_decay = "0.1 0.4";
+		include = "~/.config/kitty/themes/noctalia.conf";
 	};
 
 	# themeFile = "noctalia"; # For manually importing kitty themes
