@@ -71,9 +71,9 @@
 	#
 	# - - - - - - - - - - - - - - - - - - - - - - - - -
 
-	wayland.windowManager.hyprland.settings = {
-	"monitor" = ",preferred,auto,auto"; # Set default if no config is provided
-	};
+	# wayland.windowManager.hyprland.settings = {
+	# "monitor" = ",preferred,auto,auto"; # Set default if no config is provided
+	# };
 
 	# ! Import monitor config with individual host home.nix files !
 	# Important for later: https://github.com/TheMaxMur/NixOS-Configuration/blob/master/home/modules/hyprland/monitors/default.nix

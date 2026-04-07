@@ -5,6 +5,8 @@
 	xwayland = {
 		force_zero_scaling = "true";
 	};
+	
+	"monitor" = ",preferred,auto,auto"; # Set default if no config is provided
 
 	workspace = [
 		"1, default:true"
