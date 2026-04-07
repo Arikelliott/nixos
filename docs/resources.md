@@ -38,3 +38,4 @@ A collection of links to various Nix resources.
 - https://github.com/cachix/cachix
 - https://www.chezmoi.io/quick-start/#start-using-chezmoi-on-your-current-machine
 - https://haril.dev/en/blog/2023/04/08/chezmoi-basic-settings
+- https://github.com/dileep-kishore/nixos-config/blob/main/home/common/optional/desktops/hyprland/config.nix How to use variables and stuff better?
