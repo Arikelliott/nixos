@@ -332,6 +332,8 @@
 		# helvum # GTK Patchbay for PipeWire.
 		mpv # Media player.
 		rmpc # TUI Music Player
+		makemkv # DVD ripping software.
+		handbrake # Tool for converting video files and ripping DVDs
 		# obs-studio # Video recording software.
 		# strawberry # Music player app.
 		# cura # Slicer for 3D printing.
