@@ -46,41 +46,16 @@
 	services.gvfs.enable = true; # Mount, trash, and other functionalities
 	services.tumbler.enable = true; # Thumbnail support for images
 
-	# - Docker -
-	users.extraGroups.docker.members = [ "arik" ]; # List user accounts with Docker access.
-	virtualisation.docker.enable = true; # Enable docker.
-
-	# - Ollama - (NEEDS DOCKER)
-	virtualisation = {
-		oci-containers.backend = "docker";
-		oci-containers.containers = { # List all containers and options to run.
-			ollama = { # Run Ollama container.
-				image = "ollama/ollama:rocm";
-				volumes = [
-					"ollama:/root/.ollama"
-				];
-				ports = [
-					"11434:11434"
-				];
-				extraOptions = [
-					"--device=/dev/kfd"
-					"--device=/dev/dri"
-				];
-			};
-			open-webui = { # Run WebUI for Ollama.
-				hostname = "open-webui";
-				image = "ghcr.io/open-webui/open-webui:latest";
-				volumes = [
-					"open-webui:/app/backend/data"
-				];
-				ports = [
-					"3000:8080"
-				];
-				extraOptions = [
-					"--add-host=host.docker.internal:host-gateway"
-				];
-			};
-		};
+	# - Ollama LLM setup -
+	services.ollama = {
+		enable = true;
+		package = pkgs.unstable.ollama-vulkan;
+	};
+	services.open-webui = {
+		enable = true;
+		package = pkgs.unstable.open-webui;
+		port = 3000;
+		host = "0.0.0.0";
 	};
 
 	# - Tailscale -
