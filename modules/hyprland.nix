@@ -4,7 +4,6 @@
 
 	imports = [
 		# - Import configs exclusive to this host
-		./icons.nix
 		./themes.nix
 	];
 
@@ -65,7 +64,6 @@
 		pywal # Color scheme generator/switcher.
 		xdg-desktop-portal-hyprland
 		mako # Lightweight Wayland notification daemon.
-		inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default # Quickshell, a Qt-based shell/widget maker
 	];
 
 }

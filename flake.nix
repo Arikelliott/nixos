@@ -12,11 +12,6 @@
 			url = "github:nix-community/nixvim/nixos-25.11";
 			inputs.nixpkgs.follows = "nixpkgs";
         };
-		quickshell = {
-			# add ?ref=<tag> to track a tag
-			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-			inputs.nixpkgs.follows = "nixpkgs-unstable"; # Needs to follow Unstable
-		};
 		noctalia = {
 			url = "github:noctalia-dev/noctalia-shell";
 			inputs.nixpkgs.follows = "nixpkgs-unstable";
