@@ -178,6 +178,9 @@
 
 	# - Graphics Support -
 	hardware.amdgpu.opencl.enable = true; # Enable OpenCL support
+	
+	# - Add SCSi Generic driver for reading DVD players -
+	boot.kernelModules = [ "sg" ];
 
 	# - Audio -
 	security.rtkit.enable = true;
@@ -308,6 +311,7 @@
 		mpv # Media player.
 		rmpc # TUI Music Player
 		makemkv # DVD ripping software.
+		mkvtoolnix # Tools for combining mkv files and stuff.
 		handbrake # Tool for converting video files and ripping DVDs
 		# obs-studio # Video recording software.
 		# strawberry # Music player app.
