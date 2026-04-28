@@ -84,6 +84,7 @@ in
 					../../home-manager/shell
 					../../home-manager/theme
 					../../home-manager/nixtools
+					../../home-manager/default-envvars.nix
 				];
 			};
 		};

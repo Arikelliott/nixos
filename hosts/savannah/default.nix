@@ -65,6 +65,7 @@ in
 				../../home-manager/hyprland
 				../../home-manager/hyprland/configs/displays/savannah1.nix
 				../../home-manager/hyprland/configs/keybinds/savannah-keybinds.nix
+					../../home-manager/default-envvars.nix
 				];
 	
 					wayland.windowManager.hyprland.settings.general = {
