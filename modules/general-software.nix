@@ -60,6 +60,7 @@ environment.systemPackages = with pkgs; [
 	eza # ls replacement
 	bat # cat replacement
 	tmux # Terminal multiplexer.
+	most # pager like less that does everything
 	dig
 	wev # Get wayland keypresses in terminal
 	xdg-ninja # Shell script which checks your $HOME for unwanted files and directories
