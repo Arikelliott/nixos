@@ -240,6 +240,7 @@
 
 		firefox
 		keepassxc # KeePassXC password manager.
+		keepass-diff # Diff databases.
 		kpcli # KeePass CLI utility.
 
 		# GPU utilities
