@@ -49,7 +49,7 @@ in
 
 				home.sessionVariables = {
 					# EDITOR = "emacs";
-					# CUPCAKE = "fred";
+					CUPCAKE = "fred";
 				};
 
 				# Let Home Manager install and manage itself.
@@ -66,6 +66,7 @@ in
 					../../home-manager/hyprland/configs/displays/silvana1.nix
 					../../home-manager/hyprland/configs/extra/silvana-extra.nix
 					../../home-manager/hyprland/configs/keybinds/silvana-keybinds.nix
+					../../home-manager/default-envvars.nix
 				];
 			};
 			root = {
@@ -84,7 +85,6 @@ in
 					../../home-manager/shell
 					../../home-manager/theme
 					../../home-manager/nixtools
-					../../home-manager/default-envvars.nix
 				];
 			};
 		};
