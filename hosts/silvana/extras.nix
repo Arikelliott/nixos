@@ -136,17 +136,17 @@
 			fsType = "ext4";
 			options = ["defaults"]; # Mount options (optional). NOTE: Use square brackets around string.
 		};
-		"/home/arik/mount/adrive" = { # Mount 1TB HDD drive.
+		"/mnt/a" = { # Mount 1TB HDD drive.
 			device = "/dev/disk/by-uuid/aefc0e6c-76c9-462d-b154-861aa982bc4e";
 			fsType = "ext4";
 			options = ["defaults"];
 		};
-		"/home/arik/mount/bdrive" = { # Mount 8TB HDD RAID drives.
+		"/mnt/b" = { # Mount 8TB HDD RAID drives.
 			device = "/dev/disk/by-uuid/8f196129-06eb-4971-aa9f-c814b242353d";
 			fsType = "ext4";
 			options = ["defaults"];
 		};
-		"/home/arik/mount/cdrive" = { # Mount 1TB SSD drive.
+		"/mnt/c" = { # Mount 1TB SSD drive.
 		device = "/dev/disk/by-uuid/a030f9c6-c4e4-49e9-a18c-4769e3f3e8ac";
 		fsType = "ext4";
 		options = ["defaults"];
