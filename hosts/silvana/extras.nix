@@ -345,6 +345,7 @@
 		# ntfs3g # NTFS filesystem driver.
 		usbutils # Tools for working with USB devices, such as lsusb.
 		smartmontools # Hard drive health monitoring tools.
+		libimobiledevice # iPhone utilities
 		exfatprogs # exFAT filesystem utilities.
 		foomatic-db-engine # A big set of utilities for printing.
 		ghostscript # Postscript interpreter for PDFs and stuff.
