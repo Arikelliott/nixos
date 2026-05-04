@@ -65,6 +65,7 @@
 		nil # Language server for Nix.
 		nixd # Other language server for Nix.
 		ntfs3g # Add NTFS drivers.
+		sshfs # Mount remote filesystems with ssh.
 
 	];
 
