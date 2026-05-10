@@ -356,6 +356,7 @@
 		jellyfin
 		jellyfin-web
 		jellyfin-ffmpeg
+		sniffnet # Easy GUI net traffic analyzer.
 
 
 		# --- GNOME EXTENSIONS ---
