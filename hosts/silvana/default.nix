@@ -26,8 +26,7 @@ in
 
 		# - Import Users
 		../../modules/users/user-arik.nix # Add Arik user.
-		# ../../modules/users/user-access.nix # Add Access
-		# ../../modules/users/service-users/user-restic.nix # Add user account for Restic service
+		../../modules/users/user-anyara.nix # Add Anyara user.
 
 	];
 
@@ -39,22 +38,10 @@ in
 		extraSpecialArgs = { inherit inputs; };
 		users = {
 			arik = {
-				# Home Manager needs a bit of information about you and the paths it should
-				# manage.
 				home.username = "arik";
 				home.homeDirectory = "/home/arik";
-
-				# Home Manager release your system is compatible with. Don't change except on fresh install!!!
-				home.stateVersion = "23.11";
-
-				home.sessionVariables = {
-					# EDITOR = "emacs";
-					CUPCAKE = "fred";
-				};
-
-				# Let Home Manager install and manage itself.
-				programs.home-manager.enable = true;
-
+				home.stateVersion = "23.11"; # Home Manager release your system is compatible with. Don't change except on fresh install!!!
+				programs.home-manager.enable = true; # Let Home Manager install and manage itself.
 				imports = [
 					../../home-manager/kitty
 					../../home-manager/shell
@@ -68,19 +55,31 @@ in
 					../../home-manager/hyprland/configs/keybinds/silvana-keybinds.nix
 					../../home-manager/default-envvars.nix
 				];
+				# home.sessionVariables = {
+				# 	CUPCAKE = "fred";
+				# };
+			};
+			anyara = {
+				home.username = "anyara";
+				home.homeDirectory = "/home/anyara";
+				home.stateVersion = "23.11"; # Home Manager release your system is compatible with. Don't change except on fresh install!!!
+				programs.home-manager.enable = true; # Let Home Manager install and manage itself.
+				imports = [
+					../../home-manager/kitty
+					../../home-manager/shell
+					../../home-manager/theme
+					../../home-manager/nixtools
+					../../home-manager/default-envvars.nix
+				];
+				# home.sessionVariables = {
+				# 	CUPCAKE = "fred";
+				# };
 			};
 			root = {
-				# Home Manager needs a bit of information about you and the paths it should
-				# manage.
 				home.username = "root";
 				home.homeDirectory = "/root";
-
-				# Home Manager release.
-				home.stateVersion = "23.11";
-
-				# Let Home Manager install and manage itself.
-				programs.home-manager.enable = true;
-
+				home.stateVersion = "23.11"; # Home Manager release your system is compatible with. Don't change except on fresh install!!!
+				programs.home-manager.enable = true; # Let Home Manager install and manage itself.
 				imports = [
 					../../home-manager/shell
 					../../home-manager/theme
