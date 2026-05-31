@@ -52,6 +52,14 @@
 			## case insensitive path-completion
 			zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 			zstyle ':completion:*' menu select
+
+		function y() {
+			local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+			command yazi "$@" --cwd-file="$tmp"
+			IFS= read -r -d ''' cwd < "$tmp"
+			[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+			command rm -f -- "$tmp"
+		}
 	'';
 
 	# Commands added to .zprofile and .zlogout that run when starting or quitting a zsh session
