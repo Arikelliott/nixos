@@ -12,18 +12,18 @@
 	];
 
 	# - GNOME -
-	services.xserver.enable = true;
-	services.desktopManager.gnome.enable = true;
+	# services.xserver.enable = true;
+	# services.desktopManager.gnome.enable = true;
 	# Disable certain preinstalled software
-	services.gnome.games.enable = false;
-	services.gnome.gcr-ssh-agent.enable = false;
+	# services.gnome.games.enable = false;
+	# services.gnome.gcr-ssh-agent.enable = false;
 
 	# - Cosmic -
- 	services.desktopManager.cosmic = {
- 		enable = true;
- 		xwayland.enable	= true;
- 	};
- 	services.system76-scheduler.enable = true;
+	# services.desktopManager.cosmic = {
+ 	# 	enable = true;
+ 	# 	xwayland.enable	= true;
+ 	# };
+ 	# services.system76-scheduler.enable = true;
 
 
 	# - Install Thunar -
