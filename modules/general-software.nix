@@ -40,6 +40,7 @@ environment.systemPackages = with pkgs; [
 	wget # Webpage downloader utility thing.
 	tree # Shows contents of directories recursively.
 	ranger # TUI file manager.
+	yazi # Another TUI file manager.
 	tldr # Summarizes common commands for CLI utilities.
 	lsof # Lists open files and the corresponding processes.
 	# screen # Lets you have detachable shell sessions.
