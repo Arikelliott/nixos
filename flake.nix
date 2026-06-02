@@ -54,11 +54,21 @@
 					./noctalia.nix
 				];
 			};
+			
+			# Dell Optiplex server.
+			shetland = nixpkgs.lib.nixosSystem {
+				inherit system;
+				specialArgs = { inherit inputs; };
+				modules = [
+					({ ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
+					./hosts/shetland
+					home-manager.nixosModules.home-manager
+				];
+			};
 
 			# --- RETIRED CONFIGS ---
 			# Agrew - Linode server
 			# Forrester - old Gateway laptop
-			# Shetland - old Dell Optiplex homeserver
 		};
 	};
 }
