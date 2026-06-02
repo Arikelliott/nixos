@@ -14,9 +14,6 @@
 		enable = true;
 	};
 
-	services.flatpak.enable = true; # Enable Flatpak.
-
-
 	# -------- ZSH --------
 	programs.zsh.enable = true; # Enable zsh.
 	users.defaultUserShell = pkgs.zsh; # Set zsh as default shell.

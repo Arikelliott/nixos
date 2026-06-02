@@ -43,7 +43,7 @@ in
 				home.homeDirectory = "/home/arik";
 
 				# Home Manager release your system is compatible with. Don't change except on fresh install!!!
-				home.stateVersion = "26.05";
+				home.stateVersion = "25.11";
 
 				home.sessionVariables = {
 					# EDITOR = "emacs";

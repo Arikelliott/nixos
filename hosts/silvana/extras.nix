@@ -82,6 +82,9 @@
 	};
 		
 
+	services.flatpak.enable = true; # Enable Flatpak.
+
+
 	# - k3b CD Burner -
 	security.wrappers = {
 		cdrdao = {
