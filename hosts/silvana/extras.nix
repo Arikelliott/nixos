@@ -31,7 +31,7 @@
 
 	# - Install Thunar -
 	programs.thunar.enable = true;
-	programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
+	programs.thunar.plugins = with pkgs; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
 
 	# -------- GAMES --------
 
@@ -78,7 +78,10 @@
 		accelerationDevices = null;
 		openFirewall = true;
 		host = "0.0.0.0";
-		# mediaLocation = "/home/arik/Pictures/immich";
+		# mediaLocation = "/home/immich/";
+		# environment = {
+		# 	IMMICH_IGNORE_MOUNT_CHECK_ERRORS = "true";
+		# };
 	};
 		
 
@@ -228,7 +231,6 @@
 
 
 
-
 	# -------- PACKAGES --------
 	environment.systemPackages = (with pkgs; [
 
@@ -258,7 +260,7 @@
 		gallery-dl # Download images galleries from image hosting sites.
 		ytfzf # Find, download, and watch Youtube videos from the terminal.
 		glow # Utility for rendering Markdown in the terminal.
-		neofetch # System info fetcher and snowflake displayer.
+		fastfetch # System info fetcher and snowflake displayer.
 		spotdl # Spotify music downloader.
 		id3v2 # Music metadata viewing and editing tool.
 
@@ -289,7 +291,7 @@
 		vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 		zed-editor # New IDE trying to replace vscodium.
 		vscodium # Yeahhh I'm adding it back
-		xfce.mousepad # basic text editor from XFCE.
+		mousepad # basic text editor from XFCE.
 
 		# CREATIVE TOOLS
 		audacity # Audio editing suite.
@@ -300,8 +302,8 @@
 		# furnace # Chiptune tracker.
 		# goattracker # Commodore 64 tracker.
 		# klystrack # C64/Amiga/NES tracker.
-		blender-hip # HIP/ROCm version of Blender?
-		# blender # 3D Modeling software.
+		# blender-hip # HIP/ROCm version of Blender?
+		blender # 3D Modeling software.
 		gimp3 # Raster editing program.
 		inkscape # Vector illustration program.
 		krita # Photo editing and painting program.
@@ -349,6 +351,7 @@
 		usbutils # Tools for working with USB devices, such as lsusb.
 		smartmontools # Hard drive health monitoring tools.
 		libimobiledevice # iPhone utilities
+		ifuse
 		exfatprogs # exFAT filesystem utilities.
 		foomatic-db-engine # A big set of utilities for printing.
 		ghostscript # Postscript interpreter for PDFs and stuff.
@@ -360,6 +363,7 @@
 		jellyfin-web
 		jellyfin-ffmpeg
 		sniffnet # Easy GUI net traffic analyzer.
+		virtualbox
 
 
 		# --- GNOME EXTENSIONS ---

@@ -41,7 +41,7 @@
 	# - Packages -
 	environment.systemPackages = with pkgs; [
 		kdePackages.ark # Graphical file archival tool
-		xorg.xhost # Server access control program for X. (May be needed for Gparted?)
+		xhost # Server access control program for X. (May be needed for Gparted?)
 		gparted # GUI disk partitioning tool.
 		kitty # My preferred terminal program.
 		dunst # Standalone notificatin manager for WMs.
@@ -51,7 +51,7 @@
 		slurp # Wayland region selector utility.
 		wf-recorder # Wayland screen recorder.
 		hyprpicker # Wayland color picker.
-		swww # Fancy Wayland wallpaper setter and daemon.
+		awww # Fancy Wayland wallpaper setter and daemon.
 		nwg-look # Wayland alternative to lxappearance.
 		rofi # A launcher menu app.
 		waybar # Wayland bar.

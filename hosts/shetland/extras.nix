@@ -36,7 +36,7 @@
 
 		gallery-dl # Download images galleries from image hosting sites.
 		glow # Utility for rendering Markdown in the terminal.
-		neofetch # System info fetcher and snowflake displayer.
+		fastfetch # System info fetcher and snowflake displayer.
 		spotdl # Spotify music downloader.
 		id3v2 # Music metadata viewing and editing tool.
 		pandoc # General filetype converter (eg. md to html).
