@@ -20,6 +20,7 @@
 {
 	wayland.windowManager.hyprland = {
 		enable = true; # Configure Hyprland with home-manager
+		configType = "hyprlang";
 		systemd = {
 			enable = true; # Enable systemd service I guess?
 		};
@@ -27,7 +28,6 @@
 		# plugins = [ ];
 		settings = {
 			"$mainMod" = "SUPER";
-			"$ipc" = "noctalia-shell ipc call";
 
 			# EXEC-ONCE: RUN THESE ONLY AT STARTUP
 			exec-once = [
@@ -36,7 +36,7 @@
 				# "sh ~/dotfiles/rgb/rgb.sh off" # Autoruns RGB (currently defaults to "off")
 				"wl-paste --type text --watch cliphist store" # Stores only text data
 				"wl-paste --type image --watch cliphist store" # Stores only image data
-				"noctalia-shell" # run Noctalia on start
+				"noctalia" # run Noctalia on start
 			];
 			# EXEC: RUN THESE EVERY HYPRLAND RELOAD
 			# exec = [
@@ -68,8 +68,7 @@
 				layout = "dwindle";
 			};
 			dwindle = {
-				pseudotile = "true";
-				preserve_split = "true";
+				smart_split = "true";
 			};
 			decoration = {
 				rounding = "0";
@@ -133,8 +132,7 @@
 				"$mainMod, T, togglefloating,"
 				"$mainMod, F, fullscreen,"
 				"$mainMod, P, pseudo, # dwindle"
-				"$mainMod, Space, exec, $ipc launcher toggle" # Opens Noctalia launcher
-				"$mainMod, W, exec, $ipc wallpaper toggle" # Opens Noctalia wallpaper selector
+				"$mainMod, Space, exec, noctalia msg panel-toggle launcher" # Opens Noctalia launcher
 				"$mainMod, Return, exec, kitty"
 				"$mainMod SHIFT CTRL ALT, L, exec, sh scripts/linus-keybind.sh" # For creating incompatibility with Windows LinkedIn keybind (see https://invent.kde.org/plasma/plasma-desktop/-/merge_requests/1731)
 				"$mainMod, G, exec, sh scripts/open-gparted.sh"
@@ -149,7 +147,7 @@
 				# Move focus with mainMod + arrow keys
 				"$mainMod, left, workspace, r-1"
 				"$mainMod, right, workspace, r+1"
-				"$mainMod, up, togglesplit"
+				"$mainMod, up, layoutmsg, togglesplit"
 				"$mainMod, down, layoutmsg, swapsplit"
 
 				# Switch workspaces with mainMod + [0-9]
@@ -214,13 +212,13 @@
 			# See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 			windowrule = [
 				# "float, ^(org.gnome.Calculator)$"
-				"float, class:org.gnome.Calculator" # both of these work, dunno what the regex does
-				"float, class:org.kde.polkit-kde-authentication-agent-1"
-				"float,class:^(thunar)$,title:^(File Operation Progress)$"
+				# "float, class:org.gnome.Calculator" # both of these work, dunno what the regex does
+				# "float, class:org.kde.polkit-kde-authentication-agent-1"
+				# "float,class:^(thunar)$,title:^(File Operation Progress)$"
 				# "stayfocused, title:^()$,class:^(steam)$"
 				# "minsize 1 1, title:^()$,class:^(steam)$"
-				"float, size 30% 30%, class:xdg-desktop-portal-gtk"
-				"float, size 172 502, title:^(Authentication Required)$"
+				# "float, size 30% 30%, class:xdg-desktop-portal-gtk"
+				# "float, size 172 502, title:^(Authentication Required)$"
 			];
 			# Some things are layers, not windows. Rofi for example. They have different limits
 			# http://wiki.hyprland.org/Configuring/Window-Rules/#layer-rules for more info

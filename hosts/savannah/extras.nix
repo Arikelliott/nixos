@@ -28,7 +28,7 @@
 
 	# - Install Thunar -
 	programs.thunar.enable = true;
-	programs.thunar.plugins = with pkgs.xfce; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
+	programs.thunar.plugins = with pkgs; [ thunar-archive-plugin thunar-volman thunar-media-tags-plugin ];
 
 	# -------- GAMES --------
 
@@ -140,7 +140,7 @@
 		gallery-dl # Download images galleries from image hosting sites.
 		ytfzf # Find, download, and watch Youtube videos from the terminal.
 		glow # Utility for rendering Markdown in the terminal.
-		neofetch # System info fetcher and snowflake displayer.
+		fastfetch # System info fetcher and snowflake displayer.
 		spotdl # Spotify music downloader.
 		id3v2 # Music metadata viewing and editing tool.
 
@@ -170,7 +170,7 @@
 		# TEXT EDITORS
 		vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
 		zed-editor # New IDE trying to replace vscodium.
-		xfce.mousepad # basic text editor from XFCE.
+		mousepad # basic text editor from XFCE.
 
 		# SOCIAL
 		vesktop # Modded discord desktop client.

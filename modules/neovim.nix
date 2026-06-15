@@ -41,7 +41,7 @@
 
 			wilder = {
 			# 	# Popup menu for command suggestions (whenever you type :, /, or ?
-				enable = true;
+				enable = false;
 			# 	# enable_cmdline_enter = true;
 				settings = {
 					modes = [

@@ -46,7 +46,6 @@ in
 					../../home-manager/kitty
 					../../home-manager/shell
 					../../home-manager/scripts
-					../../home-manager/theme
 					../../home-manager/nixtools
 					../../home-manager/git
 					../../home-manager/hyprland
@@ -67,7 +66,6 @@ in
 				imports = [
 					../../home-manager/kitty
 					../../home-manager/shell
-					../../home-manager/theme
 					../../home-manager/nixtools
 					../../home-manager/default-envvars.nix
 				];
@@ -82,7 +80,6 @@ in
 				programs.home-manager.enable = true; # Let Home Manager install and manage itself.
 				imports = [
 					../../home-manager/shell
-					../../home-manager/theme
 					../../home-manager/nixtools
 				];
 			};
