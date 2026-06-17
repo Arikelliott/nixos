@@ -12,6 +12,20 @@
 	services.gvfs.enable = true; # Mount, trash, and other functionalities
 	services.tumbler.enable = true; # Thumbnail support for images
 
+	# - Matrix server (Continuwuity) -
+	services.matrix-continuwuity = {
+		enable = true;
+		settings = {
+			global = {
+				server_name = "matrix.raindropz.net";
+				address = "0.0.0.0";
+				# database_path = "/var/lib/conduwuit";
+				new_user_displayname_suffix = "";
+			};
+		};
+	};
+
+
 	# -------- HARDWARE --------
 	# - Setup Bootloader -
 	boot.loader = {
