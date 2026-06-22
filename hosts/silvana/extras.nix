@@ -364,6 +364,7 @@
 		jellyfin-ffmpeg
 		sniffnet # Easy GUI net traffic analyzer.
 		virtualbox
+		android-tools # Android ADB SDK and Fastboot.
 
 
 		# --- GNOME EXTENSIONS ---
