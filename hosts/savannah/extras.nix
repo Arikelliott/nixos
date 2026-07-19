@@ -43,6 +43,12 @@
 	services.gvfs.enable = true; # Mount, trash, and other functionalities
 	services.tumbler.enable = true; # Thumbnail support for images
 
+	# - Tailscale -
+	services.tailscale = {
+		enable = true;
+		useRoutingFeatures = "both";
+	};
+
 	# -------- SYNCTHING --------
 	services.syncthing = {
 		enable = true;
@@ -111,6 +117,9 @@
 		nssmdns4 = true;
 		openFirewall = true;
 	};
+
+	# - Battery -
+	services.upower.enable = true;
 
 
 
