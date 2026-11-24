@@ -19,7 +19,7 @@
 	# Disable certain preinstalled software
 	# services.gnome.games.enable = false;
 	# services.gnome.core-developer-tools.enable = false;
-	# services.gnome.gcr-ssh-agent.enable = false;
+	services.gnome.gcr-ssh-agent.enable = false;
 
 	# - Cosmic -
 	# services.desktopManager.cosmic = {
@@ -28,6 +28,9 @@
 	# };
 	# services.system76-scheduler.enable = true;
 
+	services.xserver = {
+		desktopManager.cinnamon.enable = true;
+	};
 
 	# - Install Thunar -
 	programs.thunar.enable = true;
