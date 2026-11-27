@@ -361,6 +361,7 @@
 		jdk # Java 19, main release of Java on NixOS. May include other Java versions too?
 		gvfs # Virtual Filesystem support library
 		easytag # GUI ID3 song metadata viewer and editor.
+		eyed3 # Terminal song metadata editor.
 		kdePackages.k3b # for k3b CD Burner.
 		jellyfin
 		jellyfin-web
